@@ -1,0 +1,56 @@
+.logo {
+  color: #ffffff;
+  margin-right: 193px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //background-color: #153d77;
+  height: 64px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.header:before {
+  background: #153d77;
+  content: " ";
+  height: 264px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.leftBlock {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menuIcon {
+  font-size: 65px;
+  color: #fff;
+}
+
+.icon {
+  font-size: 25px;
+  color: #fff;
+}
+
+.input {
+  border: none;
+  color: #fff;
+  background: inherit;
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.rightIcons {
+  display: flex;
+  gap: 1rem;
+}
