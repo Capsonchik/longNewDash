@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import {SmallWidget} from "@/components/baseStatistic/widgets/smallWidget/SmallWidget";
 import {MapWidget} from "@/components/baseStatistic/widgets/mapWidget/MapWidget";
+import {LanguageWidget} from "@/components/baseStatistic/widgets/languageWidget/LanguageWidget";
 
 export const BaseStatistic = () => {
   return (
@@ -38,6 +39,17 @@ export const BaseStatistic = () => {
         </div>
         <div className={styles.map}>
           <MapWidget/>
+        </div>
+      </div>
+      <div className={styles.middleContainer}>
+        <div className={styles.block}>
+          <LanguageWidget/>
+        </div>
+        <div className={styles.block}>
+          <LanguageWidget/>
+        </div>
+        <div className={styles.block}>
+          <LanguageWidget/>
         </div>
       </div>
     </div>
