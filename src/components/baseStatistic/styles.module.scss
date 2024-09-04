@@ -1,3 +1,21 @@
 .container {
-  margin-top: 1rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.widgets {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.map {
+  width: 52%;
 }
