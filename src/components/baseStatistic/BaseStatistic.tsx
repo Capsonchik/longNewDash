@@ -17,7 +17,7 @@ export const BaseStatistic = () => {
           />
           <SmallWidget
             name={'Отскок'}
-            value={'$24.300'}
+            value={'₽24.300'}
             statistic={'8.35%'}
             status={"success"}
             description={'Больше посетителей чем обычно'}
@@ -46,10 +46,10 @@ export const BaseStatistic = () => {
           <LanguageWidget/>
         </div>
         <div className={styles.block}>
-          <LanguageWidget/>
+          test
         </div>
         <div className={styles.block}>
-          <LanguageWidget/>
+          test
         </div>
       </div>
     </div>
