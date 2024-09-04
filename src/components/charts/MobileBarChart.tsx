@@ -7,7 +7,7 @@ export const MobileBarChart = (props: Props) => {
   const option = {
     xAxis: {
       type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      data: ['Пон.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вск.']
     },
     yAxis: {
       type: 'value'

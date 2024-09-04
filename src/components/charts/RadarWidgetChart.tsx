@@ -14,12 +14,12 @@ export const RadarWidgetChart = (props: Props) => {
     radar: {
       // shape: 'circle',
       indicator: [
-        {name: 'Sales', max: 6500},
-        {name: 'Administration', max: 16000},
-        {name: 'Information Technology', max: 30000},
-        {name: 'Customer Support', max: 38000},
-        {name: 'Development', max: 52000},
-        {name: 'Marketing', max: 25000}
+        {name: 'Продажи', max: 6500},
+        {name: 'Администрация', max: 16000},
+        {name: 'Технологии', max: 30000},
+        {name: 'Поддержка', max: 38000},
+        {name: 'Разработка', max: 52000},
+        {name: 'Маркетинг', max: 25000}
       ]
     },
     series: [
