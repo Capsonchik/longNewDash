@@ -4,6 +4,8 @@ import {MapWidget} from "@/components/baseStatistic/widgets/mapWidget/MapWidget"
 import {LanguageWidget} from "@/components/baseStatistic/widgets/languageWidget/LanguageWidget";
 import {RadarWidget} from "@/components/baseStatistic/widgets/radarWidget/RadarWidget";
 import {MobileWidget} from "@/components/baseStatistic/widgets/mobileWidget/MobileWidget";
+import {TrafficWidget} from "@/components/baseStatistic/widgets/trafficWidget/TrafficWidget";
+import {BrowserWidget} from "@/components/baseStatistic/widgets/browserWidget/BrowserWidget";
 
 export const BaseStatistic = () => {
   return (
@@ -52,6 +54,14 @@ export const BaseStatistic = () => {
         </div>
         <div className={styles.block}>
           <MobileWidget/>
+        </div>
+      </div>
+      <div className={styles.botContainer}>
+        <div className={styles.traffic}>
+          <TrafficWidget/>
+        </div>
+        <div className={styles.browser}>
+          <BrowserWidget/>
         </div>
       </div>
     </div>
