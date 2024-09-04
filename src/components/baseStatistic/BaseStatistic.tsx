@@ -2,6 +2,8 @@ import styles from './styles.module.scss';
 import {SmallWidget} from "@/components/baseStatistic/widgets/smallWidget/SmallWidget";
 import {MapWidget} from "@/components/baseStatistic/widgets/mapWidget/MapWidget";
 import {LanguageWidget} from "@/components/baseStatistic/widgets/languageWidget/LanguageWidget";
+import {RadarWidget} from "@/components/baseStatistic/widgets/radarWidget/RadarWidget";
+import {MobileWidget} from "@/components/baseStatistic/widgets/mobileWidget/MobileWidget";
 
 export const BaseStatistic = () => {
   return (
@@ -46,10 +48,10 @@ export const BaseStatistic = () => {
           <LanguageWidget/>
         </div>
         <div className={styles.block}>
-          test
+          <RadarWidget/>
         </div>
         <div className={styles.block}>
-          test
+          <MobileWidget/>
         </div>
       </div>
     </div>
