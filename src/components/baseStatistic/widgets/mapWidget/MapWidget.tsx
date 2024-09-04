@@ -1,10 +1,11 @@
 import styles from './styles.module.scss';
+import {Map} from "@/components/map/Map";
 
-type Props = {};
-export const MapWidget = (props: Props) => {
+export const MapWidget = () => {
   return (
     <div className={styles.container}>
-      map
+      <span className={styles.title}>Статистика на карте</span>
+      <Map/>
     </div>
   );
 };
