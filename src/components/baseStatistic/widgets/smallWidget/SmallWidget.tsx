@@ -7,13 +7,13 @@ export const SmallWidget = (props: SmallWidgetType) => {
 
   const iconSwitcher = (titleName: string) => {
     switch (titleName) {
-      case "Посетители":
+      case "Количество участников системы":
         return <FiUsers style={{color: "white"}}/>;
-      case "Отскок":
+      case "Внесенные SKU":
         return <FiExternalLink style={{color: "white"}}/>;
-      case "Реальное время":
+      case "количество ответов":
         return <FiActivity style={{color: "white"}}/>;
-      case "Активность":
+      case "Объем медиа данных":
         return <FiShoppingCart style={{color: "white"}}/>;
       default:
         return <FiWifiOff style={{color: "white"}}/>

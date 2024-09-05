@@ -27,7 +27,7 @@ export const BaseStatistic = () => {
             description={'Больше посетителей чем обычно'}
           />
           <SmallWidget
-            name={'количество ответов'}
+            name={'Количество ответов'}
             value={'255'}
             statistic={'5.50%'}
             status={"success"}
