@@ -12,8 +12,12 @@ export const MobileBarChart = (props: Props) => {
     yAxis: {
       type: 'value'
     },
+    legend: {
+      data: ['Пользователи ПК', 'Пользователи мобильных']
+    },
     series: [
       {
+        name: 'Пользователи ПК',
         data: [120, 200, 150, 80, 70, 110, 130],
         type: 'bar',
         barWidth: '20%',
@@ -23,6 +27,7 @@ export const MobileBarChart = (props: Props) => {
         }
       },
       {
+        name: 'Пользователи мобильных',
         data: [120, 200, 150, 80, 70, 110, 130],
         type: 'bar',
         barWidth: '20%',

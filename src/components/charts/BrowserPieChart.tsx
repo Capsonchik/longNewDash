@@ -36,11 +36,9 @@ export const BrowserPieChart = () => {
           show: false
         },
         data: [
-          {value: 1048, name: 'Поиск'},
-          {value: 735, name: 'Директ'},
-          {value: 580, name: 'Мэил'},
-          {value: 484, name: 'Реклама'},
-          {value: 300, name: 'Видео'}
+          {value: 1048, name: 'Биология'},
+          {value: 735, name: 'Физиология'},
+          {value: 580, name: 'Социология'},
         ]
       }
     ]

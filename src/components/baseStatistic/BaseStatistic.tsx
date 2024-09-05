@@ -13,29 +13,29 @@ export const BaseStatistic = () => {
       <div className={styles.topContainer}>
         <div className={styles.widgets}>
           <SmallWidget
-            name={'Посетители'}
-            value={'2.562'}
+            name={'Количество участников системы'}
+            value={'1200 чел'}
             statistic={'-2.65%'}
             status={"danger"}
             description={'Количество посетителей'}
           />
           <SmallWidget
-            name={'Отскок'}
-            value={'₽24.300'}
+            name={'Внесенные SKU'}
+            value={'13900'}
             statistic={'8.35%'}
             status={"success"}
             description={'Больше посетителей чем обычно'}
           />
           <SmallWidget
-            name={'Реальное время'}
-            value={'17.212'}
+            name={'количество ответов'}
+            value={'255'}
             statistic={'5.50%'}
             status={"success"}
             description={'Активность выше чем обычно'}
           />
           <SmallWidget
-            name={'Активность'}
-            value={'43'}
+            name={'Объем медиа данных'}
+            value={'49GB'}
             statistic={'-4.25%'}
             status={"danger"}
             description={'Активность ниже чем обычно'}

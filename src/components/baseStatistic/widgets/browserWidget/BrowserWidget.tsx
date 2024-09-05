@@ -6,7 +6,7 @@ type Props = {};
 export const BrowserWidget = (props: Props) => {
   return (
     <div className={styles.container}>
-      <span className={styles.title}>Популярность браузеров</span>
+      <span className={styles.title}>Параметры лонгитюдной системы</span>
       <BrowserPieChart/>
     </div>
   );

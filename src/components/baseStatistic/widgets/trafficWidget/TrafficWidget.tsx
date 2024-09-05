@@ -6,7 +6,7 @@ type Props = {};
 export const TrafficWidget = (props: Props) => {
   return (
     <div className={styles.container}>
-      <span className={styles.title}>Траффик</span>
+      <span className={styles.title}>Самые активные участники за неделю</span>
       <TrafficTable/>
     </div>
   );

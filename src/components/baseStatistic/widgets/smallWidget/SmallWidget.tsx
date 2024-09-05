@@ -32,9 +32,12 @@ export const SmallWidget = (props: SmallWidgetType) => {
         </div>
         <span className={styles.value}>{props.value}</span>
         <span className={styles.stat}>
+          На&nbsp;
           <span
             className={`${props.status === 'danger' ? styles.statValue : styles.statGreen}`}>{props.statistic} </span>
-          {props.description}
+          {props.status === 'danger' ? 'меньше' : 'больше'}&nbsp;
+          чем вчера
+          {/*{props.description}*/}
         </span>
       </div>
     </div>
