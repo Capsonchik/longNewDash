@@ -1,56 +1,56 @@
 export const TRAFFIC_MOCK = [
   {
     id: 1,
-    source: 'Bing',
-    users: 504,
-    sessions: 623,
-    bounce: '66.76%',
+    source: 2342,
+    users: 'Муж.',
+    sessions: 23,
+    bounce: 'Москва',
     status: 'danger',
-    duration: '00:04:42'
+    duration: 135
   },
   {
     id: 2,
-    source: 'Direct',
-    users: 872,
-    sessions: 1077,
-    bounce: '32.70%',
+    source: 7343,
+    users: 'Жен.',
+    sessions: 56,
+    bounce: 'Москва',
     status: 'success',
-    duration: '00:09:18'
+    duration: 130
   },
   {
     id: 3,
-    source: 'DuckDuckGo',
-    users: 693,
-    sessions: 856,
-    bounce: '37.36%',
+    source: 123,
+    users: 'Жен.',
+    sessions: 18,
+    bounce: 'Москва',
     status: 'success',
-    duration: '00:09:12'
+    duration: 110
   },
   {
     id: 4,
-    source: 'GitHub',
-    users: 713,
-    sessions: 881,
-    bounce: '38.09%',
+    source: 12,
+    users: 'Муж.',
+    sessions: 32,
+    bounce: 'Москва',
     status: 'success',
-    duration: '00:06:19'
+    duration: 95
   },
   {
     id: 5,
-    source: 'Google',
-    users: 1023,
-    sessions: 1265,
-    bounce: '27.23%',
+    source: 133455,
+    users: 'Муж.',
+    sessions: 40,
+    bounce: 'Москва',
     status: 'success',
-    duration: '00:06:25'
+    duration: 60
   },
   {
     id: 6,
-    source: 'Pinterest',
-    users: 623,
-    sessions: 770,
-    bounce: '52.81%',
+    source: 333333,
+    users: 'Муж.',
+    sessions: 38,
+    bounce: 'Москва',
     status: 'danger',
-    duration: '00:03:10'
+    duration: 55
   },
 ]

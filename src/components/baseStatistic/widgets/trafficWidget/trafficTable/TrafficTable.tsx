@@ -18,27 +18,27 @@ export const TrafficTable = (props: Props) => {
       }}
     >
       <Column width={100} align="left" fixed>
-        <HeaderCell className={styles.headerCell}>Источник</HeaderCell>
+        <HeaderCell className={styles.headerCell}>ID</HeaderCell>
         <Cell className={styles.cell} dataKey="source"/>
       </Column>
 
       <Column width={120} align="center" fixed>
-        <HeaderCell className={styles.headerCell}>Пользователей</HeaderCell>
+        <HeaderCell className={styles.headerCell}>Пол</HeaderCell>
         <Cell className={styles.cell} dataKey="users"/>
       </Column>
 
       <Column width={90} align='center' fixed>
-        <HeaderCell className={styles.headerCell}>Сессий</HeaderCell>
+        <HeaderCell className={styles.headerCell}>Возраст</HeaderCell>
         <Cell className={styles.cell} dataKey='sessions'/>
       </Column>
 
       <Column width={140} align="center" fixed>
-        <HeaderCell className={styles.headerCell}>Процент отказа</HeaderCell>
+        <HeaderCell className={styles.headerCell}>Регион</HeaderCell>
         <Cell className={styles.cell} dataKey='bounce'/>
       </Column>
 
-      <Column width={200} align="center" fixed>
-        <HeaderCell className={styles.headerCell}>Продолжительность сеанса</HeaderCell>
+      <Column width={200} align="center">
+        <HeaderCell className={styles.headerCell}>Количество анкет</HeaderCell>
         <Cell className={styles.cell} dataKey='duration'/>
       </Column>
     </Table>

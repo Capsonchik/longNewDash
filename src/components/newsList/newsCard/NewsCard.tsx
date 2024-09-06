@@ -3,9 +3,6 @@ import {Graph} from "@/components/newsList/newsCard/Graph";
 
 export const NewsCard = (card: any) => {
 
-  console.log("NewsCard", card);
-
-
   return (
     <div className={styles.card}>
 
