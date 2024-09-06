@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import {FiActivity, FiExternalLink, FiShoppingCart, FiUsers, FiWifiOff} from "react-icons/fi";
+import {FiClipboard, FiFilm, FiShoppingCart, FiUsers, FiWifiOff} from "react-icons/fi";
 import {SmallWidgetType} from "@/types/widgetTypes";
 
 
@@ -10,11 +10,11 @@ export const SmallWidget = (props: SmallWidgetType) => {
       case "Количество участников системы":
         return <FiUsers style={{color: "white"}}/>;
       case "Внесенные SKU":
-        return <FiExternalLink style={{color: "white"}}/>;
-      case "количество ответов":
-        return <FiActivity style={{color: "white"}}/>;
-      case "Объем медиа данных":
         return <FiShoppingCart style={{color: "white"}}/>;
+      case "Количество ответов":
+        return <FiClipboard style={{color: "white"}}/>;
+      case "Объем медиа данных":
+        return <FiFilm style={{color: "white"}}/>;
       default:
         return <FiWifiOff style={{color: "white"}}/>
     }

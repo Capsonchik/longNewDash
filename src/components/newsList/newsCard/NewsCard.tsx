@@ -1,26 +1,23 @@
 import styles from './styles.module.scss';
-import Image from "next/image";
+import {Graph} from "@/components/newsList/newsCard/Graph";
 
 export const NewsCard = (card: any) => {
 
   console.log("NewsCard", card);
 
-  const renderImage = () => {
-    if (card.item.image_url) {
-      return <Image src={card.item.image_url} alt={'image'} width={100} height={100}/>
-    } else return <span>Изображение отсутствует</span>
-  }
 
   return (
     <div className={styles.card}>
+
       {card.item.image_url
-        ? <Image src={card.item.image_url} alt={'image'} width={100} height={100}/>
-        : <span>test</span>
+        ? <img className={styles.image} src={card.item.image_url} alt="photo"/>
+        : <Graph/>
       }
 
-      <span>{card.item.title}</span>
+      <span className={styles.title}>{card.item.title}</span>
 
-      <span>{card.item.description}</span>
+      <span className={styles.text}>{card.item.description}</span>
+
     </div>
   );
 };

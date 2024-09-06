@@ -3,9 +3,27 @@
   flex-direction: column;
   box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
   padding: 12px 20px 20px;
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 400px;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.image {
+  width: 308px;
+  height: 205px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Количество строк */
+  overflow: hidden;
 }
