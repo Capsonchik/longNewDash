@@ -6,10 +6,7 @@ import DashboardIcon from '@rsuite/icons/legacy/Dashboard';
 import GroupIcon from '@rsuite/icons/legacy/Group';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import GearCircleIcon from '@rsuite/icons/legacy/GearCircle';
-import SpeakerIcon from '@rsuite/icons/Speaker';
 import {useRouter} from "next/navigation";
-
-type Props = {};
 
 export const SideBar = () => {
   const router = useRouter();
@@ -30,14 +27,12 @@ export const SideBar = () => {
             <Nav.Item eventKey="2" icon={<GroupIcon/>}>
               Группы пользователей
             </Nav.Item>
-            <Nav.Item onClick={() => handleNavigate('/news')} eventKey="3" icon={<SpeakerIcon/>}>
-              Свежие новости
-            </Nav.Item>
-            <Nav.Menu eventKey="4" title="Лонгитюдный круг" icon={<MagicIcon/>}>
-              <Nav.Item eventKey="4-1">Пространство и время</Nav.Item>
-              <Nav.Item eventKey="4-2">Инфо - поле</Nav.Item>
-              <Nav.Item eventKey="4-3">Внешние факторы</Nav.Item>
-              <Nav.Item onClick={() => handleNavigate('/long')} eventKey="3-4">Аналитика</Nav.Item>
+            <Nav.Menu eventKey="4" title="Аналитика" icon={<MagicIcon/>}>
+              <Nav.Item onClick={() => handleNavigate('/long')} eventKey="4-1">Лонгитюдный круг</Nav.Item>
+              <Nav.Item eventKey="4-2">Пространство и время</Nav.Item>
+              <Nav.Item onClick={() => handleNavigate('/news')} eventKey="4-3">Инфо - поле</Nav.Item>
+              <Nav.Item eventKey="4-4">Внешние факторы</Nav.Item>
+              <Nav.Item eventKey="3-4">Результат</Nav.Item>
             </Nav.Menu>
             <Nav.Menu eventKey="5" title="Settings" icon={<GearCircleIcon/>}>
               <Nav.Item eventKey="5-1">Applications</Nav.Item>
