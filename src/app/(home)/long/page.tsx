@@ -1,9 +1,9 @@
-type Props = {
+import styles from './styles.module.scss';
 
-};
-export default function Page (props: Props)  {
+type Props = {};
+export default function Page(props: Props) {
   return (
-    <div>
+    <div className={styles.container}>
       Лонгитюд
     </div>
   );
