@@ -19,8 +19,7 @@ export default async function Page({searchParams}: { searchParams: Props }) {
     <div className={styles.container}>
       Лонгитюд
       <div className={styles.bursts}>
-        <FirstSunBurst data={currentData}/>
-        <FirstSunBurst data={currentData}/>
+        <FirstSunBurst/>
       </div>
     </div>
   );

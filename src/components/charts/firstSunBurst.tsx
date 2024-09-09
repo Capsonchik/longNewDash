@@ -4,18 +4,25 @@ import ReactECharts from "echarts-for-react";
 import {useDispatch, useSelector} from "react-redux";
 import {setCurrentValue} from "@/store/firstSunBurstSlice/firstSunBurst.slice";
 import {selectFirstSunData} from "@/store/firstSunBurstSlice/firstSunBurst.selectors";
+import {fetchGetDefaultSunBurst, fetchGetNextSunBurst} from "@/store/firstSunBurstSlice/firstSunBirst.actions";
+import {useEffect} from "react";
 
-type Props = {
-  data: any
-};
+type Props = {};
 
 export const FirstSunBurst = (props: Props) => {
   const dispatch = useDispatch();
   const sunData = useSelector(selectFirstSunData);
-  const {data} = props;
+
+  useEffect(() => {
+    // @ts-ignore
+    dispatch(fetchGetDefaultSunBurst())
+
+  }, [dispatch]);
 
   const onChartClick = (params: any) => {
     dispatch(setCurrentValue(params.data.name));
+    // @ts-ignore
+    dispatch(fetchGetNextSunBurst(params.data.name))
   };
 
   const onEvents = {
@@ -32,7 +39,7 @@ export const FirstSunBurst = (props: Props) => {
     },
     series: {
       type: 'sunburst',
-      data: !sunData ? sunData : data,
+      data: sunData,
       radius: [0, '90%'],
       label: {
         rotate: 'horizontal',
