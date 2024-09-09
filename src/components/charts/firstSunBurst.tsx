@@ -1,11 +1,27 @@
 'use client'
 
-import {SUN_DATA_MINI} from "@/mocks/sunBurstData";
 import ReactECharts from "echarts-for-react";
+import {useDispatch, useSelector} from "react-redux";
+import {setCurrentValue} from "@/store/firstSunBurstSlice/firstSunBurst.slice";
+import {selectFirstSunData} from "@/store/firstSunBurstSlice/firstSunBurst.selectors";
 
-type Props = {};
+type Props = {
+  data: any
+};
 
 export const FirstSunBurst = (props: Props) => {
+  const dispatch = useDispatch();
+  const sunData = useSelector(selectFirstSunData);
+  const {data} = props;
+
+  const onChartClick = (params: any) => {
+    dispatch(setCurrentValue(params.data.name));
+  };
+
+  const onEvents = {
+    click: onChartClick
+  };
+
 
   const option = {
     tooltip: {
@@ -16,7 +32,7 @@ export const FirstSunBurst = (props: Props) => {
     },
     series: {
       type: 'sunburst',
-      data: SUN_DATA_MINI,
+      data: !sunData ? sunData : data,
       radius: [0, '90%'],
       label: {
         rotate: 'horizontal',
@@ -46,6 +62,7 @@ export const FirstSunBurst = (props: Props) => {
         option={option}
         style={{height: '375px', width: 400}}
         opts={{renderer: 'svg'}}
+        onEvents={onEvents}
       />
     </div>
   );

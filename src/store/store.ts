@@ -1,5 +1,6 @@
 import {configureStore, Middleware} from '@reduxjs/toolkit'
 import mainSlice from './store.slice'
+import firstSunSlice from './firstSunBurstSlice/firstSunBurst.slice'
 
 const customMiddleware: Middleware = store => next => action => {
   console.log('Dispatching action:', action);
@@ -9,6 +10,7 @@ const customMiddleware: Middleware = store => next => action => {
 const store = configureStore({
   reducer: {
     main: mainSlice,
+    firstSunBurst: firstSunSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()

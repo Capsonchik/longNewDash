@@ -1647,22 +1647,13 @@ export const SUN_DATA_MINI = [
   {
     "name": "Биология",
     "value": 33.333333333333336,
-    "itemStyle": {
-      "color": '#4f92fc'
-    }
   },
   {
     "name": "Психология",
     "value": 33.333333333333336,
-    "itemStyle": {
-      "color": '#94b5ea'
-    }
   },
   {
     "name": "Социология",
     "value": 33.333333333333336,
-    "itemStyle": {
-      "color": '#407bd8'
-    }
   }
 ]
