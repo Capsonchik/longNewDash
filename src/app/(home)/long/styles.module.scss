@@ -1,3 +1,13 @@
 .container {
+  margin-top: 3rem;
+  box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
+  padding: 12px 20px 20px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
 
+.bursts {
+  display: flex;
+  justify-content: space-around;
 }
