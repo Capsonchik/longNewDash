@@ -9,7 +9,7 @@ export const fetchGetDefaultSunBurst = createAsyncThunk(
   }
 );
 
-export const fetchGetNextSunBurst = createAsyncThunk(
+export const fetchGetNextSunBurst = createAsyncThunk<any, any, any>(
   'nextSunBurst',
   async (element) => {
     try {

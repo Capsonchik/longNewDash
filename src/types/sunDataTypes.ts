@@ -1,6 +1,11 @@
 export type SunDataType = {
   sunData: []
-  currentValue: string
+  currentValue: string,
+  key: number
+  backData: null | string
+  scaleType: string
+  categoryId: number | null
+  firstQuestionData: null
 }
 
 export type SunItem = {

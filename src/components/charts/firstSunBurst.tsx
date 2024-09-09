@@ -2,27 +2,64 @@
 
 import ReactECharts from "echarts-for-react";
 import {useDispatch, useSelector} from "react-redux";
-import {setCurrentValue} from "@/store/firstSunBurstSlice/firstSunBurst.slice";
-import {selectFirstSunData} from "@/store/firstSunBurstSlice/firstSunBurst.selectors";
+import {
+  setCurrentValue,
+  setFirstBackData,
+  setFirstCategoryId,
+  setFirstScaleType
+} from "@/store/firstSunBurstSlice/firstSunBurst.slice";
+import {
+  selectFirstBackData,
+  selectFirstDataKey,
+  selectFirstSunData
+} from "@/store/firstSunBurstSlice/firstSunBurst.selectors";
 import {fetchGetDefaultSunBurst, fetchGetNextSunBurst} from "@/store/firstSunBurstSlice/firstSunBirst.actions";
-import {useEffect} from "react";
+import {useEffect, useRef, useState} from "react";
+import {SunItems} from "@/types/sunDataTypes";
+import {AppDispatch} from "@/store/store";
+import {Button} from "rsuite";
 
-type Props = {};
-
-export const FirstSunBurst = (props: Props) => {
-  const dispatch = useDispatch();
+export const FirstSunBurst = () => {
+  const dispatch = useDispatch<AppDispatch>();
   const sunData = useSelector(selectFirstSunData);
+  const chartRef = useRef(null);
+  const key = useSelector(selectFirstDataKey);
+  const backData = useSelector(selectFirstBackData);
+  const [currentData, setCurrentData] = useState<SunItems | []>();
+
+  const handleBack = () => {
+    if (backData) {
+      dispatch(fetchGetDefaultSunBurst())
+    } else {
+
+    }
+  }
+
 
   useEffect(() => {
-    // @ts-ignore
     dispatch(fetchGetDefaultSunBurst())
-
   }, [dispatch]);
+
+  useEffect(() => {
+    setCurrentData(sunData);
+    if (chartRef.current) {
+      //@ts-ignore
+      chartRef.current.getEchartsInstance().setOption({
+        series: [{data: sunData}]
+      });
+    }
+  }, [sunData]);
 
   const onChartClick = (params: any) => {
     dispatch(setCurrentValue(params.data.name));
-    // @ts-ignore
+    dispatch(setFirstBackData(params.data.name));
     dispatch(fetchGetNextSunBurst(params.data.name))
+
+    if (params.data.is_last_block) {
+      dispatch(setFirstScaleType(params.data.scale_type))
+      dispatch(setFirstCategoryId(+params.data.id))
+
+    }
   };
 
   const onEvents = {
@@ -39,7 +76,7 @@ export const FirstSunBurst = (props: Props) => {
     },
     series: {
       type: 'sunburst',
-      data: sunData,
+      data: currentData,
       radius: [0, '90%'],
       label: {
         rotate: 'horizontal',
@@ -65,10 +102,12 @@ export const FirstSunBurst = (props: Props) => {
 
   return (
     <div>
+      <Button onClick={() => console.log('work')} appearance={'primary'} color={'blue'}>Назад</Button>
       <ReactECharts
         option={option}
-        style={{height: '375px', width: 400}}
-        opts={{renderer: 'svg'}}
+        ref={chartRef}
+        key={key}
+        style={{height: 400, width: 400}}
         onEvents={onEvents}
       />
     </div>
