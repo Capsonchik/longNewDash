@@ -1,6 +1,7 @@
 import {configureStore, Middleware} from '@reduxjs/toolkit'
 import mainSlice from './store.slice'
 import firstSunSlice from './firstSunBurstSlice/firstSunBurst.slice'
+import secondSunBurstSlice from './secondSunBirstSlice/secondSunBurst.slice'
 import dataToSend from './dataSendSlice/dataToSend.slice'
 import answers from './answersSlice/answersSlice'
 
@@ -13,6 +14,7 @@ const store = configureStore({
   reducer: {
     main: mainSlice,
     firstSunBurst: firstSunSlice,
+    secondSunBurst: secondSunBurstSlice,
     dataToSend: dataToSend,
     answers: answers
   },

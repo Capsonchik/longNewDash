@@ -5,7 +5,7 @@ export type SunDataType = {
   backData: null | string
   scaleType: string
   categoryId: number | null
-  firstQuestionData: null
+  questionData: null
 }
 
 export type SunItem = {

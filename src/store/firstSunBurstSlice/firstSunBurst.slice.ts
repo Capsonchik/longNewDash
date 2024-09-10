@@ -14,7 +14,7 @@ const initialState: SunDataType = {
   backData: null,
   scaleType: '',
   categoryId: null,
-  firstQuestionData: null
+  questionData: null
 }
 
 const sunDataReducer = createSlice({
@@ -34,7 +34,7 @@ const sunDataReducer = createSlice({
       state.categoryId = action.payload
     },
     setFirstQuestionData: (state, action: PayloadAction<any>) => {
-      state.firstQuestionData = action.payload
+      state.questionData = action.payload
     }
   },
   extraReducers: (builder) => {
