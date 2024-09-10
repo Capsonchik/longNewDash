@@ -7,26 +7,27 @@ import GroupIcon from '@rsuite/icons/legacy/Group';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import GearCircleIcon from '@rsuite/icons/legacy/GearCircle';
 import {useRouter} from "next/navigation";
-import {useState} from "react";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {selectActiveKey} from "@/store/store.selectors";
+import {setActiveKey} from "@/store/store.slice";
 
 export const SideBar = () => {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  const [activeKey, setActiveKey] = useState('1')
+  const key = useSelector(selectActiveKey);
 
 
   const handleNavigate = (route: string, key: string, title: string) => {
     router.push(route)
-    setActiveKey(key)
+    dispatch(setActiveKey(key))
   }
 
   return (
     <div className={styles.sideNavContainer}>
       <Sidenav appearance={'subtle'} defaultOpenKeys={['3', '4', '5']}>
         <Sidenav.Body className={styles.sideBody}>
-          <Nav activeKey={activeKey}>
+          <Nav activeKey={key}>
             <Nav.Item onClick={() => handleNavigate('/', '1', 'Дашборд')} className={styles.sideItem} eventKey="1"
                       icon={<DashboardIcon/>}>
               Дашборд
@@ -41,7 +42,8 @@ export const SideBar = () => {
               <Nav.Item onClick={() => handleNavigate('/news', '4-3', 'Инфо - поле')} eventKey="4-3">Инфо -
                 поле</Nav.Item>
               <Nav.Item eventKey="4-4">Внешние факторы</Nav.Item>
-              <Nav.Item eventKey="3-4">Результат</Nav.Item>
+              <Nav.Item onClick={() => handleNavigate('/long/longresult', '4-5', 'Выбор результатов')}
+                        eventKey="4-5">Результат</Nav.Item>
             </Nav.Menu>
             <Nav.Menu eventKey="5" title="Настройки" icon={<GearCircleIcon/>}>
               <Nav.Item eventKey="5-1">Профиль</Nav.Item>

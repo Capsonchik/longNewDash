@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import {FirstSunBurst} from "@/components/charts/firstSunBurst";
 import {SecondSunBurst} from "@/components/charts/secondSunBurst";
+import {LongBtn} from "@/components/longBtn/LongBtn";
 
 type Props = {
   client_id: number
@@ -18,11 +19,14 @@ export default async function Page({searchParams}: { searchParams: Props }) {
 
   return (
     <div className={styles.container}>
-      Лонгитюд
       <div className={styles.bursts}>
         <FirstSunBurst/>
         <SecondSunBurst/>
       </div>
+      <div className={styles.btnBlock}>
+        <LongBtn/>
+      </div>
+
     </div>
   );
 };
