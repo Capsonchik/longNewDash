@@ -32,3 +32,19 @@ export const fetchGetSecondAnswers = createAsyncThunk(
     }
   }
 );
+
+export const fetchPostGraphData = createAsyncThunk(
+  'postGraphInfo',
+  async (data: any) => {
+    try {
+      const response = await axiosMainRequest.post(`/visualizations/crosstabulation_barcharts_percentage/`, data);
+      if (response.status === 200) {
+        return response.data;
+      } else {
+        return 'error';
+      }
+    } catch (error) {
+      return 'throwError(error)';
+    }
+  }
+);

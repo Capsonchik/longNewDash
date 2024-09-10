@@ -1,5 +1,10 @@
+import styles from './styles.module.scss';
+import {AnswerPicker} from "@/components/longResult/answerPicker/AnswerPicker";
+
 export default function Page() {
   return (
-    <span>test</span>
+    <div className={styles.container}>
+      <AnswerPicker/>
+    </div>
   )
 }

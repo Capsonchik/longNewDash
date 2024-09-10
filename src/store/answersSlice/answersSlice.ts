@@ -1,9 +1,10 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {fetchGetAnswers, fetchGetSecondAnswers} from "@/store/answersSlice/answers.actions";
+import {fetchGetAnswers, fetchGetSecondAnswers, fetchPostGraphData} from "@/store/answersSlice/answers.actions";
 
 const initialState = {
   answers: [],
   secondAnswers: [],
+  answerResponse: []
 }
 
 export const answersSlice = createSlice({
@@ -17,6 +18,9 @@ export const answersSlice = createSlice({
       })
       .addCase(fetchGetSecondAnswers.fulfilled, (state, action) => {
         state.secondAnswers = action.payload
+      })
+      .addCase(fetchPostGraphData.fulfilled, (state, action) => {
+        state.answerResponse = action.payload
       })
   }
 })

@@ -24,13 +24,13 @@ const dataToSendSlice = createSlice({
     setSecondDataId: (state, action: PayloadAction<number>) => {
       state.question2 = action.payload
     },
-    setFirstAnswerData: (state, action: PayloadAction<string[]>) => {
+    setFirstAnswerData: (state, action: PayloadAction<string[] | null>) => {
       state.answ1 = action.payload
     },
-    setSecondAnswerData: (state, action: PayloadAction<string[]>) => {
+    setSecondAnswerData: (state, action: PayloadAction<string[] | null>) => {
       state.answ2 = action.payload
     }
-  }
+  },
 })
 
 export const {
