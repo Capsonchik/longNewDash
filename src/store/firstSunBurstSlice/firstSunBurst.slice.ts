@@ -1,6 +1,11 @@
 import {SunDataType} from "@/types/sunDataTypes";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {fetchGetDefaultSunBurst, fetchGetNextSunBurst} from "@/store/firstSunBurstSlice/firstSunBirst.actions";
+import {
+  fetchGetBackData,
+  fetchGetDefaultSunBurst,
+  fetchGetNextSunBurst,
+  fetchGetSunBurstBack
+} from "@/store/firstSunBurstSlice/firstSunBirst.actions";
 
 const initialState: SunDataType = {
   sunData: [],
@@ -47,6 +52,16 @@ const sunDataReducer = createSlice({
       .addCase(fetchGetNextSunBurst.pending, (state, action) => {
         state.sunData = []
         state.key = state.key + 1
+      })
+      .addCase(fetchGetSunBurstBack.fulfilled, (state, action) => {
+        state.sunData = action.payload
+        state.key = state.key + 1
+      })
+      .addCase(fetchGetSunBurstBack.pending, (state) => {
+        state.sunData = []
+      })
+      .addCase(fetchGetBackData.fulfilled, (state, action) => {
+        state.backData = action.payload
       })
   }
 })

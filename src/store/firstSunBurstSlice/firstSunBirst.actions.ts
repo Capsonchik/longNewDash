@@ -24,3 +24,35 @@ export const fetchGetNextSunBurst = createAsyncThunk<any, any, any>(
     }
   }
 );
+
+export const fetchGetSunBurstBack = createAsyncThunk(
+  'backSunBurst',
+  async (element: string) => {
+    try {
+      const response = await axiosMainRequest.get(`visualizations/sunburst_tree/?element_name=${element}&get_back=true`);
+      if (response.status === 200) {
+        return response.data;
+      } else {
+        return 'error';
+      }
+    } catch (error) {
+      return 'throwError(error)';
+    }
+  }
+);
+
+export const fetchGetBackData = createAsyncThunk(
+  'dataForMoveBack',
+  async (element: string) => {
+    try {
+      const response = await axiosMainRequest.get(`navigator/sunburst_tree_get_parent/?element_name=${element}`);
+      if (response.status === 200) {
+        return response.data;
+      } else {
+        return 'error';
+      }
+    } catch (error) {
+      return 'throwError(error)';
+    }
+  }
+);

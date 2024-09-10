@@ -13,11 +13,18 @@ import {
   selectFirstDataKey,
   selectFirstSunData
 } from "@/store/firstSunBurstSlice/firstSunBurst.selectors";
-import {fetchGetDefaultSunBurst, fetchGetNextSunBurst} from "@/store/firstSunBurstSlice/firstSunBirst.actions";
+import {
+  fetchGetBackData,
+  fetchGetDefaultSunBurst,
+  fetchGetNextSunBurst,
+  fetchGetSunBurstBack
+} from "@/store/firstSunBurstSlice/firstSunBirst.actions";
 import {useEffect, useRef, useState} from "react";
 import {SunItems} from "@/types/sunDataTypes";
 import {AppDispatch} from "@/store/store";
 import {Button} from "rsuite";
+import {setFirstDataId} from "@/store/dataSendSlice/dataToSend.slice";
+import {fetchGetAnswers} from "@/store/answersSlice/answers.actions";
 
 export const FirstSunBurst = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -28,10 +35,12 @@ export const FirstSunBurst = () => {
   const [currentData, setCurrentData] = useState<SunItems | []>();
 
   const handleBack = () => {
-    if (backData) {
+    if (backData === null) {
+      console.log('backData', backData);
       dispatch(fetchGetDefaultSunBurst())
     } else {
-
+      dispatch(fetchGetSunBurstBack(backData))
+      dispatch(fetchGetBackData(backData))
     }
   }
 
@@ -54,11 +63,11 @@ export const FirstSunBurst = () => {
     dispatch(setCurrentValue(params.data.name));
     dispatch(setFirstBackData(params.data.name));
     dispatch(fetchGetNextSunBurst(params.data.name))
-
     if (params.data.is_last_block) {
       dispatch(setFirstScaleType(params.data.scale_type))
       dispatch(setFirstCategoryId(+params.data.id))
-
+      dispatch(setFirstDataId(+params.data.id))
+      dispatch(fetchGetAnswers(+params.data.id))
     }
   };
 
@@ -102,7 +111,14 @@ export const FirstSunBurst = () => {
 
   return (
     <div>
-      <Button onClick={() => console.log('work')} appearance={'primary'} color={'blue'}>Назад</Button>
+      <Button
+        onClick={handleBack}
+        appearance={'primary'}
+        color={'blue'}
+        disabled={backData === null}
+      >
+        Назад
+      </Button>
       <ReactECharts
         option={option}
         ref={chartRef}
