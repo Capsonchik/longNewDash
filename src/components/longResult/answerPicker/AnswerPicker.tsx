@@ -3,7 +3,7 @@
 import styles from './styles.module.scss';
 import {Button, CheckPicker} from "rsuite";
 import {useDispatch, useSelector} from "react-redux";
-import {selectFirstAnswers, selectSecondAnswers} from "@/store/answersSlice/answers.selectors";
+import {selectAnswersResponse, selectFirstAnswers, selectSecondAnswers} from "@/store/answersSlice/answers.selectors";
 import {setFirstAnswerData, setSecondAnswerData} from "@/store/dataSendSlice/dataToSend.slice";
 import {
   selectDataToSend,
@@ -12,6 +12,8 @@ import {
 } from "@/store/dataSendSlice/dataToSend.selectors";
 import {AppDispatch} from "@/store/store";
 import {fetchPostGraphData} from "@/store/answersSlice/answers.actions";
+import {LongResultBarChart} from "@/components/charts/longResultBarChart";
+import {resetResponse} from "@/store/answersSlice/answersSlice";
 
 interface AnswerItem {
   response: string;
@@ -23,6 +25,7 @@ export const AnswerPicker = () => {
   const answers1 = useSelector(selectDataToSendFirstAnswers);
   const answers2 = useSelector(selectDataToSendSecondAnswer);
   const dataToSend = useSelector(selectDataToSend);
+  const currentData = useSelector(selectAnswersResponse);
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -45,35 +48,41 @@ export const AnswerPicker = () => {
   }
 
   const handlePostAnswer = () => {
-    console.log('dataToSend', dataToSend)
+    dispatch(resetResponse())
     dispatch(fetchPostGraphData(dataToSend))
   }
 
   return (
     <div className={styles.container}>
-      <CheckPicker
-        className={styles.picker}
-        data={firstData}
-        placeholder={'Выберите вариант'}
-        onChange={handleFirstChange}
-        onClean={() => dispatch(setFirstAnswerData(null))}
-      />
-      <CheckPicker
-        className={styles.picker}
-        data={secondData}
-        placeholder={'Выберите вариант'}
-        onChange={handleSecondChange}
-        onClean={() => dispatch(setSecondAnswerData(null))}
-      />
-      <Button
-        className={styles.btn}
-        appearance={'primary'}
-        color={'blue'}
-        disabled={(answers1 === null || answers1.length === 0) || (answers2 === null || answers2.length === 0)}
-        onClick={handlePostAnswer}
-      >
-        Отпарвить
-      </Button>
+      <div className={styles.pickers}>
+        <CheckPicker
+          className={styles.picker}
+          data={firstData}
+          placeholder={'Выберите вариант'}
+          onChange={handleFirstChange}
+          onClean={() => dispatch(setFirstAnswerData(null))}
+        />
+        <CheckPicker
+          className={styles.picker}
+          data={secondData}
+          placeholder={'Выберите вариант'}
+          onChange={handleSecondChange}
+          onClean={() => dispatch(setSecondAnswerData(null))}
+        />
+        <Button
+          className={styles.btn}
+          appearance={'primary'}
+          color={'blue'}
+          disabled={(answers1 === null || answers1.length === 0) || (answers2 === null || answers2.length === 0)}
+          onClick={handlePostAnswer}
+        >
+          Отпарвить
+        </Button>
+      </div>
+      <div style={{height: '100%', marginTop: '1.5rem'}}>
+        {currentData ? <LongResultBarChart/> : null}
+        {/*<LongResultBarChart/>*/}
+      </div>
     </div>
   );
 };

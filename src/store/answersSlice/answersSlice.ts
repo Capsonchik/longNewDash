@@ -10,7 +10,11 @@ const initialState = {
 export const answersSlice = createSlice({
   name: "answers",
   initialState,
-  reducers: {},
+  reducers: {
+    resetResponse: (state) => {
+      state.answerResponse = []
+    }
+  },
   extraReducers: builder => {
     builder
       .addCase(fetchGetAnswers.fulfilled, (state, action) => {
@@ -22,9 +26,14 @@ export const answersSlice = createSlice({
       .addCase(fetchPostGraphData.fulfilled, (state, action) => {
         state.answerResponse = action.payload
       })
+      .addCase(fetchPostGraphData.pending, (state) => {
+        state.answerResponse = []
+      })
   }
 })
 
-export const {} = answersSlice.actions;
+export const {
+  resetResponse,
+} = answersSlice.actions;
 
 export default answersSlice.reducer
