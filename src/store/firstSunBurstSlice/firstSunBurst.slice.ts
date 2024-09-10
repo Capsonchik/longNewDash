@@ -41,17 +41,17 @@ const sunDataReducer = createSlice({
     builder
       .addCase(fetchGetDefaultSunBurst.fulfilled, (state, action) => {
         state.sunData = action.payload
-      })
-      .addCase(fetchGetDefaultSunBurst.pending, (state, action) => {
-        state.sunData = []
         state.key = state.key + 1
+      })
+      .addCase(fetchGetDefaultSunBurst.pending, (state) => {
+        state.sunData = []
       })
       .addCase(fetchGetNextSunBurst.fulfilled, (state, action) => {
         state.sunData = action.payload
-      })
-      .addCase(fetchGetNextSunBurst.pending, (state, action) => {
-        state.sunData = []
         state.key = state.key + 1
+      })
+      .addCase(fetchGetNextSunBurst.pending, (state) => {
+        state.sunData = []
       })
       .addCase(fetchGetSunBurstBack.fulfilled, (state, action) => {
         state.sunData = action.payload
