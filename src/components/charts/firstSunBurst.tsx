@@ -36,7 +36,6 @@ export const FirstSunBurst = () => {
 
   const handleBack = () => {
     if (backData === null) {
-      console.log('backData', backData);
       dispatch(fetchGetDefaultSunBurst())
     } else {
       dispatch(fetchGetSunBurstBack(backData))

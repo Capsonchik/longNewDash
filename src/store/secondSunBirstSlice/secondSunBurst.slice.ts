@@ -66,5 +66,11 @@ export const secondSunBurstSlice = createSlice({
   }
 })
 
-export const {} = secondSunBurstSlice.actions;
+export const {
+  setSecondBackData,
+  setSecondCategoryId,
+  setSecondScaleType,
+  setSecondQuestionData,
+  setSecondCurrentValue
+} = secondSunBurstSlice.actions;
 export default secondSunBurstSlice.reducer;

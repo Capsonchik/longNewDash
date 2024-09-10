@@ -1,10 +1,14 @@
 'use client'
 
-
 import {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch} from "@/store/store";
-import {fetchGetSecondDefaultSunBurst} from "@/store/secondSunBirstSlice/secondSunBurst.actions";
+import {
+  fetchGetSecondBackData,
+  fetchGetSecondDefaultSunBurst,
+  fetchGetSecondNextSunBurst,
+  fetchGetSecondSunBurstBack
+} from "@/store/secondSunBirstSlice/secondSunBurst.actions";
 import {SunItems} from "@/types/sunDataTypes";
 import {
   selectSecondBackData,
@@ -13,6 +17,14 @@ import {
 } from "@/store/secondSunBirstSlice/secondSunBurst.selectors";
 import {Button} from "rsuite";
 import ReactECharts from "echarts-for-react";
+import {
+  setSecondBackData,
+  setSecondCategoryId,
+  setSecondCurrentValue,
+  setSecondScaleType
+} from "@/store/secondSunBirstSlice/secondSunBurst.slice";
+import {setSecondDataId} from "@/store/dataSendSlice/dataToSend.slice";
+import {fetchGetSecondAnswers} from "@/store/answersSlice/answers.actions";
 
 export const SecondSunBurst = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -30,7 +42,7 @@ export const SecondSunBurst = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    setCurrentData(sunData);
+    setCurrentData(sunData)
     if (chartRef.current) {
       //@ts-ignore
       chartRef.current.getEchartsInstance().setOption({
@@ -38,6 +50,31 @@ export const SecondSunBurst = () => {
       });
     }
   }, [sunData]);
+
+  const handleBack = () => {
+    if (backData === null) {
+      dispatch(fetchGetSecondDefaultSunBurst())
+    } else {
+      dispatch(fetchGetSecondSunBurstBack(backData))
+      dispatch(fetchGetSecondBackData(backData))
+    }
+  }
+
+  const onChartClick = (params: any) => {
+    dispatch(setSecondCurrentValue(params.data.name));
+    dispatch(setSecondBackData(params.data.name));
+    dispatch(fetchGetSecondNextSunBurst(params.data.name))
+    if (params.data.is_last_block) {
+      dispatch(setSecondScaleType(params.data.scale_type))
+      dispatch(setSecondCategoryId(+params.data.id))
+      dispatch(setSecondDataId(+params.data.id))
+      dispatch(fetchGetSecondAnswers(+params.data.id))
+    }
+  }
+
+  const onEvents = {
+    click: onChartClick
+  };
 
   const option = {
     tooltip: {
@@ -74,7 +111,7 @@ export const SecondSunBurst = () => {
   return (
     <div>
       <Button
-        // onClick={handleBack}
+        onClick={handleBack}
         appearance={'primary'}
         color={'blue'}
         disabled={backData === null}
@@ -86,7 +123,7 @@ export const SecondSunBurst = () => {
         ref={chartRef}
         key={key}
         style={{height: 400, width: 400}}
-        // onEvents={onEvents}
+        onEvents={onEvents}
       />
     </div>
   );
