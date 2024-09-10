@@ -1,5 +1,6 @@
 import styles from './styles.module.scss';
 import {FirstSunBurst} from "@/components/charts/firstSunBurst";
+import {SecondSunBurst} from "@/components/charts/secondSunBurst";
 
 type Props = {
   client_id: number
@@ -20,6 +21,7 @@ export default async function Page({searchParams}: { searchParams: Props }) {
       Лонгитюд
       <div className={styles.bursts}>
         <FirstSunBurst/>
+        <SecondSunBurst/>
       </div>
     </div>
   );
