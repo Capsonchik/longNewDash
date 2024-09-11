@@ -2,18 +2,19 @@
 
 import './map.css';
 import {useEffect, useState} from "react";
+import {RegionInfo, RU_BA, RU_CU, RU_LIP, RU_SAK, RU_TA} from "@/mocks/regionInfoMock";
 
 export const Map = () => {
   const [activePath, setActivePath] = useState<string | null>(null); // Активный path
   const [tooltipVisible, setTooltipVisible] = useState(false); // Видимость тултипа
-  const [tooltipContent, setTooltipContent] = useState(""); // Контент тултипа
+  const [tooltipContent, setTooltipContent] = useState<RegionInfo | null>(); // Контент тултипа
 
   const pathsData = [
-    {id: "RU-TA", title: "Республика Татарстан", color: "#ff0000", info: "Информация о Татарстане"},
-    {id: "RU-LIP", title: "Липецкая область", color: "#00ff00", info: "Информация о Липецке"},
-    {id: "RU-CU", title: "Чувашская республика", color: "#00ff00", info: "Информация о Чувашия"},
-    {id: "RU-BA", title: "Республика башкартостан", color: "#00ff00", info: "Информация о Башкартостан"},
-    {id: "RU-SAK", title: "Сахалинская область", color: "#00ff00", info: "Информация о Сахалин"},
+    {id: "RU-TA", title: "Республика Татарстан", color: "#ff0000", info: RU_TA},
+    {id: "RU-LIP", title: "Липецкая область", color: "#00ff00", info: RU_LIP},
+    {id: "RU-CU", title: "Чувашская республика", color: "#00ff00", info: RU_CU},
+    {id: "RU-BA", title: "Республика башкартостан", color: "#00ff00", info: RU_BA},
+    {id: "RU-SAK", title: "Сахалинская область", color: "#00ff00", info: RU_SAK},
 
   ];
 
@@ -39,7 +40,16 @@ export const Map = () => {
   return (
     <div className="rf-map margin-top-20">
       <div className={`tooltip ${tooltipVisible ? 'tooltip-visible' : ''}`}>
-        {tooltipContent}
+        <span className={'tooltipTitle'}>{tooltipContent?.name}</span>
+        <span>{tooltipContent?.param}</span>
+        <div className={'cityParam'}>
+          <span>{tooltipContent?.city}</span>
+          <span
+            style={{color: `${tooltipContent?.cityStatus === 'up' ? 'green' : 'red'}`}}
+          >
+            {tooltipContent?.cityStatus === 'down' ? '-' : '+'}{tooltipContent?.cityPercentage}%
+          </span>
+        </div>
       </div>
       <div className="district"><b></b><span></span></div>
       <div className="close-district">&times;</div>

@@ -5,26 +5,45 @@
 }
 
 .tooltip {
-    width: 300px;
+    width: 210px;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     top: -30px;
     z-index: 1;
     right: 0;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f2f2f5;
+    background-color: #f2faff;
+    border-radius: 5px;
     padding: 4px;
     opacity: 0; /* Элемент изначально скрыт */
     visibility: hidden; /* Скрывает элемент визуально */
     transition: opacity 0.3s ease, visibility 0.3s ease; /* Переход для плавности */
+    box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
 }
 
 .tooltip-visible {
     opacity: 1; /* Показываем элемент */
     visibility: visible; /* Делаем его видимым */
+}
+
+.tooltipTitle {
+    font-size: 1rem;
+    color: #3e4676;
+}
+
+.tooltipParam {
+    color: #3e4676;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cityParam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3e4676;
 }
 
 .rf-map {
