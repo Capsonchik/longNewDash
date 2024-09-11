@@ -8,7 +8,6 @@ export const Map = () => {
   const [tooltipVisible, setTooltipVisible] = useState(false); // Видимость тултипа
   const [tooltipContent, setTooltipContent] = useState(""); // Контент тултипа
 
-  // Массив с данными path, которые должны подсвечиваться
   const pathsData = [
     {id: "RU-TA", title: "Республика Татарстан", color: "#ff0000", info: "Информация о Татарстане"},
     {id: "RU-LIP", title: "Липецкая область", color: "#00ff00", info: "Информация о Липецке"},
@@ -16,7 +15,6 @@ export const Map = () => {
     {id: "RU-BA", title: "Республика башкартостан", color: "#00ff00", info: "Информация о Башкартостан"},
     {id: "RU-SAK", title: "Сахалинская область", color: "#00ff00", info: "Информация о Сахалин"},
 
-    // Добавь остальные регионы сюда
   ];
 
   useEffect(() => {
@@ -40,14 +38,9 @@ export const Map = () => {
 
   return (
     <div className="rf-map margin-top-20">
-      {tooltipVisible ? (
-          <div className="tooltip">
-            {tooltipContent}
-          </div>
-        )
-        : null
-      }
-
+      <div className={`tooltip ${tooltipVisible ? 'tooltip-visible' : ''}`}>
+        {tooltipContent}
+      </div>
       <div className="district"><b></b><span></span></div>
       <div className="close-district">&times;</div>
       <div id="RU-SAR" className="district-text">

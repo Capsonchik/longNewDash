@@ -17,6 +17,14 @@
     background-color: #fff;
     border-radius: 8px;
     padding: 4px;
+    opacity: 0; /* Элемент изначально скрыт */
+    visibility: hidden; /* Скрывает элемент визуально */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Переход для плавности */
+}
+
+.tooltip-visible {
+    opacity: 1; /* Показываем элемент */
+    visibility: visible; /* Делаем его видимым */
 }
 
 .rf-map {
