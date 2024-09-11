@@ -1,6 +1,22 @@
 .rf-map,
 .rf-map * {
     box-sizing: border-box;
+    position: relative;
+}
+
+.tooltip {
+    width: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+    z-index: 1;
+    right: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 4px;
 }
 
 .rf-map {
@@ -177,17 +193,17 @@
 
 /* Цвета регионов */
 .rf-map [data-code="RU-SAR"] {
-    fill: #ccc;
+    fill: #2469ce;
     cursor: pointer;
 }
 
 .rf-map [data-code="RU-SA"] {
-    fill: #ccc;
+    fill: #2469ce;
     cursor: pointer;
 }
 
 .rf-map [data-code="RU-KO"] {
-    fill: #ccc;
+    fill: #2469ce;
 }
 
 .rf-map [data-code="RU-SAR"]:hover {
