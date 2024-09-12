@@ -16,10 +16,9 @@ export const LongBtn = () => {
 
   return (
     <Button
-      style={{width: '70%',}}
+      style={{width: '70%', background: '#FF8200'}}
       appearance={'primary'}
       onClick={onPress}
-
     >
       Перейти к результатам
     </Button>

@@ -115,6 +115,7 @@ export const SecondSunBurst = () => {
         appearance={'primary'}
         color={'blue'}
         disabled={backData === null}
+        style={{background: '#FF8200'}}
       >
         Назад
       </Button>

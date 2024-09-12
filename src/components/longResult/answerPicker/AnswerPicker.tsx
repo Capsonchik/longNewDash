@@ -71,6 +71,7 @@ export const AnswerPicker = () => {
         />
         <Button
           className={styles.btn}
+          style={{background: '#FF8200'}}
           appearance={'primary'}
           color={'blue'}
           disabled={(answers1 === null || answers1.length === 0) || (answers2 === null || answers2.length === 0)}
