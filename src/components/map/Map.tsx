@@ -1,6 +1,6 @@
 'use client'
 
-import './map.css';
+import './map.scss';
 import {useEffect, useState} from "react";
 import {RegionInfo, RU_BA, RU_CU, RU_LIP, RU_SAK, RU_TA} from "@/mocks/regionInfoMock";
 
@@ -69,7 +69,7 @@ export const Map = () => {
           data-title="Москва"
           data-code="RU-MOW"
           style={{
-            fill: activePath === "RU-MOW" ? "#ffa812" : "#2469ce", // Подсвечиваем активный path
+            fill: activePath === "RU-MOW" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
           }}
         />
         <path
@@ -137,7 +137,7 @@ export const Map = () => {
           data-title="Липецкая область"
           data-code="RU-LIP"
           style={{
-            fill: activePath === "RU-LIP" ? "#ffa812" : "#2469ce", // Подсвечиваем активный path
+            fill: activePath === "RU-LIP" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
           }}
         />
         <path
@@ -220,7 +220,7 @@ export const Map = () => {
           data-title="Республика Башкортостан"
           data-code="RU-BA"
           style={{
-            fill: activePath === "RU-BA" ? "#ffa812" : "#2469ce", // Подсвечиваем активный path
+            fill: activePath === "RU-BA" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
           }}
         />
         <path
@@ -313,7 +313,7 @@ export const Map = () => {
           data-title="Сахалинская область"
           data-code="RU-SAK"
           style={{
-            fill: activePath === "RU-SAK" ? "#ffa812" : "#2469ce", // Подсвечиваем активный path
+            fill: activePath === "RU-SAK" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
           }}
         />
         <path
@@ -386,7 +386,7 @@ export const Map = () => {
           data-title="Республика Татарстан"
           data-code="RU-TA"
           style={{
-            fill: activePath === "RU-TA" ? "#ffa812" : "#2469ce", // Подсвечиваем активный path
+            fill: activePath === "RU-TA" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
           }}
         />
         <path
@@ -399,7 +399,7 @@ export const Map = () => {
           data-title="Чувашская Республика"
           data-code="RU-CU"
           style={{
-            fill: activePath === "RU-CU" ? "#ffa812" : "#2469ce", // Подсвечиваем активный path
+            fill: activePath === "RU-CU" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
           }}
         />
         <path

@@ -1,3 +1,5 @@
+@import "src/mixins";
+
 .logo {
   color: #ffffff;
   margin-right: 193px;
@@ -14,7 +16,7 @@
 }
 
 .header:before {
-  background: #153d77;
+  background: $bg-top;
   content: " ";
   height: 264px;
   left: 0;

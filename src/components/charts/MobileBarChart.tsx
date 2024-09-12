@@ -1,4 +1,5 @@
 'use client'
+
 import ReactECharts from "echarts-for-react";
 
 type Props = {};
@@ -22,7 +23,7 @@ export const MobileBarChart = (props: Props) => {
         type: 'bar',
         barWidth: '20%',
         itemStyle: {
-          color: '#2469ce',
+          color: '#FF8200',
           borderRadius: [10, 10, 0, 0]
         }
       },

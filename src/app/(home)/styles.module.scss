@@ -1,3 +1,5 @@
+@import "src/mixins";
+
 .main {
   margin-top: 1rem;
 }
@@ -18,7 +20,7 @@
 }
 
 .content:before {
-  background: #f2faff;
+  background: $bg-bot;
   content: " ";
   left: 0;
   position: absolute;

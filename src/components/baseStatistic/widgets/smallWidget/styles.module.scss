@@ -1,3 +1,5 @@
+@import "src/mixins";
+
 .container {
   box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
   padding: 12px 20px 20px;
@@ -30,7 +32,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #2469ce;
+  background-color: $bg-top;
   display: flex;
   justify-content: center;
   align-items: center;
