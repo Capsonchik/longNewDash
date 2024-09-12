@@ -1,31 +1,21 @@
 .slider {
   width: 100%;
   overflow: hidden;
-  //position: relative;
-  //background: #f3f3f3;
-  //border: 1px solid #ccc;
-  //white-space: nowrap;
 }
 
 .sliderContent {
   display: flex;
   gap: 3rem;
-  width: 200%;
-  //padding-left: 100%;
-  animation: marquee 30s linear infinite;
+  width: 139%;
+  animation: marquee 20s linear infinite;
   animation-delay: 0s;
 }
 
-//.sliderContent span {
-//  display: inline-block;
-//  padding: 0 2rem;
-//}
-
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-40%);
   }
 }
