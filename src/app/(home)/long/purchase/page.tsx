@@ -5,9 +5,13 @@ import {MapBig} from "@/components/mapBig/MapBig";
 import {MAP_REGIONS} from "@/mocks/regionInfoMock";
 import {SelectPicker} from "rsuite";
 import {useState} from "react";
+import {useSelector} from "react-redux";
+import {selectCurrentRegion} from "@/store/store.selectors";
 
 export default function Page() {
-  const [currentRegion, setCurrentRegion] = useState<string | null>(null)
+  const region = useSelector(selectCurrentRegion)
+
+  const [currentRegion, setCurrentRegion] = useState<string | null>(region)
 
   const data = MAP_REGIONS.map(item => ({label: item, value: item}));
 
@@ -23,6 +27,7 @@ export default function Page() {
       <span className={styles.title}>Объем покупок по регионам</span>
       <div className={styles.filters}>
         <SelectPicker
+          defaultValue={currentRegion}
           data={data}
           placeholder={'Выберите регион...'}
           onChange={(value) => handlePickRegion(value)}

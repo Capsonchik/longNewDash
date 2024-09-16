@@ -5,7 +5,8 @@ import {Map} from "@/components/map/Map";
 import {useRouter} from "next/navigation";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "@/store/store";
-import {setActiveKey} from "@/store/store.slice";
+import {setActiveKey, setCurrentRegion} from "@/store/store.slice";
+import {useEffect, useState} from "react";
 
 
 export const MapWidget = () => {
@@ -17,11 +18,21 @@ export const MapWidget = () => {
     router.push('/long/purchase');
   }
 
+  const [currentPickValue, setCurrentPickValue] = useState<string | null>(null)
+
+  console.log('currentPickValue', currentPickValue)
+
+  useEffect(() => {
+    if (currentPickValue !== null) {
+      dispatch(setCurrentRegion(currentPickValue))
+      router.push('/long/purchase');
+    }
+  }, [currentPickValue])
 
   return (
     <div className={styles.container}>
       <span onClick={handleNavigate} className={styles.title}>Объем покупок в категории</span>
-      <Map/>
+      <Map valueSetter={setCurrentPickValue}/>
     </div>
   );
 };
