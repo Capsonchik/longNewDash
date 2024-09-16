@@ -6,10 +6,12 @@ import DashboardIcon from '@rsuite/icons/legacy/Dashboard';
 import GroupIcon from '@rsuite/icons/legacy/Group';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import GearCircleIcon from '@rsuite/icons/legacy/GearCircle';
+
 import {useRouter} from "next/navigation";
 import {useDispatch, useSelector} from "react-redux";
 import {selectActiveKey} from "@/store/store.selectors";
 import {setActiveKey} from "@/store/store.slice";
+import FunnelTrendIcon from '@rsuite/icons/FunnelTrend';
 
 export const SideBar = () => {
   const router = useRouter();
@@ -42,6 +44,14 @@ export const SideBar = () => {
               className={`${key === '2' ? styles.sideItemActive : styles.sideDisable}`}
             >
               Группы пользователей
+            </Nav.Item>
+            <Nav.Item
+              eventKey="3"
+              icon={<FunnelTrendIcon/>}
+              onClick={() => handleNavigate('/long/purchase', '3', 'Объем покупок')}
+              className={`${key === '3' ? styles.sideItemActive : styles.sideDisable}`}
+            >
+              Объем покупок
             </Nav.Item>
             <Nav.Menu
               eventKey="4"

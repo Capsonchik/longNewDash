@@ -26,6 +26,9 @@ export const HeaderTitle = () => {
         case "/news":
           dispatch(setMainTitle('Новости системы'))
           break;
+        case "/long/purchase":
+          dispatch(setMainTitle('Объем покупок'))
+          break;
         default:
           // Handle other paths or do nothing
           break;
