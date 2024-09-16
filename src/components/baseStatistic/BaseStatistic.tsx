@@ -6,7 +6,7 @@ import {RadarWidget} from "@/components/baseStatistic/widgets/radarWidget/RadarW
 import {MobileWidget} from "@/components/baseStatistic/widgets/mobileWidget/MobileWidget";
 import {TrafficWidget} from "@/components/baseStatistic/widgets/trafficWidget/TrafficWidget";
 import {BrowserWidget} from "@/components/baseStatistic/widgets/browserWidget/BrowserWidget";
-import {MainSlider} from "@/components/slider/MainSlider";
+import {MainSwiper} from "@/components/swiper/MainSwiper";
 
 export const BaseStatistic = () => {
   return (
@@ -46,8 +46,11 @@ export const BaseStatistic = () => {
           <MapWidget/>
         </div>
       </div>
-      <div className={styles.slider}>
-        <MainSlider/>
+      {/*<div className={styles.slider}>*/}
+      {/*  <MainSlider/>*/}
+      {/*</div>*/}
+      <div className={styles.swiper}>
+        <MainSwiper/>
       </div>
       <div className={styles.middleContainer}>
         <div className={styles.block}>
