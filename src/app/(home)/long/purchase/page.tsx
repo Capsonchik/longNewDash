@@ -2,14 +2,14 @@
 
 import styles from './styles.module.scss'
 import {MapBig} from "@/components/mapBig/MapBig";
-import {REGION} from "@/mocks/regionInfoMock";
+import {MAP_REGIONS} from "@/mocks/regionInfoMock";
 import {SelectPicker} from "rsuite";
 import {useState} from "react";
 
 export default function Page() {
   const [currentRegion, setCurrentRegion] = useState<string | null>(null)
 
-  const data = REGION.map(item => ({label: item, value: item}));
+  const data = MAP_REGIONS.map(item => ({label: item, value: item}));
 
   const handlePickRegion = (value: string | null) => {
     if (value) {
