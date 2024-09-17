@@ -3,12 +3,17 @@
 import './map.scss';
 import {useEffect, useState} from "react";
 import {RegionInfo, RU_BA, RU_CU, RU_LIP, RU_SAK, RU_TA} from "@/mocks/regionInfoMock";
+import {useDispatch} from "react-redux";
+import {AppDispatch} from "@/store/store";
+import {setCurrentPickValue} from "@/store/store.slice";
 
 type Props = {
   valueSetter: (value: string | null) => void
 }
 
-export const Map = ({valueSetter}: Props) => {
+export const Map = () => {
+  const dispatch = useDispatch<AppDispatch>()
+
   const [activePath, setActivePath] = useState<string | null>(null); // Активный path
   const [tooltipVisible, setTooltipVisible] = useState(false); // Видимость тултипа
   const [tooltipContent, setTooltipContent] = useState<RegionInfo | null>(); // Контент тултипа
@@ -78,7 +83,7 @@ export const Map = ({valueSetter}: Props) => {
           }}
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -94,7 +99,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-SPE"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -110,7 +115,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-NEN"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -126,7 +131,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-YAR"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -142,7 +147,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-CHE"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -158,7 +163,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-ULY"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -174,7 +179,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-TYU"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -190,7 +195,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-TUL"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -206,7 +211,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-SVE"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -222,7 +227,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-RYA"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -238,7 +243,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-ORL"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -254,7 +259,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-OMS"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -270,7 +275,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-NGR"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -289,7 +294,7 @@ export const Map = ({valueSetter}: Props) => {
           }}
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -305,7 +310,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KRS"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -321,7 +326,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KGN"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -337,7 +342,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KGD"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -353,7 +358,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-IVA"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -369,7 +374,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-BRY"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -385,7 +390,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-AST"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -401,7 +406,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KHA"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -417,7 +422,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-CE"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -433,7 +438,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-UD"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -449,7 +454,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-SE"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -465,7 +470,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-MO"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -481,7 +486,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KR"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -497,7 +502,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KL"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -513,7 +518,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-IN"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -529,7 +534,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-AL"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -548,7 +553,7 @@ export const Map = ({valueSetter}: Props) => {
           }}
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -564,7 +569,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-AD"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -580,7 +585,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-CR"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -596,7 +601,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-SEV"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -612,7 +617,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KO"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -628,7 +633,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KIR"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -644,7 +649,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-PNZ"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -660,7 +665,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-TAM"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -676,7 +681,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-MUR"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -692,7 +697,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-LEN"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -708,7 +713,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-VLG"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -724,7 +729,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KOS"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
         />
         <path
@@ -733,7 +738,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-PSK"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -749,7 +754,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-ARK"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -765,7 +770,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-YAN"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -781,7 +786,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-CHU"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -797,7 +802,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-YEV"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -813,7 +818,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-TY"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -832,7 +837,7 @@ export const Map = ({valueSetter}: Props) => {
           }}
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -848,7 +853,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-AMU"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -864,7 +869,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-BU"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
         />
         <path
@@ -873,7 +878,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KK"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -889,7 +894,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KEM"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -905,7 +910,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-NVS"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -921,7 +926,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-ALT"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -937,7 +942,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-DA"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -953,7 +958,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-STA"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -969,7 +974,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KB"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -985,7 +990,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KC"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1001,7 +1006,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KDA"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1017,7 +1022,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-ROS"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1033,7 +1038,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-SAM"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1052,7 +1057,7 @@ export const Map = ({valueSetter}: Props) => {
           }}
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1068,7 +1073,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-ME"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1087,7 +1092,7 @@ export const Map = ({valueSetter}: Props) => {
           }}
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1103,7 +1108,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-NIZ"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1119,7 +1124,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-VLA"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1135,7 +1140,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-MOS"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1151,7 +1156,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KLU"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1167,7 +1172,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-BEL"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1183,7 +1188,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-ZAB"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1199,7 +1204,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-PRI"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1215,7 +1220,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KAM"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1231,7 +1236,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-MAG"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1247,7 +1252,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-SA"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1263,7 +1268,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KYA"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1279,7 +1284,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-ORE"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1295,7 +1300,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-SAR"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1311,7 +1316,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-VGG"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1327,7 +1332,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-VOR"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1343,7 +1348,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-SMO"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1359,7 +1364,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-TVE"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1375,7 +1380,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-PER"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1391,7 +1396,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-KHM"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1407,7 +1412,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-TOM"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1423,7 +1428,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-IRK"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1439,7 +1444,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-HR"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1455,7 +1460,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-ZP"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1471,7 +1476,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-DON"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }}
           onMouseEnter={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
@@ -1487,7 +1492,7 @@ export const Map = ({valueSetter}: Props) => {
           data-code="RU-LUG"
           onClick={(event) => {
             const title = event.currentTarget.getAttribute('data-title');
-            valueSetter(title)// Выводим значение data-title в консоль
+            dispatch(setCurrentPickValue(title))
           }} onMouseEnter={(event) => {
           const title = event.currentTarget.getAttribute('data-title');
           setRegionName(title)

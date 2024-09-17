@@ -5,13 +5,15 @@ type MainSliceType = {
   mainDescription: string;
   activeKey: string;
   currentRegion: string;
+  currentPickValue: string | null;
 }
 
 const initialState: MainSliceType = {
   mainTitle: "Обзор Аналитики",
   mainDescription: "За последние 30 дней ваш показатель отказов увеличился на 5,25 %.",
   activeKey: '1',
-  currentRegion: 'Красноярский край'
+  currentRegion: 'Красноярский край',
+  currentPickValue: null
 }
 
 const mainSlice = createSlice({
@@ -26,6 +28,9 @@ const mainSlice = createSlice({
     },
     setCurrentRegion: (state, action: PayloadAction<string>) => {
       state.currentRegion = action.payload
+    },
+    setCurrentPickValue: (state, action: PayloadAction<string | null>) => {
+      state.currentPickValue = action.payload
     }
   }
 })
@@ -33,6 +38,7 @@ const mainSlice = createSlice({
 export const {
   setMainTitle,
   setActiveKey,
-  setCurrentRegion
+  setCurrentRegion,
+  setCurrentPickValue,
 } = mainSlice.actions;
 export default mainSlice.reducer;
