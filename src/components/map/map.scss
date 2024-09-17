@@ -6,10 +6,26 @@
   position: relative;
 }
 
+.cityName {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  font-size: 1rem;
+  color: #3e4676;
+  width: 210px;
+  border: 1px solid #f2f2f5;
+  background-color: $bg-bot;
+  border-radius: 5px;
+  padding: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .tooltip {
   width: 210px;
   position: absolute;
-  top: -30px;
+  top: 20px;
   z-index: 1;
   right: 0;
   display: flex;
