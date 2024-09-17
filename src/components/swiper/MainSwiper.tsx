@@ -1,8 +1,8 @@
 'use client'
 
+import 'swiper/css';
 import styles from './styles.module.scss'
 import {Swiper, SwiperSlide} from 'swiper/react';
-import 'swiper/css';
 import {SliderBlock} from "@/components/slider/sliderBlock/SliderBlock";
 import {Autoplay} from 'swiper/modules';
 
