@@ -84,7 +84,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -100,7 +100,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -116,7 +116,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -132,7 +132,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -148,7 +148,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -164,7 +164,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -180,7 +180,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -196,7 +196,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -212,7 +212,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -228,7 +228,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -244,7 +244,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -260,7 +260,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -276,7 +276,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -295,7 +295,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -311,7 +311,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -327,7 +327,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -343,7 +343,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -359,7 +359,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -375,7 +375,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -391,7 +391,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -407,7 +407,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -423,7 +423,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -439,7 +439,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -455,7 +455,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -471,7 +471,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -487,7 +487,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -503,7 +503,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -519,7 +519,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -535,7 +535,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -554,7 +554,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -570,7 +570,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -586,7 +586,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -602,7 +602,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -618,7 +618,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -634,7 +634,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -650,7 +650,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -666,7 +666,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -682,7 +682,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -698,7 +698,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -714,7 +714,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -739,7 +739,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -755,7 +755,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -771,7 +771,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -787,7 +787,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -803,7 +803,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -819,7 +819,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -838,7 +838,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -854,7 +854,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -879,7 +879,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -895,7 +895,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -911,7 +911,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -927,7 +927,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -943,7 +943,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -959,7 +959,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -975,7 +975,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -991,7 +991,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1007,7 +1007,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1023,7 +1023,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1039,7 +1039,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1058,7 +1058,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1074,7 +1074,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1093,7 +1093,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1109,7 +1109,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1125,7 +1125,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1141,7 +1141,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1157,7 +1157,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1173,7 +1173,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1189,7 +1189,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1205,7 +1205,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1221,7 +1221,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1237,7 +1237,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1253,7 +1253,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1269,7 +1269,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1285,7 +1285,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1301,7 +1301,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1317,7 +1317,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1333,7 +1333,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1349,7 +1349,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1365,7 +1365,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1381,7 +1381,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1397,7 +1397,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1413,7 +1413,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1429,7 +1429,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1445,7 +1445,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1461,7 +1461,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1477,7 +1477,7 @@ export const Map = ({valueSetter}: Props) => {
             const title = event.currentTarget.getAttribute('data-title');
             setRegionName(title)
           }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
         />
@@ -1492,7 +1492,7 @@ export const Map = ({valueSetter}: Props) => {
           const title = event.currentTarget.getAttribute('data-title');
           setRegionName(title)
         }}
-          onMouseLeave={(event) => {
+          onMouseLeave={() => {
             setRegionName(null)
           }}
 
