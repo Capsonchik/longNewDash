@@ -28,7 +28,7 @@ export const MapWidget = () => {
   useEffect(() => {
     if (currentPickValue !== null) {
       dispatch(setCurrentRegion(currentPickValue))
-      router.push('/long/purchase');
+      // router.push('/long/purchase');
     }
   }, [currentPickValue])
 

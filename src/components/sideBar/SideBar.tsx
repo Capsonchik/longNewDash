@@ -23,6 +23,7 @@ export const SideBar = () => {
   const handleNavigate = (route: string, key: string, title: string) => {
     router.push(route)
     dispatch(setActiveKey(key))
+    console.log('go to', route);
   }
 
   return (

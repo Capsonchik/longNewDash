@@ -18,9 +18,9 @@ const store = configureStore({
     dataToSend: dataToSend,
     answers: answers
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware()
-      .concat(customMiddleware) // Ваше дополнительное middleware
+  // middleware: (getDefaultMiddleware) =>
+  //   getDefaultMiddleware()
+  //     .concat(customMiddleware)
 })
 
 export type AppDispatch = typeof store.dispatch
