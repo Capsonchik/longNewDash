@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import {WidgetTable} from "@/components/baseStatistic/widgets/languageWidget/widgetTable/WidgetTable";
+import {WidgetTable} from "@/components/baseStatistic/widgets/nationalityWidget/widgetTable/WidgetTable";
 
 type Props = {};
 export const LanguageWidget = (props: Props) => {

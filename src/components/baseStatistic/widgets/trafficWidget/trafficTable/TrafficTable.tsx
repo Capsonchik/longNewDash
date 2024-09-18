@@ -1,6 +1,6 @@
 'use client'
 
-import styles from "@/components/baseStatistic/widgets/languageWidget/widgetTable/styles.module.scss";
+import styles from "@/components/baseStatistic/widgets/nationalityWidget/widgetTable/styles.module.scss";
 import {Cell, Column, HeaderCell} from "rsuite-table";
 import {Table} from "rsuite";
 import {TRAFFIC_MOCK} from "@/mocks/trafficMock";

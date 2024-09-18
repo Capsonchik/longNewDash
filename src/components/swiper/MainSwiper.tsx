@@ -26,9 +26,10 @@ export const MainSwiper = () => {
         <SwiperSlide>
           <SliderBlock
             title={'Индекс свободных денег'}
-            percent={60.5}
+            percent={"60.5%"}
             date={'август 2024'}
-            up={3.4} upStatus={'up'}
+            up={3.4}
+            upStatus={'up'}
             down={19.1}
             downStatus={'down'}
             change={'п.п'}
@@ -37,7 +38,7 @@ export const MainSwiper = () => {
         <SwiperSlide>
           <SliderBlock
             title={'Индекс благосостояния'}
-            percent={30.2}
+            percent={"30.2%"}
             date={'август 2024'}
             up={0.5}
             upStatus={'down'}
@@ -49,10 +50,10 @@ export const MainSwiper = () => {
         <SwiperSlide>
           <SliderBlock
             title={'Дефлятор FMCG'}
-            percent={227.5}
+            percent={"227.5%"}
             date={'август 2024'}
-            up={2.3} upStatus={'up'}
-            down={21.2}
+            up={0.1} upStatus={'up'}
+            down={21.6}
             downStatus={'up'}
             change={'%'}
           />
@@ -60,23 +61,23 @@ export const MainSwiper = () => {
         <SwiperSlide>
           <SliderBlock
             title={'Недельный средний чек'}
-            percent={816}
-            date={'2-8 сентября'}
-            up={2.9}
-            upStatus={'down'}
-            down={11.2}
+            percent={'816 руб.'}
+            date={'9-15 сентября'}
+            up={4.0}
+            upStatus={"up"}
+            down={21.6}
             downStatus={'up'}
             change={'%'}
           />
         </SwiperSlide>
         <SwiperSlide>
           <SliderBlock
-            title={'Недельные расходы'}
-            percent={60.5}
+            title={'9-15 сентября'}
+            percent={"7764 руб."}
             date={'2-8 сентября'}
             up={2.4}
             upStatus={'up'}
-            down={23.2}
+            down={21.6}
             downStatus={'up'}
             change={'%'}/>
         </SwiperSlide>

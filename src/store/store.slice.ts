@@ -10,8 +10,8 @@ type MainSliceType = {
 }
 
 const initialState: MainSliceType = {
-  mainTitle: "Обзор Аналитики",
-  mainDescription: "За последние 30 дней ваш показатель отказов увеличился на 5,25 %.",
+  mainTitle: "Лонгитюдная система",
+  mainDescription: "Витрина данных",
   activeKey: '1',
   currentRegion: 'Красноярский край',
   currentPickValue: null,

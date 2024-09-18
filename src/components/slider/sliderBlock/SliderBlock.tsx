@@ -2,7 +2,7 @@ import styles from './styles.module.scss'
 
 type Props = {
   title: string
-  percent: number
+  percent: number | string
   date: string
   up: number
   upStatus: 'up' | 'down'

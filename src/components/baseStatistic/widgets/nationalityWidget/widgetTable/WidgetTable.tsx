@@ -17,8 +17,8 @@ export const WidgetTable = (props: Props) => {
         console.log(rowData);
       }}
     >
-      <Column width={90} align="center" fixed>
-        <HeaderCell className={styles.headerCell}>Язык</HeaderCell>
+      <Column width={120} align="center" fixed>
+        <HeaderCell className={styles.headerCell}>Национальность</HeaderCell>
         <Cell className={styles.cell} dataKey="language"/>
       </Column>
 

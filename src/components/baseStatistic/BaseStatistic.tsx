@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import {SmallWidget} from "@/components/baseStatistic/widgets/smallWidget/SmallWidget";
 import {MapWidget} from "@/components/baseStatistic/widgets/mapWidget/MapWidget";
-import {LanguageWidget} from "@/components/baseStatistic/widgets/languageWidget/LanguageWidget";
+import {LanguageWidget} from "@/components/baseStatistic/widgets/nationalityWidget/LanguageWidget";
 import {RadarWidget} from "@/components/baseStatistic/widgets/radarWidget/RadarWidget";
 import {MobileWidget} from "@/components/baseStatistic/widgets/mobileWidget/MobileWidget";
 import {TrafficWidget} from "@/components/baseStatistic/widgets/trafficWidget/TrafficWidget";
@@ -15,28 +15,28 @@ export const BaseStatistic = () => {
         <div className={styles.widgets}>
           <SmallWidget
             name={'Количество участников системы'}
-            value={'1200 чел'}
-            statistic={'-2.65%'}
-            status={"danger"}
+            value={'40 000 чел.'}
+            statistic={'+2.65%'}
+            status={'success'}
             description={'Количество посетителей'}
           />
           <SmallWidget
             name={'Внесенные SKU'}
-            value={'13900'}
+            value={'25 млн.'}
             statistic={'8.35%'}
             status={"success"}
             description={'Больше посетителей чем обычно'}
           />
           <SmallWidget
             name={'Количество ответов'}
-            value={'255'}
+            value={'100 000'}
             statistic={'5.50%'}
             status={"success"}
             description={'Активность выше чем обычно'}
           />
           <SmallWidget
             name={'Объем медиа данных'}
-            value={'49GB'}
+            value={'49TB'}
             statistic={'-4.25%'}
             status={"danger"}
             description={'Активность ниже чем обычно'}

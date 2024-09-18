@@ -14,12 +14,12 @@ export const RadarWidgetChart = (props: Props) => {
     radar: {
       // shape: 'circle',
       indicator: [
-        {name: 'Продажи', max: 6500},
-        {name: 'Администрация', max: 16000},
-        {name: 'Технологии', max: 30000},
-        {name: 'Поддержка', max: 38000},
-        {name: 'Разработка', max: 52000},
-        {name: 'Маркетинг', max: 25000}
+        {name: 'Девочка', max: 6500},
+        {name: 'Девушка', max: 16000},
+        {name: 'Женщина', max: 30000},
+        {name: 'Мальчик', max: 38000},
+        {name: 'Парень', max: 52000},
+        {name: 'Мужчина', max: 25000}
       ]
     },
     series: [
@@ -43,7 +43,7 @@ export const RadarWidgetChart = (props: Props) => {
     <div>
       <ReactECharts
         option={option}
-        style={{height: '335px', width: '100%'}} // Настройте размеры графика
+        style={{height: '305px', width: '100%'}} // Настройте размеры графика
         opts={{renderer: 'svg'}} // Выберите рендерер: 'canvas' или 'svg'
       />
     </div>
