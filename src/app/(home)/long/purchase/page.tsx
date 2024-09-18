@@ -30,6 +30,12 @@ export default function Page() {
     } else setCurrentRegion(null);
   }
 
+  const handleChangeRegion = (value: string | null) => {
+    if (value) {
+      dispatch(setCurrentPeriod(value))
+    }
+  }
+
   return (
     <div className={styles.container}>
       <span className={styles.title}>Объем покупок по регионам</span>
@@ -45,7 +51,7 @@ export default function Page() {
           defaultValue={'Год'}
           data={periodData}
           placeholder={'Период...'}
-          onChange={(value) => dispatch(setCurrentPeriod(value))}
+          onChange={handleChangeRegion}
         />
       </div>
       <div className={styles.slider}>
