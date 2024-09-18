@@ -1,4 +1,6 @@
 import {YearPicker} from "@/components/rangePickers/yearPicker/YearPicker";
+import {QuarterPicker} from "@/components/rangePickers/quarterPicker/QuarterPicker";
+import {MonthPiker} from "@/components/rangePickers/monthPicker/MonthPiker";
 
 type Props = {
   periodType: string
@@ -10,9 +12,9 @@ export const RangePickers = ({periodType}: Props) => {
       case 'Год':
         return <YearPicker/>
       case 'Квартал':
-        return <span>Квартал</span>
+        return <QuarterPicker/>
       case 'Месяц':
-        return <span>Месяц</span>
+        return <MonthPiker/>
       case 'Неделя':
         return <span>Неделя</span>
       case 'День':

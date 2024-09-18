@@ -7,8 +7,8 @@ export const YearPicker = () => {
     <RangeSlider
       renderMark={(mark) => mark}
       graduated
-      defaultValue={[2019, 2022]}
-      min={2018}
+      defaultValue={[2021, 2022]}
+      min={2020}
       max={2024}
     />
   );
