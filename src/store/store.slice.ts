@@ -4,7 +4,7 @@ type MainSliceType = {
   mainTitle: string;
   mainDescription: string;
   activeKey: string;
-  currentRegion: string;
+  currentRegion: string | null;
   currentPickValue: string | null;
   currentPeriod: string;
 }
@@ -28,7 +28,7 @@ const mainSlice = createSlice({
     setActiveKey: (state, action: PayloadAction<string>) => {
       state.activeKey = action.payload
     },
-    setCurrentRegion: (state, action: PayloadAction<string>) => {
+    setCurrentRegion: (state, action: PayloadAction<string | null>) => {
       state.currentRegion = action.payload
     },
     setCurrentPickValue: (state, action: PayloadAction<string | null>) => {

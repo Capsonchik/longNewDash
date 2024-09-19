@@ -4,13 +4,13 @@ import styles from './styles.module.scss'
 import {MapBig} from "@/components/mapBig/MapBig";
 import {MAP_REGIONS} from "@/mocks/regionInfoMock";
 import {SelectPicker} from "rsuite";
-import {useState} from "react";
+import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {selectCurrentPeriod, selectCurrentRegion} from "@/store/store.selectors";
 import {PERIOD} from "@/mocks/periodMock";
 import {RangePickers} from "@/components/rangePickers/RangePickers";
 import {AppDispatch} from "@/store/store";
-import {setCurrentPeriod} from "@/store/store.slice";
+import {setCurrentPeriod, setCurrentRegion} from "@/store/store.slice";
 
 export default function Page() {
   const region = useSelector(selectCurrentRegion)
@@ -18,34 +18,53 @@ export default function Page() {
 
   const dispatch = useDispatch<AppDispatch>();
 
-  const [currentRegion, setCurrentRegion] = useState<string | null>(region)
+  // const [currentRegion, setCurrentRegion] = useState<string | null>(region)
 
   const data = MAP_REGIONS.map(item => ({label: item, value: item}));
   const periodData = PERIOD.map(item => ({label: item, value: item}));
 
   const handlePickRegion = (value: string | null) => {
     if (value) {
-      setCurrentRegion(value);
-      console.log(value);
-    } else setCurrentRegion(null);
+      dispatch(setCurrentRegion(value));
+      // setCurrentRegion(value);
+    } else dispatch(setCurrentRegion(null));
   }
 
   const handleChangeRegion = (value: string | null) => {
     if (value) {
       dispatch(setCurrentPeriod(value))
+      dispatch(setCurrentRegion(value))
     }
   }
+
+  const renderRegionPicker = () => {
+    return (
+      <SelectPicker
+        // defaultValue={region}
+        value={region}
+        data={data}
+        placeholder={'Выберите регион...'}
+        onChange={(value) => handlePickRegion(value)}
+      />
+    )
+  }
+
+  useEffect(() => {
+    renderRegionPicker();
+    setCurrentRegion(region);
+  }, [region]);
 
   return (
     <div className={styles.container}>
       <span className={styles.title}>Объем покупок по регионам</span>
       <div className={styles.filters}>
         <SelectPicker
-          defaultValue={currentRegion}
+          value={region}
           data={data}
           placeholder={'Выберите регион...'}
           onChange={(value) => handlePickRegion(value)}
         />
+        {/*{renderRegionPicker()}*/}
         <SelectPicker data={data} placeholder={'Выберите категорию...'}/>
         <SelectPicker
           defaultValue={'Год'}
@@ -57,7 +76,7 @@ export default function Page() {
       <div className={styles.slider}>
         <RangePickers periodType={currentPeriod}/>
       </div>
-      <MapBig currentValue={currentRegion}/>
+      <MapBig currentValue={region}/>
     </div>
   )
 }
