@@ -18,7 +18,7 @@ export const MainSwiper = () => {
         speed={3000}
         loop={true}
         className={styles.swiper}
-        // spaceBetween={50}
+        spaceBetween={20}
         slidesPerView={3}
         // onSlideChange={() => console.log('slide change')}
         // onSwiper={(swiper) => console.log(swiper)}
