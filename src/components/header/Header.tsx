@@ -9,7 +9,7 @@ export const Header = (props: Props) => {
   return (
     <div className={styles.header}>
       <div className={styles.leftBlock}>
-        <span className={styles.logo}>РОМИР</span>
+        <img style={{width: 100, height: 30}} src="/romir_logo_white.svg" alt="log"/>
         <FiAlignJustify className={styles.menuIcon}/>
         <Input className={styles.input} placeholder="Поиск по сервису..."/>
       </div>
