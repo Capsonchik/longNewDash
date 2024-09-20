@@ -42,7 +42,7 @@ export const Map = () => {
     }, 4000); // Пауза между сменами path
 
     return () => clearInterval(interval); // Очистка интервала при размонтировании компонента
-  }, [pathsData]);
+  }, []);
 
   const handleClick = (event: SyntheticEvent) => {
     const title = event.currentTarget.getAttribute('data-title');
@@ -65,14 +65,14 @@ export const Map = () => {
           </span>
         </div>
       </div>
-      <div className="district"><b></b><span></span></div>
-      <div className="close-district">&times;</div>
-      <div id="RU-SAR" className="district-text">
-        <div className="saratov"></div>
-      </div>
-      <div id="RU-SA" className="district-text">
-        <div className="saha"></div>
-      </div>
+      {/*<div className="district"><b></b><span></span></div>*/}
+      {/*<div className="close-district">&times;</div>*/}
+      {/*<div id="RU-SAR" className="district-text">*/}
+      {/*  <div className="saratov"></div>*/}
+      {/*</div>*/}
+      {/*<div id="RU-SA" className="district-text">*/}
+      {/*  <div className="saha"></div>*/}
+      {/*</div>*/}
       {/* Баг линтера */}
       {/* @ts-ignore */}
       <svg xmlnsSvg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"

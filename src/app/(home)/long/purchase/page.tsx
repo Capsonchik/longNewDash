@@ -11,6 +11,7 @@ import {PERIOD} from "@/mocks/periodMock";
 import {RangePickers} from "@/components/rangePickers/RangePickers";
 import {AppDispatch} from "@/store/store";
 import {setCurrentPeriod, setCurrentRegion} from "@/store/store.slice";
+import {CATEGORY} from "@/mocks/categories";
 
 export default function Page() {
   const region = useSelector(selectCurrentRegion)
@@ -22,6 +23,7 @@ export default function Page() {
 
   const data = MAP_REGIONS.map(item => ({label: item, value: item}));
   const periodData = PERIOD.map(item => ({label: item, value: item}));
+  const categoriesData = CATEGORY.map(item => ({label: item, value: item}));
 
   const handlePickRegion = (value: string | null) => {
     if (value) {
@@ -65,7 +67,11 @@ export default function Page() {
           onChange={(value) => handlePickRegion(value)}
         />
         {/*{renderRegionPicker()}*/}
-        <SelectPicker data={data} placeholder={'Выберите категорию...'}/>
+        <SelectPicker
+          defaultValue={"Кемпинг"}
+          data={categoriesData}
+          placeholder={'Выберите категорию...'}
+        />
         <SelectPicker
           defaultValue={'Год'}
           data={periodData}
