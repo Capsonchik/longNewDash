@@ -8,10 +8,6 @@ import {AppDispatch} from "@/store/store";
 import {setCurrentPickValue} from "@/store/store.slice";
 import {useRouter} from "next/navigation";
 
-type Props = {
-  valueSetter: (value: string | null) => void
-}
-
 export const Map = () => {
   const dispatch = useDispatch<AppDispatch>()
   const router = useRouter();
@@ -19,7 +15,7 @@ export const Map = () => {
   const [activePath, setActivePath] = useState<string | null>(null); // Активный path
   const [tooltipVisible, setTooltipVisible] = useState(false); // Видимость тултипа
   const [tooltipContent, setTooltipContent] = useState<RegionInfo | null>(); // Контент тултипа
-  const [regionName, setRegionName] = useState<string | null>('')
+  const [regionName, setRegionName] = useState<string | null>(null)
 
   const pathsData = [
     {id: "RU-TA", title: "Республика Татарстан", color: "#ff0000", info: RU_TA},
@@ -46,7 +42,7 @@ export const Map = () => {
     }, 4000); // Пауза между сменами path
 
     return () => clearInterval(interval); // Очистка интервала при размонтировании компонента
-  }, []);
+  }, [pathsData]);
 
   const handleClick = (event: SyntheticEvent) => {
     const title = event.currentTarget.getAttribute('data-title');

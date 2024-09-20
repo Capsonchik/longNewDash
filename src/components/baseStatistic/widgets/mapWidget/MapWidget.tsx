@@ -21,16 +21,11 @@ export const MapWidget = () => {
     router.push('/long/purchase');
   }
 
-  // const [currentPickValue, setCurrentPickValue] = useState<string | null>(null)
-
-  console.log('currentPickValue', currentPickValue)
-
   useEffect(() => {
     if (currentPickValue !== null) {
       dispatch(setCurrentRegion(currentPickValue))
-      // router.push('/long/purchase');
     }
-  }, [currentPickValue])
+  }, [currentPickValue, dispatch])
 
   return (
     <div className={styles.container}>
