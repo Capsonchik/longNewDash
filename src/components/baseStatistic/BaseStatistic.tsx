@@ -15,21 +15,21 @@ export const BaseStatistic = () => {
         <div className={styles.widgets}>
           <SmallWidget
             name={'Количество участников системы'}
-            value={'40 000 чел.'}
+            value={'173 872 чел.'}
             statistic={'+2.65%'}
             status={'success'}
             description={'Количество посетителей'}
           />
           <SmallWidget
             name={'Внесенные SKU'}
-            value={'25 млн.'}
+            value={'28 млн.'}
             statistic={'8.35%'}
             status={"success"}
             description={'Больше посетителей чем обычно'}
           />
           <SmallWidget
             name={'Количество ответов'}
-            value={'100 000'}
+            value={'103 472'}
             statistic={'5.50%'}
             status={"success"}
             description={'Активность выше чем обычно'}
