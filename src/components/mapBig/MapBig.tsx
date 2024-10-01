@@ -38,7 +38,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Москва"
           data-code="RU-MOW"
           style={{
-            fill: currentValue === "Москва" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Москва" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -47,7 +47,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Санкт-Петербург"
           data-code="RU-SPE"
           style={{
-            fill: currentValue === "Санкт-Петербург" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Санкт-Петербург" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -56,7 +56,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Ненецкий АО"
           data-code="RU-NEN"
           style={{
-            fill: currentValue === "Нанецкий АО" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Нанецкий АО" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -65,7 +65,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Ярославская область"
           data-code="RU-YAR"
           style={{
-            fill: currentValue === "Ярославская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Ярославская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -74,7 +74,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Челябинская область"
           data-code="RU-CHE"
           style={{
-            fill: currentValue === "Челябинская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Челябинская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -83,7 +83,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Ульяновская область"
           data-code="RU-ULY"
           style={{
-            fill: currentValue === "Ульяновская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Ульяновская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -92,7 +92,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Тюменская область"
           data-code="RU-TYU"
           style={{
-            fill: currentValue === "Тюменская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Тюменская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -101,7 +101,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Тульская область"
           data-code="RU-TUL"
           style={{
-            fill: currentValue === "Тульская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Тульская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -110,7 +110,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Свердловская область"
           data-code="RU-SVE"
           style={{
-            fill: currentValue === "Свердловская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Свердловская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -119,7 +119,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Рязанская область"
           data-code="RU-RYA"
           style={{
-            fill: currentValue === "Рязанская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Рязанская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -128,7 +128,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Орловская область"
           data-code="RU-ORL"
           style={{
-            fill: currentValue === "Орловская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Орловская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -137,7 +137,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Омская область"
           data-code="RU-OMS"
           style={{
-            fill: currentValue === "Омская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Омская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -146,7 +146,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Новгородская область"
           data-code="RU-NGR"
           style={{
-            fill: currentValue === "Новгородская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Новгородская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -155,7 +155,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Липецкая область"
           data-code="RU-LIP"
           style={{
-            fill: currentValue === "Липецкая область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Липецкая область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -164,7 +164,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Курская область"
           data-code="RU-KRS"
           style={{
-            fill: currentValue === "Курская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Курская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -173,7 +173,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Курганская область"
           data-code="RU-KGN"
           style={{
-            fill: currentValue === "Курганская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Курганская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -182,7 +182,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Калининградская область"
           data-code="RU-KGD"
           style={{
-            fill: currentValue === "Калининградская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Калининградская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -191,7 +191,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Ивановская область"
           data-code="RU-IVA"
           style={{
-            fill: currentValue === "Ивановская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Ивановская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -200,7 +200,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Брянская область"
           data-code="RU-BRY"
           style={{
-            fill: currentValue === "Брянская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Брянская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -209,7 +209,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Астраханская область"
           data-code="RU-AST"
           style={{
-            fill: currentValue === "Астраханская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Астраханская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -218,7 +218,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Хабаровский край"
           data-code="RU-KHA"
           style={{
-            fill: currentValue === "Хабаровский край" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Хабаровский край" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -227,7 +227,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Чеченская Республика"
           data-code="RU-CE"
           style={{
-            fill: currentValue === "Чеченская Республика" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Чеченская Республика" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -236,7 +236,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Удмуртская Республика"
           data-code="RU-UD"
           style={{
-            fill: currentValue === "Удмуртская Республика" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Удмуртская Республика" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -245,7 +245,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Северная Осетия — Алания"
           data-code="RU-SE"
           style={{
-            fill: currentValue === "Республика Северная Осетия — Алания" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Северная Осетия — Алания" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -254,7 +254,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Мордовия"
           data-code="RU-MO"
           style={{
-            fill: currentValue === "Республика Мордовия" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Мордовия" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -263,7 +263,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Карелия"
           data-code="RU-KR"
           style={{
-            fill: currentValue === "Республика Карелия" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Карелия" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -272,7 +272,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Калмыкия"
           data-code="RU-KL"
           style={{
-            fill: currentValue === "Республика Калмыкия" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Калмыкия" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -281,7 +281,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Ингушетия"
           data-code="RU-IN"
           style={{
-            fill: currentValue === "Республика Ингушетия" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Ингушетия" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -290,7 +290,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Алтай"
           data-code="RU-AL"
           style={{
-            fill: currentValue === "Республика Алтай" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Алтай" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -299,7 +299,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Башкортостан"
           data-code="RU-BA"
           style={{
-            fill: currentValue === "Республика Башкортостан" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Башкортостан" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -308,7 +308,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Адыгея"
           data-code="RU-AD"
           style={{
-            fill: currentValue === "Республика Адыгея" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Адыгея" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -317,7 +317,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Крым"
           data-code="RU-CR"
           style={{
-            fill: currentValue === "Республика Крым" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Крым" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -326,7 +326,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Севастополь"
           data-code="RU-SEV"
           style={{
-            fill: currentValue === "Севастополь" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Севастополь" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -335,7 +335,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Коми"
           data-code="RU-KO"
           style={{
-            fill: currentValue === "Республика Коми" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Коми" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -344,7 +344,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Кировская область"
           data-code="RU-KIR"
           style={{
-            fill: currentValue === "Кировская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Кировская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -353,7 +353,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Пензенская область"
           data-code="RU-PNZ"
           style={{
-            fill: currentValue === "Пензенская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Пензенская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -362,7 +362,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Тамбовская область"
           data-code="RU-TAM"
           style={{
-            fill: currentValue === "Тамбовская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Тамбовская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -371,7 +371,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Мурманская область"
           data-code="RU-MUR"
           style={{
-            fill: currentValue === "Мурманская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Мурманская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -380,7 +380,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Ленинградская область"
           data-code="RU-LEN"
           style={{
-            fill: currentValue === "Ленинградская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Ленинградская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -389,7 +389,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Вологодская область"
           data-code="RU-VLG"
           style={{
-            fill: currentValue === "Вологодская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Вологодская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -398,7 +398,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Костромская область"
           data-code="RU-KOS"
           style={{
-            fill: currentValue === "Костромская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Костромская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -407,7 +407,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Псковская область"
           data-code="RU-PSK"
           style={{
-            fill: currentValue === "Псковская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Псковская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -416,7 +416,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Архангельская область"
           data-code="RU-ARK"
           style={{
-            fill: currentValue === "Архангельская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Архангельская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -425,7 +425,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Ямало-Ненецкий АО"
           data-code="RU-YAN"
           style={{
-            fill: currentValue === "Ямало-Ненецкий АО" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Ямало-Ненецкий АО" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -434,7 +434,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Чукотский АО"
           data-code="RU-CHU"
           style={{
-            fill: currentValue === "Чукотский АО" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Чукотский АО" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -443,7 +443,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Еврейская автономная область"
           data-code="RU-YEV"
           style={{
-            fill: currentValue === "Еврейская автономная область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Еврейская автономная область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -452,7 +452,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Тыва"
           data-code="RU-TY"
           style={{
-            fill: currentValue === "Республика Тыва" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Тыва" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -461,7 +461,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Сахалинская область"
           data-code="RU-SAK"
           style={{
-            fill: currentValue === "Сахалинская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Сахалинская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -470,7 +470,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Амурская область"
           data-code="RU-AMU"
           style={{
-            fill: currentValue === "Амурская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Амурская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -479,7 +479,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Бурятия"
           data-code="RU-BU"
           style={{
-            fill: currentValue === "Республика Бурятия" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Бурятия" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -488,7 +488,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Хакасия"
           data-code="RU-KK"
           style={{
-            fill: currentValue === "Республика Хакасия" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Хакасия" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -497,7 +497,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Кемеровская область"
           data-code="RU-KEM"
           style={{
-            fill: currentValue === "Кемеровская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Кемеровская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -506,7 +506,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Новосибирская область"
           data-code="RU-NVS"
           style={{
-            fill: currentValue === "Новосибирская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Новосибирская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -515,7 +515,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Алтайский край"
           data-code="RU-ALT"
           style={{
-            fill: currentValue === "Алтайский край" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Алтайский край" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -524,7 +524,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Дагестан"
           data-code="RU-DA"
           style={{
-            fill: currentValue === "Республика Дагестан" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Дагестан" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -533,7 +533,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Ставропольский край"
           data-code="RU-STA"
           style={{
-            fill: currentValue === "Ставропольский край" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Ставропольский край" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -542,7 +542,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Кабардино-Балкарская Республика "
           data-code="RU-KB"
           style={{
-            fill: currentValue === "Кабардино-Балкарская Республика" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Кабардино-Балкарская Республика" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -551,7 +551,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Карачаево-Черкесская Республика"
           data-code="RU-KC"
           style={{
-            fill: currentValue === "Карачаево-Черкесская Республика" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Карачаево-Черкесская Республика" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -560,7 +560,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Краснодарский край"
           data-code="RU-KDA"
           style={{
-            fill: currentValue === "Краснодарский край" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Краснодарский край" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -569,7 +569,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Ростовская область"
           data-code="RU-ROS"
           style={{
-            fill: currentValue === "Ростовская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Ростовская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -578,7 +578,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Самарская область"
           data-code="RU-SAM"
           style={{
-            fill: currentValue === "Самарская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Самарская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -587,7 +587,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Татарстан"
           data-code="RU-TA"
           style={{
-            fill: currentValue === "Республика Татарстан" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Татарстан" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -596,7 +596,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Марий Эл"
           data-code="RU-ME"
           style={{
-            fill: currentValue === "Республика Марий Эл" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Марий Эл" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -605,7 +605,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Чувашская Республика"
           data-code="RU-CU"
           style={{
-            fill: currentValue === "Чувашская Республика" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Чувашская Республика" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -614,7 +614,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Нижегородская область"
           data-code="RU-NIZ"
           style={{
-            fill: currentValue === "Нижегородская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Нижегородская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -623,7 +623,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Владимирская область"
           data-code="RU-VLA"
           style={{
-            fill: currentValue === "Владимирская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Владимирская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -632,7 +632,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Московская область"
           data-code="RU-MOS"
           style={{
-            fill: currentValue === "Московская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Московская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -641,7 +641,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Калужская область"
           data-code="RU-KLU"
           style={{
-            fill: currentValue === "Калужская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Калужская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -650,7 +650,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Белгородская область"
           data-code="RU-BEL"
           style={{
-            fill: currentValue === "Белгородская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Белгородская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -659,7 +659,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Забайкальский край"
           data-code="RU-ZAB"
           style={{
-            fill: currentValue === "Забайкальский край" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Забайкальский край" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -668,7 +668,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Приморский край"
           data-code="RU-PRI"
           style={{
-            fill: currentValue === "Приморский край" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Приморский край" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -677,7 +677,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Камчатский край"
           data-code="RU-KAM"
           style={{
-            fill: currentValue === "Камчатский край" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Камчатский край" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -686,7 +686,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Магаданская область"
           data-code="RU-MAG"
           style={{
-            fill: currentValue === "Магаданская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Магаданская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -695,7 +695,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Республика Саха (Якутия)"
           data-code="RU-SA"
           style={{
-            fill: currentValue === "Республика Саха (Якутия)" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Республика Саха (Якутия)" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -704,7 +704,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Красноярский край"
           data-code="RU-KYA"
           style={{
-            fill: currentValue === "Красноярский край" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Красноярский край" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -713,7 +713,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Оренбургская область"
           data-code="RU-ORE"
           style={{
-            fill: currentValue === "Оренбургская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Оренбургская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -722,7 +722,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Саратовская область"
           data-code="RU-SAR"
           style={{
-            fill: currentValue === "Саратовская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Саратовская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -731,7 +731,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Волгоградская область"
           data-code="RU-VGG"
           style={{
-            fill: currentValue === "Волгоградская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Волгоградская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -740,7 +740,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Воронежская область"
           data-code="RU-VOR"
           style={{
-            fill: currentValue === "Воронежская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Воронежская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -749,7 +749,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Смоленская область"
           data-code="RU-SMO"
           style={{
-            fill: currentValue === "Смоленская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Смоленская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -758,7 +758,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Тверская область"
           data-code="RU-TVE"
           style={{
-            fill: currentValue === "Тверская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Тверская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -767,7 +767,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Пермский край"
           data-code="RU-PER"
           style={{
-            fill: currentValue === "Пермский край" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Пермский край" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -776,7 +776,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Ханты-Мансийский АО - Югра"
           data-code="RU-KHM"
           style={{
-            fill: currentValue === "Ханты-Мансийский АО - Югра" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Ханты-Мансийский АО - Югра" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -785,7 +785,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Томская область"
           data-code="RU-TOM"
           style={{
-            fill: currentValue === "Томская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Томская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -794,7 +794,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Иркутская область"
           data-code="RU-IRK"
           style={{
-            fill: currentValue === "Иркутская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Иркутская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -803,7 +803,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Херсонская область"
           data-code="RU-HR"
           style={{
-            fill: currentValue === "Херсонская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Херсонская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -812,7 +812,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Запорожская область"
           data-code="RU-ZP"
           style={{
-            fill: currentValue === "Запорожская область" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Запорожская область" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -821,7 +821,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Донецкая Народная Республика"
           data-code="RU-DON"
           style={{
-            fill: currentValue === "Донецкая Народная Республика" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Донецкая Народная Республика" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />
@@ -830,7 +830,7 @@ export const MapBig = ({currentValue}: Props) => {
           data-title="Луганская Народная Республика"
           data-code="RU-LUG"
           style={{
-            fill: currentValue === "Луганская Народная Республика" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: currentValue === "Луганская Народная Республика" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
         />

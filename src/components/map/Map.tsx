@@ -83,7 +83,7 @@ export const Map = () => {
           data-title="Москва"
           data-code="RU-MOW"
           style={{
-            fill: activePath === "RU-MOW" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+            fill: activePath === "RU-MOW" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           }}
           onClick={(event) => handleClick(event)}
           onMouseEnter={(event) => {
@@ -255,7 +255,7 @@ export const Map = () => {
           data-title="Липецкая область"
           data-code="RU-LIP"
           // style={{
-          //   fill: activePath === "RU-LIP" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+          //   fill: activePath === "RU-LIP" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           // }}
           style={{
             fill: activePath === "RU-LIP" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
@@ -469,7 +469,7 @@ export const Map = () => {
           data-title="Республика Башкортостан"
           data-code="RU-BA"
           // style={{
-          //   fill: activePath === "RU-BA" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+          //   fill: activePath === "RU-BA" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           // }}
           style={{
             fill: activePath === "RU-BA" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
@@ -883,7 +883,7 @@ export const Map = () => {
           data-title="Республика Татарстан"
           data-code="RU-TA"
           // style={{
-          //   fill: activePath === "RU-TA" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+          //   fill: activePath === "RU-TA" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           // }}
           style={{
             fill: activePath === "RU-TA" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
@@ -915,7 +915,7 @@ export const Map = () => {
           data-title="Чувашская Республика"
           data-code="RU-CU"
           // style={{
-          //   fill: activePath === "RU-CU" ? "#007dff" : "#ff9b33", // Подсвечиваем активный path
+          //   fill: activePath === "RU-CU" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
           // }}
           style={{
             fill: activePath === "RU-CU" ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
