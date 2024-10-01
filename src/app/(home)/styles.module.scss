@@ -1,7 +1,9 @@
 @import "src/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 .main {
   margin-top: 1rem;
+  font-family: "Jost", cursive;
 }
 
 .header {
