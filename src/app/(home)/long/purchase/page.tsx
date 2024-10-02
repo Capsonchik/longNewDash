@@ -14,6 +14,8 @@ import {CATEGORY} from "@/mocks/categories";
 import {MapBig} from "@/components/mapBig/MapBig";
 import SortUpIcon from '@rsuite/icons/SortUp';
 import SortDownIcon from '@rsuite/icons/SortDown';
+import {BaseBarChart} from "@/components/charts/BaseBarChart";
+import {BaseStackHorizontal} from "@/components/charts/BaseStackHorizontal";
 
 export default function Page() {
   const region = useSelector(selectCurrentRegion)
@@ -119,7 +121,7 @@ export default function Page() {
             </div>
           </div>
 
-          <span className={styles.mainTitle}>Топ-3 категорий по изменению цены</span>
+          <span className={styles.mainTitle}>Топ категорий по изменению цены</span>
 
           <div className={styles.categories}>
 
@@ -131,7 +133,23 @@ export default function Page() {
               </div>
             </div>
 
+            <div style={{width: '80%'}} className={`${styles.categoryItem} ${styles.hidden}`}>
+              <span className={styles.categoryItemDescription}>Крем для лица</span>
+              <div className={styles.categoryItemStat}>
+                <SortUpIcon style={{color: 'green'}}/>
+                <span>40.36%</span>
+              </div>
+            </div>
+
             <div style={{width: '70%'}} className={styles.categoryItem}>
+              <span className={styles.categoryItemDescription}>Крем для лица</span>
+              <div className={styles.categoryItemStat}>
+                <SortUpIcon style={{color: 'green'}}/>
+                <span>40.36%</span>
+              </div>
+            </div>
+
+            <div style={{width: '60%'}} className={`${styles.categoryItem} ${styles.hidden}`}>
               <span className={styles.categoryItemDescription}>Крем для лица</span>
               <div className={styles.categoryItemStat}>
                 <SortUpIcon style={{color: 'green'}}/>
@@ -158,7 +176,13 @@ export default function Page() {
       </div>
 
       <div className={styles.botContainer}>
+        <div className={styles.botItem}>
+          <BaseBarChart/>
+        </div>
 
+        <div className={styles.botItem}>
+          <BaseStackHorizontal/>
+        </div>
       </div>
     </>
   )
