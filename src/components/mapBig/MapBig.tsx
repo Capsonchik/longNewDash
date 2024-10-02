@@ -1,4 +1,4 @@
-import {SyntheticEvent, useEffect, useState} from "react";
+import {SyntheticEvent, useState} from "react";
 import {setCurrentRegion} from "@/store/store.slice";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "@/store/store";
@@ -12,7 +12,6 @@ type Props = {
 export const MapBig = ({currentValue}: Props) => {
   const dispatch = useDispatch<AppDispatch>()
 
-  const [hoverValue, setHoverValue] = useState<string | null>(null)
   const [activePath, setActivePath] = useState<string | null>(null);
 
   const handleClick = (event: SyntheticEvent) => {
@@ -22,10 +21,6 @@ export const MapBig = ({currentValue}: Props) => {
       dispatch(setCurrentRegion(title))
     }
   }
-
-  useEffect(() => {
-    console.log(activePath)
-  }, [activePath])
 
   return (
     <div className="rf-map margin-top-20">
