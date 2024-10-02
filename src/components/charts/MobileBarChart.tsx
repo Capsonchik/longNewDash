@@ -23,7 +23,8 @@ export const MobileBarChart = (props: Props) => {
         type: 'bar',
         barWidth: '20%',
         itemStyle: {
-          color: '#FF8200',
+          // color: '#FF8200',
+          color: '#194a7a',
           borderRadius: [10, 10, 0, 0]
         }
       },

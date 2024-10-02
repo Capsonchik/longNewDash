@@ -27,7 +27,8 @@ export const RadarWidgetChart = (props: Props) => {
         name: 'Budget vs spending',
         type: 'radar',
         lineStyle: {
-          color: '#FF8200'
+          // color: '#FF8200'
+          color: '#194a7a'
         },
         data: [
           {

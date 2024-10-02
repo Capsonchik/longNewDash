@@ -30,7 +30,7 @@ export const WidgetTable = (props: Props) => {
       <Column width={120}>
         <HeaderCell className={styles.headerCell}>% Носителей</HeaderCell>
         <Cell className={styles.cell} style={{padding: '10px 0'}}>
-          {rowData => <Progress strokeColor={'#FF8200'} percent={rowData.usersPercent} showInfo={false}/>}
+          {rowData => <Progress strokeColor={'#194a7a'} percent={rowData.usersPercent} showInfo={false}/>}
         </Cell>
       </Column>
     </Table>

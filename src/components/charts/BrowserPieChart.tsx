@@ -36,9 +36,9 @@ export const BrowserPieChart = () => {
           show: false
         },
         data: [
-          {value: 1048, name: 'Биология', itemStyle: {color: '#ff0300'}},
-          {value: 735, name: 'Физиология', itemStyle: {color: '#FF8200'}},
-          {value: 580, name: 'Социология', itemStyle: {color: '#fcff00'}},
+          {value: 1048, name: 'Биология', itemStyle: {color: '#476f95'}},
+          {value: 735, name: 'Физиология', itemStyle: {color: '#7593af'}},
+          {value: 580, name: 'Социология', itemStyle: {color: '#a3b7ca'}},
         ]
       }
     ]
