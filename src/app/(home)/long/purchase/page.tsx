@@ -15,7 +15,6 @@ import {MapBig} from "@/components/mapBig/MapBig";
 import SortUpIcon from '@rsuite/icons/SortUp';
 import SortDownIcon from '@rsuite/icons/SortDown';
 import {BaseBarChart} from "@/components/charts/BaseBarChart";
-import {BaseStackHorizontal} from "@/components/charts/BaseStackHorizontal";
 
 export default function Page() {
   const region = useSelector(selectCurrentRegion)
@@ -176,13 +175,13 @@ export default function Page() {
       </div>
 
       <div className={styles.botContainer}>
-        <div className={styles.botItem}>
-          <BaseBarChart/>
-        </div>
-
-        <div className={styles.botItem}>
-          <BaseStackHorizontal/>
-        </div>
+        {/*<div className={styles.botItem}>*/}
+        {/*  <BaseBarChart/>*/}
+        {/*</div>*/}
+        <BaseBarChart/>
+        {/*<div className={styles.botItem}>*/}
+        {/*  <BaseStackHorizontal/>*/}
+        {/*</div>*/}
       </div>
     </>
   )
