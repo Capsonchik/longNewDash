@@ -245,3 +245,11 @@
 .rf-map [data-code="RU-KO"]:hover {
   fill: $map-obj-hover;
 }
+
+.tooltip {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
