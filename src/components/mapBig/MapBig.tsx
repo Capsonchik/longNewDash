@@ -1,4 +1,4 @@
-import {SyntheticEvent, useState} from "react";
+import {SyntheticEvent, useEffect, useState} from "react";
 import {setCurrentRegion} from "@/store/store.slice";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "@/store/store";
@@ -13,6 +13,7 @@ export const MapBig = ({currentValue}: Props) => {
   const dispatch = useDispatch<AppDispatch>()
 
   const [hoverValue, setHoverValue] = useState<string | null>(null)
+  const [activePath, setActivePath] = useState<string | null>(null);
 
   const handleClick = (event: SyntheticEvent) => {
     const title: string | null = event.currentTarget.getAttribute('data-title');
@@ -22,14 +23,9 @@ export const MapBig = ({currentValue}: Props) => {
     }
   }
 
-  // const ToolTip = (data: any) => {
-  //   return (
-  //     <div className={styles.tollTip}>
-  //       <span>Дата тайтл: {data_title}</span>
-  //       <span>Дата код: {data_code}</span>
-  //     </div>
-  //   )
-  // }
+  useEffect(() => {
+    console.log(activePath)
+  }, [activePath])
 
   return (
     <div className="rf-map margin-top-20">
@@ -86,19 +82,16 @@ export const MapBig = ({currentValue}: Props) => {
                   data-title={path.data_title}
                   data-code={path.data_code}
                   style={{
-                    fill: currentValue === path.data_title ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
+                    fill: currentValue === path.data_title || activePath === path.data_title ? "#d1dbe4" : "#194a7a", // Подсвечиваем активный path
                   }}
-                  onClick={(event) => handleClick(event)}
-                  // onMouseEnter={(event) => {
-                  //   const title = event.currentTarget.getAttribute('data-title');
-                  //   setHoverValue(title);
-                  // }}
-                  // onMouseLeave={() => {
-                  //   setHoverValue(null);
-                  // }}
+                  onMouseEnter={() => {
+                    setActivePath(path.data_title);
+                  }}
+                  onMouseLeave={() => {
+                    setActivePath(null)
+                  }}
                 />
               </Whisper>
-
             )
           })
         }
