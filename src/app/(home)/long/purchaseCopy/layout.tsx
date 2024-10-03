@@ -1,4 +1,4 @@
-export default function PurchaseLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
+export default function PurchaseCopyLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
   return (
     <div>
       {children}
