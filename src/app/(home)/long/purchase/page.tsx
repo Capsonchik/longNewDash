@@ -98,7 +98,7 @@ export default function Page() {
               <Text muted size={"sm"}>3 кв. 2024г. к 3кв. 2023г.</Text>
               <div className={styles.middleContent}>
                 <div className={styles.contentLeft}>
-                  <FaAmbulance size={40}/>
+                  <FaAmbulance size={40} color={"#194a7a"}/>
                   <div className={styles.contentBot}>
                     <Text size={'lg'}>Здоровье</Text>
                     <Text size={'sm'} maxLines={1}>Принципиально не делают прививки</Text>
@@ -108,7 +108,7 @@ export default function Page() {
               </div>
               <div className={styles.middleContent}>
                 <div className={styles.contentLeft}>
-                  <FaAccessibleIcon size={40}/>
+                  <FaAccessibleIcon size={40} color={"#194a7a"}/>
                   <div className={styles.contentBot}>
                     <Text size={'lg'}>демография</Text>
                     <Text size={'sm'} maxLines={1}>Принципиально не делают прививки</Text>
@@ -129,7 +129,7 @@ export default function Page() {
               <Text muted size={"sm"}>3 кв. 2024г. к 3кв. 2023г.</Text>
               <div className={styles.middleContent}>
                 <div className={styles.contentLeft}>
-                  <FaAccessibleIcon size={40}/>
+                  <FaAccessibleIcon size={40} color={"#194a7a"}/>
                   <div className={styles.contentBot}>
                     <Text size={'lg'}>Демография</Text>
                     <Text size={'sm'} maxLines={1}>Находятся в незарегистрированном браке</Text>
@@ -139,7 +139,7 @@ export default function Page() {
               </div>
               <div className={styles.middleContent}>
                 <div className={styles.contentLeft}>
-                  <FaVolleyballBall size={40}/>
+                  <FaVolleyballBall size={40} color={"#194a7a"}/>
                   <div className={styles.contentBot}>
                     <Text size={'lg'}>Образ жизни</Text>
                     <Text size={'sm'} maxLines={1}>Следят за питанием</Text>
