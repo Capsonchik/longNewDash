@@ -2,7 +2,7 @@
 
 import styles from './styles.module.scss'
 import {MAP_REGIONS} from "@/mocks/regionInfoMock";
-import {SelectPicker} from "rsuite";
+import {Divider, SelectPicker, Text} from "rsuite";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {selectCurrentPeriod, selectCurrentRegion} from "@/store/store.selectors";
@@ -12,9 +12,8 @@ import {AppDispatch} from "@/store/store";
 import {setCurrentPeriod, setCurrentRegion} from "@/store/store.slice";
 import {CATEGORY} from "@/mocks/categories";
 import {MapBig} from "@/components/mapBig/MapBig";
-import SortUpIcon from '@rsuite/icons/SortUp';
-import SortDownIcon from '@rsuite/icons/SortDown';
-import {BaseBarChart} from "@/components/charts/BaseBarChart";
+import {FaAccessibleIcon, FaAmbulance, FaVolleyballBall} from "react-icons/fa";
+
 
 export default function Page() {
   const region = useSelector(selectCurrentRegion)
@@ -85,103 +84,77 @@ export default function Page() {
         <div className={styles.slider}>
           <RangePickers periodType={currentPeriod}/>
         </div>
-        {/*<MapBig currentValue={region}/>*/}
       </div>
       <div className={styles.middleContainer}>
 
         <div className={styles.middleContainerLeft}>
-          <div className={styles.middleContainerLeftTop}>
-            <span className={styles.mainTitle}>Всего продаж</span>
-            <span className={styles.mainStat}>196 927 728 472</span>
-            <div className={styles.mainStatInfo}>
-              <div className={styles.mainStatInfoLeft}>
-                <SortUpIcon style={{color: 'green'}}/>
-                <span>45 563 957 (0.0231%)</span>
+          <div className={styles.middleContainerBlock}>
+            <div className={styles.blockTitle}>
+              <div className={styles.titleTop}>
+                <Text size={'lg'}>Топ риски</Text>
+                <Divider vertical/>
+                <Text style={{cursor: 'pointer'}} size={'md'} muted>Посмотреть все риски</Text>
               </div>
-              <span className={styles.mainStatInfoRight}>30.09.2024 vs 30.09.2023</span>
+              <Text muted size={"sm"}>3 кв. 2024г. к 3кв. 2023г.</Text>
+              <div className={styles.middleContent}>
+                <div className={styles.contentLeft}>
+                  <FaAmbulance size={40}/>
+                  <div className={styles.contentBot}>
+                    <Text size={'lg'}>Здоровье</Text>
+                    <Text size={'sm'} maxLines={1}>Принципиально не делают прививки</Text>
+                  </div>
+                </div>
+                <Text color={'green'}>+3.9 п.п</Text>
+              </div>
+              <div className={styles.middleContent}>
+                <div className={styles.contentLeft}>
+                  <FaAccessibleIcon size={40}/>
+                  <div className={styles.contentBot}>
+                    <Text size={'lg'}>демография</Text>
+                    <Text size={'sm'} maxLines={1}>Принципиально не делают прививки</Text>
+                  </div>
+                </div>
+                <Text color={'red'}>-5.5% п.п</Text>
+              </div>
             </div>
           </div>
-          <div className={styles.average}>
-            <div className={styles.averageItem}>
-              <span className={styles.title}>Средняя цена за товар</span>
-              <span className={styles.averageCost}>140,30 ₽</span>
-              <div style={{color: 'green'}} className={styles.averageStat}>
-                <SortUpIcon style={{color: 'green'}}/>
-                <span>0.8(0.48%)</span>
+
+          <div className={styles.middleContainerBlock}>
+            <div className={styles.blockTitle}>
+              <div className={styles.titleTop}>
+                <Text size={'lg'}>Топ возможности</Text>
+                <Divider vertical/>
+                <Text style={{cursor: 'pointer'}} size={'md'} muted>Посмотреть все риски</Text>
               </div>
-            </div>
-            <div className={styles.averageItem}>
-              <span className={styles.title}>Средний чек</span>
-              <span className={styles.averageCost}>140,30 ₽</span>
-              <div style={{color: 'red'}} className={styles.averageStat}>
-                <SortDownIcon style={{color: 'red'}}/>
-                <span>0.8(0.48%)</span>
+              <Text muted size={"sm"}>3 кв. 2024г. к 3кв. 2023г.</Text>
+              <div className={styles.middleContent}>
+                <div className={styles.contentLeft}>
+                  <FaAccessibleIcon size={40}/>
+                  <div className={styles.contentBot}>
+                    <Text size={'lg'}>Демография</Text>
+                    <Text size={'sm'} maxLines={1}>Находятся в незарегистрированном браке</Text>
+                  </div>
+                </div>
+                <Text color={'green'}>+4.3 п.п</Text>
+              </div>
+              <div className={styles.middleContent}>
+                <div className={styles.contentLeft}>
+                  <FaVolleyballBall size={40}/>
+                  <div className={styles.contentBot}>
+                    <Text size={'lg'}>Образ жизни</Text>
+                    <Text size={'sm'} maxLines={1}>Следят за питанием</Text>
+                  </div>
+                </div>
+                <Text color={'green'}>+6.7 п.п</Text>
               </div>
             </div>
           </div>
-
-          <span className={styles.mainTitle}>Топ категорий по изменению цены</span>
-
-          <div className={styles.categories}>
-
-            <div style={{width: '90%'}} className={styles.categoryItem}>
-              <span className={styles.categoryItemDescription}>Крем для лица</span>
-              <div className={styles.categoryItemStat}>
-                <SortUpIcon style={{color: 'green'}}/>
-                <span>40.36%</span>
-              </div>
-            </div>
-
-            <div style={{width: '80%'}} className={`${styles.categoryItem} ${styles.hidden}`}>
-              <span className={styles.categoryItemDescription}>Крем для лица</span>
-              <div className={styles.categoryItemStat}>
-                <SortUpIcon style={{color: 'green'}}/>
-                <span>40.36%</span>
-              </div>
-            </div>
-
-            <div style={{width: '70%'}} className={styles.categoryItem}>
-              <span className={styles.categoryItemDescription}>Крем для лица</span>
-              <div className={styles.categoryItemStat}>
-                <SortUpIcon style={{color: 'green'}}/>
-                <span>40.36%</span>
-              </div>
-            </div>
-
-            <div style={{width: '60%'}} className={`${styles.categoryItem} ${styles.hidden}`}>
-              <span className={styles.categoryItemDescription}>Крем для лица</span>
-              <div className={styles.categoryItemStat}>
-                <SortUpIcon style={{color: 'green'}}/>
-                <span>40.36%</span>
-              </div>
-            </div>
-
-            <div style={{width: '55%'}} className={styles.categoryItem}>
-              <span className={styles.categoryItemDescription}>Крем для лица</span>
-              <div className={styles.categoryItemStat}>
-                <SortUpIcon style={{color: 'green'}}/>
-                <span>40.36%</span>
-              </div>
-            </div>
-
-          </div>
-
         </div>
 
         <div className={styles.middleContainerRight}>
           <MapBig currentValue={region}/>
         </div>
 
-      </div>
-
-      <div className={styles.botContainer}>
-        {/*<div className={styles.botItem}>*/}
-        {/*  <BaseBarChart/>*/}
-        {/*</div>*/}
-        <BaseBarChart/>
-        {/*<div className={styles.botItem}>*/}
-        {/*  <BaseStackHorizontal/>*/}
-        {/*</div>*/}
       </div>
     </>
   )
