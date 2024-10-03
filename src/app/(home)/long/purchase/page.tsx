@@ -13,6 +13,7 @@ import {setCurrentPeriod, setCurrentRegion} from "@/store/store.slice";
 import {CATEGORY} from "@/mocks/categories";
 import {MapBig} from "@/components/mapBig/MapBig";
 import {FaAccessibleIcon, FaAmbulance, FaVolleyballBall} from "react-icons/fa";
+import {setSocDrawerStatus} from "@/store/drawersSlice/drawers.slice";
 
 
 export default function Page() {
@@ -93,7 +94,8 @@ export default function Page() {
               <div className={styles.titleTop}>
                 <Text size={'lg'}>Топ риски</Text>
                 <Divider vertical/>
-                <Text style={{cursor: 'pointer'}} size={'md'} muted>Посмотреть все риски</Text>
+                <Text style={{cursor: 'pointer'}} size={'md'} muted onClick={() => dispatch(setSocDrawerStatus(true))}>Посмотреть
+                  все риски</Text>
               </div>
               <Text muted size={"sm"}>3 кв. 2024г. к 3кв. 2023г.</Text>
               <div className={styles.middleContent}>
@@ -124,7 +126,8 @@ export default function Page() {
               <div className={styles.titleTop}>
                 <Text size={'lg'}>Топ возможности</Text>
                 <Divider vertical/>
-                <Text style={{cursor: 'pointer'}} size={'md'} muted>Посмотреть все риски</Text>
+                <Text style={{cursor: 'pointer'}} size={'md'} muted onClick={() => dispatch(setSocDrawerStatus(true))}>Посмотреть
+                  все возможности</Text>
               </div>
               <Text muted size={"sm"}>3 кв. 2024г. к 3кв. 2023г.</Text>
               <div className={styles.middleContent}>

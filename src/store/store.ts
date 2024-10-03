@@ -4,6 +4,7 @@ import firstSunSlice from './firstSunBurstSlice/firstSunBurst.slice'
 import secondSunBurstSlice from './secondSunBirstSlice/secondSunBurst.slice'
 import dataToSend from './dataSendSlice/dataToSend.slice'
 import answers from './answersSlice/answersSlice'
+import drawers from './drawersSlice/drawers.slice'
 
 const customMiddleware: Middleware = store => next => action => {
   console.log('Dispatching action:', action);
@@ -16,7 +17,8 @@ const store = configureStore({
     firstSunBurst: firstSunSlice,
     secondSunBurst: secondSunBurstSlice,
     dataToSend: dataToSend,
-    answers: answers
+    answers: answers,
+    drawers: drawers,
   },
   // middleware: (getDefaultMiddleware) =>
   //   getDefaultMiddleware()
