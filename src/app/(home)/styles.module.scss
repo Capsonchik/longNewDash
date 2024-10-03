@@ -1,10 +1,13 @@
 @import "src/mixins";
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .main {
   margin-top: 1rem;
   //font-family: "Jost", cursive;
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  //font-family: "Jost", sans-serif;
 }
 
 .header {
