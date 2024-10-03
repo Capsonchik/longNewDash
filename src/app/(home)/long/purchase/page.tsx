@@ -7,7 +7,6 @@ import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {selectCurrentPeriod, selectCurrentRegion} from "@/store/store.selectors";
 import {PERIOD} from "@/mocks/periodMock";
-import {RangePickers} from "@/components/rangePickers/RangePickers";
 import {AppDispatch} from "@/store/store";
 import {setCurrentPeriod, setCurrentRegion} from "@/store/store.slice";
 import {CATEGORY} from "@/mocks/categories";
@@ -62,7 +61,7 @@ export default function Page() {
   return (
     <>
       <div className={styles.topContainer}>
-        {/*<span className={styles.title}>Объем покупок по регионам</span>*/}
+        <Text size={'xl'} className={styles.title} weight={'semibold'}>Объем покупок по регионам</Text>
         <div className={styles.filters}>
           <SelectPicker
             value={region}
@@ -82,9 +81,10 @@ export default function Page() {
             onChange={handleChangeRegion}
           />
         </div>
-        <div className={styles.slider}>
-          <RangePickers periodType={currentPeriod}/>
-        </div>
+        {/* Временно убрал */}
+        {/*<div className={styles.slider}>*/}
+        {/*  <RangePickers periodType={currentPeriod}/>*/}
+        {/*</div>*/}
       </div>
       <div className={styles.middleContainer}>
 

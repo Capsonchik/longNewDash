@@ -12,6 +12,7 @@ export const HeaderTitle = () => {
   const title = useSelector(selectMainTitle);
   const description = useSelector(selectMainDescription);
 
+
   const path = usePathname();
 
   useEffect(() => {
@@ -38,9 +39,13 @@ export const HeaderTitle = () => {
 
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.header}>{title ? title : ''}</h1>
-      <span className={styles.headerDescription}>{description ? description : ''}</span>
-    </div>
+    <>
+      {path === '/' ? (
+        <div className={styles.container}>
+          <h1 className={styles.header}>{title ? title : ''}</h1>
+          <span className={styles.headerDescription}>{description ? description : ''}</span>
+        </div>
+      ) : null}
+    </>
   );
 };
