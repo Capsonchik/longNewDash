@@ -11,8 +11,9 @@ import {AppDispatch} from "@/store/store";
 import {setCurrentPeriod, setCurrentRegion} from "@/store/store.slice";
 import {CATEGORY} from "@/mocks/categories";
 import {MapBig} from "@/components/mapBig/MapBig";
-import {FaAccessibleIcon, FaAmbulance, FaVolleyballBall} from "react-icons/fa";
 import {setSocDrawerStatus} from "@/store/drawersSlice/drawers.slice";
+import {PurasheSmallWidget} from "@/components/widgets/purashe/smallWidget/PurasheSmallWidget";
+import {CARD_POSSIBILITIES_MOCK, CARD_RISK_MOCK} from "@/mocks/socCardsMocks";
 
 
 export default function Page() {
@@ -98,25 +99,14 @@ export default function Page() {
                   все риски</Text>
               </div>
               <Text muted size={"sm"}>3 кв. 2024г. к 3кв. 2023г.</Text>
-              <div className={styles.middleContent}>
-                <div className={styles.contentLeft}>
-                  <FaAmbulance size={40} color={"#194a7a"}/>
-                  <div className={styles.contentBot}>
-                    <Text size={'lg'}>Здоровье</Text>
-                    <Text size={'sm'} maxLines={1}>Принципиально не делают прививки</Text>
-                  </div>
-                </div>
-                <Text color={'green'}>+3.9 п.п</Text>
-              </div>
-              <div className={styles.middleContent}>
-                <div className={styles.contentLeft}>
-                  <FaAccessibleIcon size={40} color={"#194a7a"}/>
-                  <div className={styles.contentBot}>
-                    <Text size={'lg'}>демография</Text>
-                    <Text size={'sm'} maxLines={1}>Принципиально не делают прививки</Text>
-                  </div>
-                </div>
-                <Text color={'red'}>-5.5% п.п</Text>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginTop: '1rem',
+                flexWrap: 'wrap',
+                gap: '.5rem'
+              }}>
+                {CARD_RISK_MOCK.map((card) => <PurasheSmallWidget key={card.id} card={card}/>)}
               </div>
             </div>
           </div>
@@ -124,31 +114,20 @@ export default function Page() {
           <div className={styles.middleContainerBlock}>
             <div className={styles.blockTitle}>
               <div className={styles.titleTop}>
-                <Text size={'lg'}>Топ возможности</Text>
+                <Text size={'lg'} weight={'semibold'}>Топ возможности</Text>
                 <Divider vertical/>
                 <Text style={{cursor: 'pointer'}} size={'md'} muted onClick={() => dispatch(setSocDrawerStatus(true))}>Посмотреть
                   все возможности</Text>
               </div>
               <Text muted size={"sm"}>3 кв. 2024г. к 3кв. 2023г.</Text>
-              <div className={styles.middleContent}>
-                <div className={styles.contentLeft}>
-                  <FaAccessibleIcon size={40} color={"#194a7a"}/>
-                  <div className={styles.contentBot}>
-                    <Text size={'lg'}>Демография</Text>
-                    <Text size={'sm'} maxLines={1}>Находятся в незарегистрированном браке</Text>
-                  </div>
-                </div>
-                <Text color={'green'}>+4.3 п.п</Text>
-              </div>
-              <div className={styles.middleContent}>
-                <div className={styles.contentLeft}>
-                  <FaVolleyballBall size={40} color={"#194a7a"}/>
-                  <div className={styles.contentBot}>
-                    <Text size={'lg'}>Образ жизни</Text>
-                    <Text size={'sm'} maxLines={1}>Следят за питанием</Text>
-                  </div>
-                </div>
-                <Text color={'green'}>+6.7 п.п</Text>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginTop: '1rem',
+                flexWrap: 'wrap',
+                gap: '.5rem'
+              }}>
+                {CARD_POSSIBILITIES_MOCK.map((card) => <PurasheSmallWidget key={card.id} card={card}/>)}
               </div>
             </div>
           </div>

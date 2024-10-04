@@ -26,3 +26,23 @@ $icons-color: #FF8200;
 $pie-1: #476f95;
 $pie-2: #7593af;
 $pie-3: #a3b7ca;
+
+$small-gap: 0.5rem;
+$medium-gap: 1rem;
+$large-gap: 2rem;
+$xxl-gap: 3rem;
+
+@mixin mainWidget {
+  box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin iternalWidget {
+  box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
+  border-radius: 16px;
+  padding: 10px;
+}

@@ -1,0 +1,35 @@
+@import "src/mixins";
+
+.container {
+  @include iternalWidget;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.iconBlock {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.statIcon {
+
+}
