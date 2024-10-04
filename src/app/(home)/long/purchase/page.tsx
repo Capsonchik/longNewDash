@@ -93,7 +93,7 @@ export default function Page() {
           <div className={styles.middleContainerBlock}>
             <div className={styles.blockTitle}>
               <div className={styles.titleTop}>
-                <Text size={'lg'}>Топ риски</Text>
+                <Text size={'lg'} weight={'semibold'}>Топ риски</Text>
                 <Divider vertical/>
                 <Text style={{cursor: 'pointer'}} size={'md'} muted onClick={() => dispatch(setSocDrawerStatus(true))}>Посмотреть
                   все риски</Text>
@@ -134,6 +134,11 @@ export default function Page() {
         </div>
 
         <div className={styles.middleContainerRight}>
+          <div className={styles.middleContainerRightTitle}>
+            <Text size={'md'}>Карта регионов России</Text>
+            <Divider vertical/>
+            <Text size={'lg'} weight={'semibold'}>{region}</Text>
+          </div>
           <MapBig currentValue={region}/>
         </div>
 
