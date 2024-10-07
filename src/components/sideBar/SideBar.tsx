@@ -40,6 +40,9 @@ export const SideBar = () => {
         dispatch(setActiveKey('4-3'));
         break;
       case "/long/longresult":
+        dispatch(setActiveKey('4-6'));
+        break;
+      case "/long/longitude":
         dispatch(setActiveKey('4-5'));
         break;
       default:
@@ -97,9 +100,16 @@ export const SideBar = () => {
               </Nav.Item>
               <Nav.Item eventKey="4-4">Внешние факторы</Nav.Item>
               <Nav.Item
-                onClick={() => handleNavigate('/long/longresult')}
+                onClick={() => handleNavigate('/long/longitude')}
                 eventKey="4-5"
                 className={`${key === '4-5' ? styles.sideItemActive : styles.sideDisable}`}
+              >
+                Тестовые круги
+              </Nav.Item>
+              <Nav.Item
+                onClick={() => handleNavigate('/long/longresult')}
+                eventKey="4-6"
+                className={`${key === '4-6' ? styles.sideItemActive : styles.sideDisable}`}
               >
                 Результат
               </Nav.Item>

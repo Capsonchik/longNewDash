@@ -1,5 +1,6 @@
 'use client'
 
+import styles from './styles.module.scss';
 import {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch} from "@/store/store";
@@ -112,10 +113,8 @@ export const SecondSunBurst = () => {
     <div>
       <Button
         onClick={handleBack}
-        appearance={'primary'}
-        color={'blue'}
+        className={styles.btn}
         disabled={backData === null}
-        style={{background: '#FF8200'}}
       >
         Назад
       </Button>

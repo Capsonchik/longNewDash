@@ -1,5 +1,6 @@
 'use client'
 
+import styles from './styles.module.scss';
 import ReactECharts from "echarts-for-react";
 import {useDispatch, useSelector} from "react-redux";
 import {
@@ -111,11 +112,9 @@ export const FirstSunBurst = () => {
   return (
     <div>
       <Button
+        className={styles.btn}
         onClick={handleBack}
-        appearance={'primary'}
-        color={'blue'}
         disabled={backData === null}
-        style={{background: '#FF8200'}}
       >
         Назад
       </Button>

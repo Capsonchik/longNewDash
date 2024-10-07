@@ -1,3 +1,5 @@
+'use client'
+
 import {SyntheticEvent, useState} from "react";
 import {setCurrentRegion} from "@/store/store.slice";
 import {useDispatch} from "react-redux";

@@ -46,3 +46,8 @@ $xxl-gap: 3rem;
   border-radius: 16px;
   padding: 10px;
 }
+
+@mixin btns {
+  background-color: #d1dbe4;
+  font-family: "Montserrat", sans-serif;
+}
