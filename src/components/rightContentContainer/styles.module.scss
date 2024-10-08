@@ -1,9 +1,13 @@
 .rightContent {
   padding: 0 40px;
   width: calc(100% - 234px);
+  height: calc(100vh - 64px);
+  overflow: auto;
 }
 
 .rightContentMax {
   padding: 0 40px;
   width: calc(100% - 50px);
+  height: calc(100vh - 64px);
+  overflow: auto;
 }
