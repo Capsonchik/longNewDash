@@ -20,7 +20,9 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
       <Header/>
       <div className={styles.content}>
         <SideBar/>
-        <RightContentContainer children={children}/>
+        <RightContentContainer>
+          {children}
+        </RightContentContainer>
         {/*<div className={styles.rightContent}>*/}
         {/*  <HeaderTitle/>*/}
         {/*  {children}*/}
