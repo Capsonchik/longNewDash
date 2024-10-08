@@ -9,8 +9,8 @@ import GearCircleIcon from '@rsuite/icons/legacy/GearCircle';
 
 import {usePathname, useRouter} from "next/navigation";
 import {useDispatch, useSelector} from "react-redux";
-import {selectActiveKey} from "@/store/store.selectors";
-import {setActiveKey} from "@/store/store.slice";
+import {selectActiveKey, selectIsMinMenu} from "@/store/store.selectors";
+import {setActiveKey, setIsMinMenu} from "@/store/store.slice";
 import FunnelTrendIcon from '@rsuite/icons/FunnelTrend';
 import {useEffect} from "react";
 
@@ -20,6 +20,7 @@ export const SideBar = () => {
   const pathName = usePathname();
 
   const key = useSelector(selectActiveKey);
+  const isMinMenu = useSelector(selectIsMinMenu);
 
   const handleNavigate = (route: string) => {
     router.push(route)
@@ -52,7 +53,7 @@ export const SideBar = () => {
 
   return (
     <div className={styles.sideNavContainer}>
-      <Sidenav appearance={'subtle'} defaultOpenKeys={['3', '4', '5']}>
+      <Sidenav expanded={isMinMenu} appearance={'subtle'} defaultOpenKeys={['3', '4', '5']}>
         <Sidenav.Body className={styles.sideBody}>
           <Nav activeKey={key}>
             <Nav.Item
@@ -76,7 +77,7 @@ export const SideBar = () => {
               onClick={() => handleNavigate('/long/purchase')}
               className={`${key === '3' ? styles.sideItemActive : styles.sideDisable}`}
             >
-              Объем покупок
+              Продажи по категориям
             </Nav.Item>
             <Nav.Menu
               eventKey="4"
@@ -120,6 +121,7 @@ export const SideBar = () => {
             </Nav.Menu>
           </Nav>
         </Sidenav.Body>
+        <Sidenav.Toggle onToggle={isMinMenu => dispatch(setIsMinMenu(isMinMenu))}/>
       </Sidenav>
     </div>
   );

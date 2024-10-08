@@ -7,6 +7,7 @@ type MainSliceType = {
   currentRegion: string | null;
   currentPickValue: string | null;
   currentPeriod: string;
+  isMinMenu: boolean;
 }
 
 const initialState: MainSliceType = {
@@ -16,6 +17,7 @@ const initialState: MainSliceType = {
   currentRegion: 'Красноярский край',
   currentPickValue: null,
   currentPeriod: 'Год',
+  isMinMenu: false,
 }
 
 const mainSlice = createSlice({
@@ -36,6 +38,9 @@ const mainSlice = createSlice({
     },
     setCurrentPeriod: (state, action: PayloadAction<string>) => {
       state.currentPeriod = action.payload
+    },
+    setIsMinMenu: (state, action: PayloadAction<boolean>) => {
+      state.isMinMenu = action.payload
     }
 
   }
@@ -46,6 +51,7 @@ export const {
   setActiveKey,
   setCurrentRegion,
   setCurrentPickValue,
-  setCurrentPeriod
+  setCurrentPeriod,
+  setIsMinMenu
 } = mainSlice.actions;
 export default mainSlice.reducer;
