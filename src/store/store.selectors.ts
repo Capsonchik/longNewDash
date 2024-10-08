@@ -7,3 +7,4 @@ export const selectCurrentRegion = (state: RootState) => state.main.currentRegio
 export const selectCurrentPickValue = (state: RootState) => state.main.currentPickValue;
 export const selectCurrentPeriod = (state: RootState) => state.main.currentPeriod;
 export const selectIsMinMenu = (state: RootState) => state.main.isMinMenu;
+export const selectResultInput = (state: RootState) => state.main.resultInput;

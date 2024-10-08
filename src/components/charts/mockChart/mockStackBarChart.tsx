@@ -92,7 +92,7 @@ export const MockStackBarChart = () => {
   return (
     <ReactECharts
       option={option}
-      style={{height: 400, width: '100%'}} // Настройте размеры графика
+      style={{height: '100%', width: '100%'}} // Настройте размеры графика
     />
   );
 };

@@ -26,6 +26,7 @@
 
 .btn {
   @include btns;
+  width: 49%;
 }
 
 .mapContainer {
@@ -37,4 +38,21 @@
 
 .graph {
   margin-top: 1rem;
+}
+
+.selectsBlocks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.selectsBlock {
+  width: 33%;
+}
+
+.select {
+  @include select;
+  margin-top: 0.5rem;
+  width: 100%;
 }

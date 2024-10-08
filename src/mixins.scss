@@ -51,3 +51,7 @@ $xxl-gap: 3rem;
   background-color: #d1dbe4;
   font-family: "Montserrat", sans-serif;
 }
+
+@mixin select {
+  font-family: "Montserrat", sans-serif !important;
+}

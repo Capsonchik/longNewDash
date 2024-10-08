@@ -7,9 +7,9 @@ import {ruRU} from "rsuite/locales";
 export const MonthPiker = () => {
 
   return (
-
     <CustomProvider locale={ruRU}>
       <DateRangePicker
+        placement={'bottomEnd'}
         placeholder={'Выберите период'}
         format="MMM yyyy"
         caretAs={BsCalendar2MonthFill}
