@@ -1,6 +1,6 @@
 import 'rsuite/dist/rsuite.min.css';
 
-import {Placeholder, Tabs} from "rsuite";
+import {Tabs} from "rsuite";
 import {Demography} from "@/components/drawers/socDrawer/socDrawerComponents/demography/Demography";
 
 export const SocNav = () => {
@@ -10,13 +10,13 @@ export const SocNav = () => {
         <Demography/>
       </Tabs.Tab>
       <Tabs.Tab eventKey="2" title="Здоровье">
-        <Placeholder.Paragraph graph="square"/>
+        <Demography/>
       </Tabs.Tab>
       <Tabs.Tab eventKey="3" title="Занятость">
-        <Placeholder.Paragraph graph="circle"/>
+        <Demography/>
       </Tabs.Tab>
       <Tabs.Tab eventKey="4" title="Мировозрение">
-        <Placeholder.Paragraph graph="circle"/>
+        <Demography/>
       </Tabs.Tab>
     </Tabs>
   );
