@@ -15,7 +15,7 @@ export const SocDrawer = () => {
   return (
     <Drawer style={{width: '80vw'}} open={status}
             onClose={() => dispatch(setSocDrawerStatus(false))}>
-      <Drawer.Body style={{padding: '20px 60px'}}>
+      <Drawer.Body style={{padding: '20px 60px', overflow: 'auto'}}>
         <SocNav/>
       </Drawer.Body>
     </Drawer>

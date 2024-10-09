@@ -18,8 +18,13 @@
   width: 60%;
   padding: 10px;
 }
-   
+
 .filters {
   display: flex;
   gap: 1rem;
+}
+
+.minGraphs {
+  display: flex;
+  justify-content: space-between;
 }

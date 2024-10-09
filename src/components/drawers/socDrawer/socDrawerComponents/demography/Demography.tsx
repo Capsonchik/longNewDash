@@ -3,6 +3,8 @@ import {Checkbox, CheckboxGroup, Heading, SelectPicker} from "rsuite";
 import {useState} from "react";
 import {MAP_REGIONS} from "@/mocks/regionInfoMock";
 import {MonthPiker} from "@/components/rangePickers/monthPicker/MonthPiker";
+import {MockLineChart} from "@/components/charts/mockChart/mockLineChart";
+import {MockScatter} from "@/components/charts/mockChart/mockScatter";
 
 export const Demography = () => {
   const [value, setValue] = useState<string[]>(['C'])
@@ -44,7 +46,12 @@ export const Demography = () => {
           <SelectPicker data={data} placeholder={'Выберите регион'}/>
           <MonthPiker/>
         </div>
-
+        <MockLineChart/>
+        <Heading level={6}>Корреляция</Heading>
+        <div className={styles.minGraphs}>
+          <MockScatter/>
+          <MockScatter/>
+        </div>
       </div>
     </div>
   );
