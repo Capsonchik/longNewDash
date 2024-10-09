@@ -53,7 +53,7 @@ export const SideBar = () => {
 
   return (
     <div className={styles.sideNavContainer}>
-      <Sidenav expanded={isMinMenu} appearance={'subtle'} defaultOpenKeys={['3', '4', '5']}>
+      <Sidenav expanded={isMinMenu} appearance={'default'} defaultOpenKeys={['3', '4', '5']}>
         <Sidenav.Body className={styles.sideBody}>
           <Nav activeKey={key}>
             <Nav.Item

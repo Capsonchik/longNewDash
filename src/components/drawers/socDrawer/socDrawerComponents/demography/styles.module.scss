@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 40%;
+  padding: 10px;
+}
+
+.containerRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60%;
+  padding: 10px;
+}
+   
+.filters {
+  display: flex;
+  gap: 1rem;
+}
