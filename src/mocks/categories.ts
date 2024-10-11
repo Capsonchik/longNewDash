@@ -221,3 +221,224 @@ export const CATEGORY = [
   "Скобяные изделия",
   "Товары для ремонта"
 ]
+
+
+const data = {
+  smallWidgets: [
+    {
+      id: 1,
+      title: 'Количество участников системы',
+      value: '173 872 чел.',
+      index: 2.65,
+      indexStatus: 'up'
+    },
+    {
+      id: 2,
+      title: 'Внесенные SKU',
+      value: '28 млн.',
+      index: 8.35,
+      indexStatus: 'up'
+    },
+    {
+      id: 3,
+      title: 'Количество ответов',
+      value: '103 472',
+      index: 5.50,
+      indexStatus: 'up'
+    },
+    {
+      id: 4,
+      title: 'Объем медиа данных',
+      value: '49 TB',
+      index: 4.25,
+      indexStatus: 'down'
+    },
+  ],
+  indicators: [
+    {
+      id: 1,
+      title: 'Индекс свободных денег',
+      period: 'август 2024',
+      value: '60.5%',
+      changeStatus: 'up',
+      changeCurrent: 3.4,
+      changeYearStatus: 'down',
+      changeYear: 19.1,
+      change: 'п.п'
+    },
+    {
+      id: 2,
+      title: 'Индекс благосостояния',
+      period: 'август 2024',
+      value: '30.2%',
+      changeStatus: 'down',
+      changeCurrent: 0.5,
+      changeYearStatus: 'up',
+      changeYear: 0.8,
+      change: 'п.п'
+    },
+    {
+      id: 3,
+      title: 'Дефлятор FMCG',
+      period: 'август 2024',
+      value: '227.5%',
+      changeStatus: 'down',
+      changeCurrent: 0.5,
+      changeYearStatus: 'up',
+      changeYear: 0.8,
+      change: '%'
+    },
+    {
+      id: 4,
+      title: 'Недельный средний чек',
+      period: '9-15 сентября',
+      value: '816 руб.',
+      changeStatus: 'up',
+      changeCurrent: 4,
+      changeYearStatus: 'up',
+      changeYear: 21.6,
+      change: '%'
+    },
+    {
+      id: 5,
+      title: 'Недельные расходы',
+      period: '2-8 сентября',
+      value: '7764 руб.',
+      changeStatus: 'up',
+      changeCurrent: 2.4,
+      changeYearStatus: 'up',
+      changeYear: 21.6,
+      change: '%'
+    },
+  ],
+  ethnography: [
+    {
+      id: 1,
+      language: 'Русские',
+      currentUsers: 735,
+      usersPercent: 43,
+    },
+    {
+      id: 2,
+      language: 'Украинцы',
+      currentUsers: 223,
+      usersPercent: 27,
+    },
+    {
+      id: 3,
+      language: 'Белорусы',
+      currentUsers: 181,
+      usersPercent: 22,
+    },
+    {
+      id: 4,
+      language: 'Татары',
+      currentUsers: 132,
+      usersPercent: 16,
+    },
+    {
+      id: 5,
+      language: 'Евреи',
+      currentUsers: 118,
+      usersPercent: 15,
+    },
+    {
+      id: 6,
+      language: 'Поляки',
+      currentUsers: 98,
+      usersPercent: 13,
+    },
+  ],
+  radar: [
+    {name: 'Девочка', max: 6500},
+    {name: 'Девушка', max: 16000},
+    {name: 'Женщина', max: 30000},
+    {name: 'Мальчик', max: 38000},
+    {name: 'Парень', max: 52000},
+    {name: 'Мужчина', max: 25000}
+  ],
+  users: [
+    {
+      name: 'Пользователи ПК',
+      data: [120, 200, 150, 80, 70, 110, 130],
+      type: 'bar',
+      barWidth: '20%',
+      itemStyle: {
+        // color: '#FF8200',
+        color: '#194a7a',
+        borderRadius: [10, 10, 0, 0]
+      }
+    },
+    {
+      name: 'Пользователи мобильных',
+      data: [120, 200, 150, 80, 70, 110, 130],
+      type: 'bar',
+      barWidth: '20%',
+      itemStyle: {
+        color: '#ccc',
+        borderRadius: [10, 10, 0, 0]
+      }
+    }
+  ],
+  activeUsers: [
+    {
+      id: 1,
+      source: 2342,
+      users: 'Муж.',
+      sessions: 23,
+      bounce: 'Москва',
+      status: 'danger',
+      duration: 135
+    },
+    {
+      id: 2,
+      source: 7343,
+      users: 'Жен.',
+      sessions: 56,
+      bounce: 'Москва',
+      status: 'success',
+      duration: 130
+    },
+    {
+      id: 3,
+      source: 123,
+      users: 'Жен.',
+      sessions: 18,
+      bounce: 'Москва',
+      status: 'success',
+      duration: 110
+    },
+    {
+      id: 4,
+      source: 12,
+      users: 'Муж.',
+      sessions: 32,
+      bounce: 'Москва',
+      status: 'success',
+      duration: 95
+    },
+    {
+      id: 5,
+      source: 133455,
+      users: 'Муж.',
+      sessions: 40,
+      bounce: 'Москва',
+      status: 'success',
+      duration: 60
+    },
+    {
+      id: 6,
+      source: 333333,
+      users: 'Муж.',
+      sessions: 38,
+      bounce: 'Москва',
+      status: 'danger',
+      duration: 55
+    },
+  ],
+  longitude: [
+    {value: 1048, name: 'Биология', itemStyle: {color: '#476f95'}},
+    {value: 735, name: 'Физиология', itemStyle: {color: '#7593af'}},
+    {value: 580, name: 'Социология', itemStyle: {color: '#a3b7ca'}},
+  ]
+}
