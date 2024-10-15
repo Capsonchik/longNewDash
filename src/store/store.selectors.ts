@@ -8,3 +8,4 @@ export const selectCurrentPickValue = (state: RootState) => state.main.currentPi
 export const selectCurrentPeriod = (state: RootState) => state.main.currentPeriod;
 export const selectIsMinMenu = (state: RootState) => state.main.isMinMenu;
 export const selectResultInput = (state: RootState) => state.main.resultInput;
+export const selectIndexes = (state: RootState) => state.main.indexes;

@@ -1,8 +1,22 @@
 'use client'
 
 import ReactECharts from "echarts-for-react";
+import {useSelector} from "react-redux";
+import {selectIndexes} from "@/store/store.selectors";
+import {Text} from "rsuite";
 
 export const MockLineChart = () => {
+  const indexes = useSelector(selectIndexes);
+
+  const renderIndexes = indexes.map((item, index) => {
+    return {
+      name: item,
+      type: 'line',
+      stack: 'Total',
+      data: [120, 132, 101, 134, 90, 230, 210]
+    }
+  })
+
   const option = {
     // title: {
     //   text: 'Stacked Line'
@@ -11,7 +25,7 @@ export const MockLineChart = () => {
       trigger: 'axis'
     },
     legend: {
-      data: ['Планируют детей в ближайший год', 'Среднесуточная температура, градусов', 'Средневзвешенный курс рубля к долл. США']
+      data: indexes
     },
     grid: {
       left: '3%',
@@ -32,32 +46,23 @@ export const MockLineChart = () => {
     yAxis: {
       type: 'value'
     },
-    series: [
-      {
-        name: 'Планируют детей в ближайший год',
-        type: 'line',
-        stack: 'Total',
-        data: [120, 132, 101, 134, 90, 230, 210]
-      },
-      {
-        name: 'Среднесуточная температура, градусов',
-        type: 'line',
-        stack: 'Total',
-        data: [220, 182, 191, 234, 290, 330, 310]
-      },
-      {
-        name: 'Средневзвешенный курс рубля к долл. США',
-        type: 'line',
-        stack: 'Total',
-        data: [150, 232, 201, 154, 190, 330, 410]
-      },
-    ]
+    series: renderIndexes
   };
 
   return (
-    <ReactECharts
-      option={option}
-      style={{height: 400, width: '100%'}} // Настройте размеры графика
-    />
+    <>
+      {indexes.length === 0 ? (
+        <div
+          style={{height: 400, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+        >
+          <Text weight={'semibold'} size={'xl'}>Сперва нужно выбрать индекс</Text>
+        </div>
+      ) : (
+        <ReactECharts
+          option={option}
+          style={{height: 400, width: '100%'}} // Настройте размеры графика
+        />
+      )}
+    </>
   );
 };

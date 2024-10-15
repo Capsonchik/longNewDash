@@ -9,6 +9,7 @@ type MainSliceType = {
   currentPeriod: string;
   isMinMenu: boolean;
   resultInput: 'graph' | 'map'
+  indexes: string[];
 }
 
 const initialState: MainSliceType = {
@@ -20,6 +21,7 @@ const initialState: MainSliceType = {
   currentPeriod: 'Год',
   isMinMenu: false,
   resultInput: 'map',
+  indexes: []
 }
 
 const mainSlice = createSlice({
@@ -46,6 +48,9 @@ const mainSlice = createSlice({
     },
     setResultInput: (state, action: PayloadAction<'graph' | 'map'>) => {
       state.resultInput = action.payload
+    },
+    setIndexes: (state, action: PayloadAction<string[]>) => {
+      state.indexes = action.payload
     }
   }
 })
@@ -57,6 +62,7 @@ export const {
   setCurrentPickValue,
   setCurrentPeriod,
   setIsMinMenu,
-  setResultInput
+  setResultInput,
+  setIndexes
 } = mainSlice.actions;
 export default mainSlice.reducer;

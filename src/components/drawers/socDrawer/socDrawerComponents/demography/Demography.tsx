@@ -1,45 +1,30 @@
 import styles from './styles.module.scss'
-import {Checkbox, CheckboxGroup, Heading, SelectPicker} from "rsuite";
-import {useState} from "react";
+import {Heading, SelectPicker} from "rsuite";
 import {MAP_REGIONS} from "@/mocks/regionInfoMock";
 import {MonthPiker} from "@/components/rangePickers/monthPicker/MonthPiker";
 import {MockLineChart} from "@/components/charts/mockChart/mockLineChart";
 import {MockScatter} from "@/components/charts/mockChart/mockScatter";
+import {
+  IndexesCheckBoxGroup
+} from "@/components/drawers/socDrawer/socDrawerComponents/indexesCheckboxGroup/IndexesCheckBoxGroup";
 
 export const Demography = () => {
-  const [value, setValue] = useState<string[]>(['C'])
-  const [nextValue, setNextValue] = useState<string[]>(['A'])
+
+  const INDEXES = ['Индекс процентов', 'Индекс п.п', 'Индекс руб.']
 
   const data = MAP_REGIONS.map(item => ({label: item, value: item}));
+  const indexesData = INDEXES.map(item => ({label: item, value: item}));
 
   return (
     <div className={styles.container}>
       <div className={styles.containerLeft}>
-        <Heading level={4}>Репродуктивные планы</Heading>
-        <CheckboxGroup
-          name="checkbox-group"
-          value={value}
-          onChange={(value) => {
-            const selectedValues = value.map(item => String(item)) as string[];
-            setValue(selectedValues);
-          }}
-        >
-          <Checkbox value="A">Сколько хотели бы иметь детей</Checkbox>
-          <Checkbox value="B">Планируют детей в ближайший год</Checkbox>
-          <Checkbox value="C">Планируют детей в ближайшие 2 года</Checkbox>
-        </CheckboxGroup>
-        <Heading level={4}>Влияние внешних факторов</Heading>
-        <CheckboxGroup
-          name="checkbox-group"
-          value={nextValue}
-          onChange={(value) => {
-            const selectedValues = value.map(item => String(item)) as string[];
-            setNextValue(selectedValues);
-          }}
-        >
-          <Checkbox value="A">Среднесуточная температура</Checkbox>
-          <Checkbox value="B">Средевзвешенный курс рубля к долл. США</Checkbox>
-        </CheckboxGroup>
+        {/*<Heading level={4}>Репродуктивные планы</Heading>*/}
+        <SelectPicker
+          data={indexesData}
+          placeholder={'Выберите индекс'}
+        />
+        <Heading level={4}>Индексы РОМИР</Heading>
+        <IndexesCheckBoxGroup/>
       </div>
       <div className={styles.containerRight}>
         <div className={styles.filters}>
