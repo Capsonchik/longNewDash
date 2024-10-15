@@ -1,0 +1,9 @@
+@import "src/mixins";
+
+.container {
+  @include mainWidget;
+}
+
+.title {
+  margin-bottom: $medium-gap;
+}
