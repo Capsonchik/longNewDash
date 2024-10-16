@@ -1657,3 +1657,36 @@ export const SUN_DATA_MINI = [
     "value": 33.333333333333336,
   }
 ]
+
+export const TEST_CHECK_TREE = [
+  {
+    label: 'Node 1',
+    value: 'node-1',
+    children: [
+      {
+        label: 'Child 1.1',
+        value: 'child-1.1',
+      },
+      {
+        label: 'Child 1.2',
+        value: 'child-1.2',
+      }
+    ]
+  },
+  {
+    label: 'Node 2',
+    value: 'node-2',
+    children: [
+      {
+        label: 'Child 2.1',
+        value: 'child-2.1',
+      },
+      {
+        label: 'Child 2.2',
+        value: 'child-2.2',
+      }
+    ]
+  }
+];
+
+

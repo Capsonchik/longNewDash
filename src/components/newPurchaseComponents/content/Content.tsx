@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import {CheckPicker, Panel, SelectPicker} from "rsuite";
+import {CheckPicker, CheckTreePicker, Panel, SelectPicker} from "rsuite";
 import {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "@/store/store";
@@ -7,6 +7,7 @@ import {setIndexes} from "@/store/store.slice";
 import {MockLineChart} from "@/components/charts/mockChart/mockLineChart";
 import {REGION} from "@/mocks/regionInfoMock";
 import {MonthPiker} from "@/components/rangePickers/monthPicker/MonthPiker";
+import {CHECK_TREE_MOCK} from "@/mocks/checkTreeMock";
 
 export const Content = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -44,8 +45,8 @@ export const Content = () => {
   // Используем состояния для каждого пикера
   const [selectedRomir, setSelectedRomir] = useState<string[]>(['Индекс свободных денег']);
   const [selectedParams, setSelectedParams] = useState<string[]>(['Среднемесячный доход на одного члена семьи за последний месяц, руб.']);
-  const [selectedConsumerPanel, setSelectedConsumerPanel] = useState<string[]>(['test6']);
-  const [selectedExternalFactors, setSelectedExternalFactors] = useState<string[]>(['test9']);
+  // const [selectedConsumerPanel, setSelectedConsumerPanel] = useState<string[]>(['test6']);
+  // const [selectedExternalFactors, setSelectedExternalFactors] = useState<string[]>(['test9']);
 
   // Собираем все выбранные значения в один массив
   const [combinedSelections, setCombinedSelections] = useState<string[]>([]);
@@ -55,11 +56,11 @@ export const Content = () => {
     setCombinedSelections([
       ...selectedRomir,
       ...selectedParams,
-      ...selectedConsumerPanel,
-      ...selectedExternalFactors
+      // ...selectedConsumerPanel,
+      // ...selectedExternalFactors
     ]);
     dispatch(setIndexes(combinedSelections));
-  }, [selectedRomir, selectedParams, selectedConsumerPanel, selectedExternalFactors, dispatch]);
+  }, [selectedRomir, selectedParams, dispatch]);
 
   return (
     <div className={styles.container}>
@@ -80,20 +81,21 @@ export const Content = () => {
             placeholder={'Прочие источники'}
             style={{width: 250, overflow: 'auto'}}
           />
-          <CheckPicker
-            data={data3}
-            value={selectedConsumerPanel}
-            onChange={setSelectedConsumerPanel}
-            placeholder={'Потребительская панель'}
-            style={{width: 250, overflow: 'auto'}}
-          />
-          <CheckPicker
-            data={data4}
-            value={selectedExternalFactors}
-            onChange={setSelectedExternalFactors}
-            placeholder={'Внешние факторы'}
-            style={{width: 250, overflow: 'auto'}}
-          />
+          {/*<CheckPicker*/}
+          {/*  data={data3}*/}
+          {/*  value={selectedConsumerPanel}*/}
+          {/*  onChange={setSelectedConsumerPanel}*/}
+          {/*  placeholder={'Потребительская панель'}*/}
+          {/*  style={{width: 250, overflow: 'auto'}}*/}
+          {/*/>*/}
+          {/*<CheckPicker*/}
+          {/*  data={data4}*/}
+          {/*  value={selectedExternalFactors}*/}
+          {/*  onChange={setSelectedExternalFactors}*/}
+          {/*  placeholder={'Внешние факторы'}*/}
+          {/*  style={{width: 250, overflow: 'auto'}}*/}
+          {/*/>*/}
+          <CheckTreePicker data={CHECK_TREE_MOCK}/>
         </div>
       </Panel>
       <Panel bordered className={styles.panel}>
