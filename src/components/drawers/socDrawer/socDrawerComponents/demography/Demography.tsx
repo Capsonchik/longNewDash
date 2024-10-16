@@ -34,8 +34,12 @@ export const Demography = () => {
         <MockLineChart indexes={INDEXES}/>
         <Heading level={6}>Корреляция</Heading>
         <div className={styles.minGraphs}>
-          <MockScatter/>
-          <MockScatter/>
+          <div style={{width: '50%'}}>
+            <MockScatter/>
+          </div>
+          <div style={{width: '50%'}}>
+            <MockScatter/>
+          </div>
         </div>
       </div>
     </div>

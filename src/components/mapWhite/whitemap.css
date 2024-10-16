@@ -1,0 +1,256 @@
+.rf-map-white,
+.rf-map-white * {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.tooltip {
+    width: 210px;
+    position: absolute;
+    top: -30px;
+    z-index: 1;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f2f2f5;
+    background-color: red;
+    border-radius: 5px;
+    padding: 4px;
+    opacity: 0; /* Элемент изначально скрыт */
+    visibility: hidden; /* Скрывает элемент визуально */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Переход для плавности */
+    box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
+}
+
+.tooltip-visible {
+    opacity: 1; /* Показываем элемент */
+    visibility: visible; /* Делаем его видимым */
+}
+
+.tooltipTitle {
+    font-size: 1rem;
+    color: #3e4676;
+}
+
+.tooltipParam {
+    color: #3e4676;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cityParam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3e4676;
+}
+
+.rf-map-white {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 95%;
+    /*padding: 20px;*/
+}
+
+.rf-map-white .district b {
+    position: absolute;
+    z-index: 5;
+    width: 18px;
+    height: 18px;
+    background: #FF8200;
+    border-radius: 50%;
+    left: 6px;
+    top: 18px;
+    transition: all 0.3s;
+}
+
+.rf-map-white .district span {
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    left: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Tahoma, sans-serif;
+    line-height: 1;
+    color: greenyellow;
+}
+
+.rf-map-white .district {
+    display: none;
+}
+
+.rf-map-white.open .district b {
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 24px 24px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+}
+
+.rf-map-white.open .district span {
+    color: #FFF;
+}
+
+.rf-map-white svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.5));
+}
+
+.rf-map-white path {
+    stroke: #ccc;
+    stroke-width: 1;
+    stroke-linejoin: round;
+}
+
+.rf-map-white [data-code] {
+    fill: white;
+    transition: fill 0.2s;
+}
+
+.rf-map-white [data-code]:hover {
+    fill: wheat;
+}
+
+.rf-map-white .district-text {
+    display: none;
+    position: absolute;
+    z-index: 6;
+    left: 0;
+    top: 60px;
+    width: calc(100% - 20px);
+    height: calc(100% - 90px);
+    padding: 0 20px;
+    overflow: auto;
+    color: #FFF;
+    font-size: 13px;
+    font-family: Verdana, sans-serif;
+}
+
+.rf-map-white .close-district {
+    opacity: 0;
+    z-index: 6;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 1s;
+    pointer-events: none;
+}
+
+.rf-map-white.open .close-district {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.rf-map-white .district-links {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rf-map-white .district-links div {
+    font-size: 13px;
+    font-family: Verdana, sans-serif;
+    padding: 4px;
+}
+
+.rf-map-white .district-links div:after {
+    content: " | ";
+    color: #337AB7;
+}
+
+.rf-map-white .district-links div:last-child:after {
+    content: "";
+}
+
+.dropfill {
+    fill: wheat !important;
+}
+
+.mainfill {
+    fill: wheat !important;
+}
+
+@media (min-width: 768px) {
+    .rf-map-white .district b {
+        width: 28px;
+        height: 28px;
+        left: 6px;
+        top: 28px;
+    }
+
+    .rf-map-white .district span {
+        top: 30px;
+        left: 46px;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .rf-map-white .district-text {
+        left: 30px;
+        top: 80px;
+        width: calc(100% - 60px);
+        height: calc(100% - 130px);
+        font-size: 16px;
+    }
+
+    .rf-map-white .close-district {
+        width: 60px;
+        height: 60px;
+        font-size: 60px;
+    }
+
+    .rf-map-white .district-links {
+        display: none;
+    }
+}
+
+/* Цвета регионов */
+.rf-map-white [data-code="RU-SAR"] {
+    fill: #42ab49;
+    cursor: pointer;
+}
+
+.rf-map-white [data-code="RU-SA"] {
+    fill: #80c783;
+    cursor: pointer;
+}
+
+.rf-map-white [data-code="RU-KO"] {
+    fill: #bddeb3;
+    cursor: pointer;
+}
+
+.rf-map-white [data-code="RU-YAR"] {
+    fill: #dcf5d6;
+    cursor: pointer;
+}
+
+.rf-map-white [data-code="RU-SAR"]:hover {
+    fill: wheat;
+}
+
+.rf-map-white [data-code="RU-SA"]:hover {
+    fill: wheat;
+}
+
+.rf-map-white [data-code="RU-KO"]:hover {
+    fill: wheat;
+}
+
+.rf-map-white [data-code="RU-YAR"]:hover {
+    fill: wheat;
+}

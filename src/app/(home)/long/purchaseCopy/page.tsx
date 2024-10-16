@@ -85,7 +85,7 @@ export default function Page() {
         <div className={styles.slider}>
           <RangePickers periodType={currentPeriod}/>
         </div>
-        {/*<MapBig currentValue={region}/>*/}
+        {/*<MapWhite currentValue={region}/>*/}
       </div>
       <div className={styles.middleContainer}>
 
