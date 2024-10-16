@@ -70,14 +70,14 @@ export const Content = () => {
             data={data}
             value={selectedRomir}
             onChange={setSelectedRomir}
-            placeholder={'Индексы ромир'}
+            placeholder={'Данные РОМИР'}
             style={{width: 250, overflow: 'auto'}}
           />
           <CheckPicker
             data={data2}
             value={selectedParams}
             onChange={setSelectedParams}
-            placeholder={'Параметры'}
+            placeholder={'Прочие источники'}
             style={{width: 250, overflow: 'auto'}}
           />
           <CheckPicker
