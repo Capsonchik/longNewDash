@@ -31,7 +31,7 @@ export const Demography = () => {
           <SelectPicker data={data} placeholder={'Выберите регион'}/>
           <MonthPiker/>
         </div>
-        <MockLineChart/>
+        <MockLineChart indexes={INDEXES}/>
         <Heading level={6}>Корреляция</Heading>
         <div className={styles.minGraphs}>
           <MockScatter/>

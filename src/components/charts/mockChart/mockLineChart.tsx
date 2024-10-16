@@ -57,7 +57,7 @@ export const MockLineChart = ({indexes}: Props) => {
         <div
           style={{height: 400, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
         >
-          <Text weight={'semibold'} size={'xl'}>Сперва нужно выбрать индекс</Text>
+          <Text weight={'semibold'} size={'xl'}>Выберите индекс</Text>
         </div>
       ) : (
         <ReactECharts
