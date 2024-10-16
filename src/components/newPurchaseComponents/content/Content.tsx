@@ -42,10 +42,10 @@ export const Content = () => {
   }));
 
   // Используем состояния для каждого пикера
-  const [selectedRomir, setSelectedRomir] = useState<string[]>([]);
-  const [selectedParams, setSelectedParams] = useState<string[]>([]);
-  const [selectedConsumerPanel, setSelectedConsumerPanel] = useState<string[]>([]);
-  const [selectedExternalFactors, setSelectedExternalFactors] = useState<string[]>([]);
+  const [selectedRomir, setSelectedRomir] = useState<string[]>(['Индекс свободных денег']);
+  const [selectedParams, setSelectedParams] = useState<string[]>(['Среднемесячный доход на одного члена семьи за последний месяц, руб.']);
+  const [selectedConsumerPanel, setSelectedConsumerPanel] = useState<string[]>(['test6']);
+  const [selectedExternalFactors, setSelectedExternalFactors] = useState<string[]>(['test9']);
 
   // Собираем все выбранные значения в один массив
   const [combinedSelections, setCombinedSelections] = useState<string[]>([]);
@@ -65,6 +65,7 @@ export const Content = () => {
     <div className={styles.container}>
       <div className={styles.romir} style={{overflow: 'auto'}}>
         <CheckPicker
+          defaultValue={['Индекс свободных денег']}
           data={data}
           value={selectedRomir}
           onChange={setSelectedRomir}
