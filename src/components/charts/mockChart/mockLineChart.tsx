@@ -1,7 +1,7 @@
 'use client'
 
 import ReactECharts from "echarts-for-react";
-import {Text} from "rsuite";
+import {Divider} from "rsuite";
 
 type Props = {
   indexes: string[]
@@ -57,7 +57,7 @@ export const MockLineChart = ({indexes}: Props) => {
         <div
           style={{height: 400, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
         >
-          <Text weight={'semibold'} size={'xl'}>Выберите индекс</Text>
+          <Divider>Выберите индекс</Divider>
         </div>
       ) : (
         <ReactECharts
