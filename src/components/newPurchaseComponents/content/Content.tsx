@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import {CheckPicker, SelectPicker} from "rsuite";
+import {CheckPicker, Panel, SelectPicker} from "rsuite";
 import {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "@/store/store";
@@ -63,42 +63,48 @@ export const Content = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.romir} style={{overflow: 'auto'}}>
-        <CheckPicker
-          defaultValue={['Индекс свободных денег']}
-          data={data}
-          value={selectedRomir}
-          onChange={setSelectedRomir}
-          placeholder={'Индексы ромир'}
-          style={{width: 250, overflow: 'auto'}}
-        />
-        <CheckPicker
-          data={data2}
-          value={selectedParams}
-          onChange={setSelectedParams}
-          placeholder={'Параметры'}
-          style={{width: 250, overflow: 'auto'}}
-        />
-        <CheckPicker
-          data={data3}
-          value={selectedConsumerPanel}
-          onChange={setSelectedConsumerPanel}
-          placeholder={'Потребительская панель'}
-          style={{width: 250, overflow: 'auto'}}
-        />
-        <CheckPicker
-          data={data4}
-          value={selectedExternalFactors}
-          onChange={setSelectedExternalFactors}
-          placeholder={'Внешние факторы'}
-          style={{width: 250, overflow: 'auto'}}
-        />
-      </div>
-      <div className={styles.filters}>
-        <SelectPicker data={region} placeholder={'Выберите регион'}/>
-        <MonthPiker/>
-      </div>
-      <MockLineChart indexes={combinedSelections}/>
+      <Panel bordered className={styles.panel}>
+        <div className={styles.romir} style={{overflow: 'auto'}}>
+          <CheckPicker
+            defaultValue={['Индекс свободных денег']}
+            data={data}
+            value={selectedRomir}
+            onChange={setSelectedRomir}
+            placeholder={'Индексы ромир'}
+            style={{width: 250, overflow: 'auto'}}
+          />
+          <CheckPicker
+            data={data2}
+            value={selectedParams}
+            onChange={setSelectedParams}
+            placeholder={'Параметры'}
+            style={{width: 250, overflow: 'auto'}}
+          />
+          <CheckPicker
+            data={data3}
+            value={selectedConsumerPanel}
+            onChange={setSelectedConsumerPanel}
+            placeholder={'Потребительская панель'}
+            style={{width: 250, overflow: 'auto'}}
+          />
+          <CheckPicker
+            data={data4}
+            value={selectedExternalFactors}
+            onChange={setSelectedExternalFactors}
+            placeholder={'Внешние факторы'}
+            style={{width: 250, overflow: 'auto'}}
+          />
+        </div>
+      </Panel>
+      <Panel bordered className={styles.panel}>
+        <div className={styles.filters}>
+          <SelectPicker data={region} placeholder={'Выберите регион'}/>
+          <MonthPiker/>
+        </div>
+      </Panel>
+      <Panel bordered className={styles.panel}>
+        <MockLineChart indexes={combinedSelections}/>
+      </Panel>
     </div>
   );
 };
