@@ -18,7 +18,7 @@ export const MockScatter = () => {
     yAxis: {},
     series: [
       {
-        symbolSize: 20,
+        symbolSize: 10,
         data: [
           [10.0, 8.04],
           [8.07, 6.95],
