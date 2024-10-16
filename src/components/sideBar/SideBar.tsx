@@ -12,6 +12,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {selectActiveKey, selectIsMinMenu} from "@/store/store.selectors";
 import {setActiveKey, setIsMinMenu} from "@/store/store.slice";
 import FunnelTrendIcon from '@rsuite/icons/FunnelTrend';
+import PushMessageIcon from '@rsuite/icons/PushMessage';
 import ProjectIcon from '@rsuite/icons/Project';
 import {useEffect} from "react";
 
@@ -49,6 +50,9 @@ export const SideBar = () => {
         break;
       case "/long/new-purchase":
         dispatch(setActiveKey('6'));
+        break;
+      case "/long/new-purchase-page":
+        dispatch(setActiveKey('7'));
         break;
       default:
         break;
@@ -90,6 +94,14 @@ export const SideBar = () => {
               className={`${key === '6' ? styles.sideItemActive : styles.sideDisable}`}
             >
               Продажи по категориям 2
+            </Nav.Item>
+            <Nav.Item
+              eventKey="7"
+              icon={<PushMessageIcon/>}
+              onClick={() => handleNavigate('/long/new-purchase-page')}
+              className={`${key === '7' ? styles.sideItemActive : styles.sideDisable}`}
+            >
+              Продажи по категориям 3
             </Nav.Item>
             <Nav.Menu
               eventKey="4"
