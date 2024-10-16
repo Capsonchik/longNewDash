@@ -1,14 +1,16 @@
 'use client'
 
 import ReactECharts from "echarts-for-react";
-import {useSelector} from "react-redux";
-import {selectIndexes} from "@/store/store.selectors";
 import {Text} from "rsuite";
 
-export const MockLineChart = () => {
-  const indexes = useSelector(selectIndexes);
+type Props = {
+  indexes: string[]
+}
 
-  const renderIndexes = indexes.map((item, index) => {
+export const MockLineChart = ({indexes}: Props) => {
+  // const indexes = useSelector(selectIndexes);
+
+  const renderIndexes = indexes.map((item) => {
     return {
       name: item,
       type: 'line',
@@ -59,6 +61,7 @@ export const MockLineChart = () => {
         </div>
       ) : (
         <ReactECharts
+          key={indexes.join(',')}
           option={option}
           style={{height: 400, width: '100%'}} // Настройте размеры графика
         />
