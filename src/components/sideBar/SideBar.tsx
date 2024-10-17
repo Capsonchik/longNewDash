@@ -3,7 +3,6 @@
 import styles from './styles.module.scss';
 import {Nav, Sidenav} from 'rsuite';
 import DashboardIcon from '@rsuite/icons/legacy/Dashboard';
-import GroupIcon from '@rsuite/icons/legacy/Group';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import GearCircleIcon from '@rsuite/icons/legacy/GearCircle';
 
@@ -12,8 +11,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {selectActiveKey, selectIsMinMenu} from "@/store/store.selectors";
 import {setActiveKey, setIsMinMenu} from "@/store/store.slice";
 import FunnelTrendIcon from '@rsuite/icons/FunnelTrend';
-import PushMessageIcon from '@rsuite/icons/PushMessage';
-import ProjectIcon from '@rsuite/icons/Project';
 import {useEffect} from "react";
 
 export const SideBar = () => {
@@ -49,7 +46,7 @@ export const SideBar = () => {
         dispatch(setActiveKey('4-5'));
         break;
       case "/long/new-purchase":
-        dispatch(setActiveKey('6'));
+        dispatch(setActiveKey('4-7'));
         break;
       case "/long/new-purchase-page":
         dispatch(setActiveKey('7'));
@@ -72,13 +69,13 @@ export const SideBar = () => {
             >
               Дашборд
             </Nav.Item>
-            <Nav.Item
-              eventKey="2"
-              icon={<GroupIcon/>}
-              className={`${key === '2' ? styles.sideItemActive : styles.sideDisable}`}
-            >
-              Группы пользователей
-            </Nav.Item>
+            {/*<Nav.Item*/}
+            {/*  eventKey="2"*/}
+            {/*  icon={<GroupIcon/>}*/}
+            {/*  className={`${key === '2' ? styles.sideItemActive : styles.sideDisable}`}*/}
+            {/*>*/}
+            {/*  Группы пользователей*/}
+            {/*</Nav.Item>*/}
             <Nav.Item
               eventKey="3"
               icon={<FunnelTrendIcon/>}
@@ -87,35 +84,49 @@ export const SideBar = () => {
             >
               Продажи по категориям
             </Nav.Item>
-            <Nav.Item
-              eventKey="6"
-              icon={<ProjectIcon/>}
-              onClick={() => handleNavigate('/long/new-purchase')}
-              className={`${key === '6' ? styles.sideItemActive : styles.sideDisable}`}
-            >
-              Продажи по категориям 2
-            </Nav.Item>
-            <Nav.Item
-              eventKey="7"
-              icon={<PushMessageIcon/>}
-              onClick={() => handleNavigate('/long/new-purchase-page')}
-              className={`${key === '7' ? styles.sideItemActive : styles.sideDisable}`}
-            >
-              Продажи по категориям 3
-            </Nav.Item>
+            {/*<Nav.Item*/}
+            {/*  eventKey="6"*/}
+            {/*  icon={<ProjectIcon/>}*/}
+            {/*  onClick={() => handleNavigate('/long/new-purchase')}*/}
+            {/*  className={`${key === '6' ? styles.sideItemActive : styles.sideDisable}`}*/}
+            {/*>*/}
+            {/*  Аналитическая панель*/}
+            {/*</Nav.Item>*/}
+            {/*<Nav.Item*/}
+            {/*  eventKey="7"*/}
+            {/*  icon={<PushMessageIcon/>}*/}
+            {/*  onClick={() => handleNavigate('/long/new-purchase-page')}*/}
+            {/*  className={`${key === '7' ? styles.sideItemActive : styles.sideDisable}`}*/}
+            {/*>*/}
+            {/*  Продажи по категориям 3*/}
+            {/*</Nav.Item>*/}
             <Nav.Menu
               eventKey="4"
               title="Аналитика"
               icon={<MagicIcon/>}
             >
               <Nav.Item
+                eventKey="4-7"
+                onClick={() => handleNavigate('/long/new-purchase')}
+                className={`${key === '4-7' ? styles.sideItemActive : styles.sideDisable}`}
+              >
+                Аналитическая сервис
+              </Nav.Item>
+              <Nav.Item
+                onClick={() => handleNavigate('/long/longitude')}
+                eventKey="4-5"
+                className={`${key === '4-5' ? styles.sideItemActive : styles.sideDisable}`}
+              >
+                Лонгитюдный круг
+              </Nav.Item>
+              <Nav.Item
                 onClick={() => handleNavigate('/long')}
                 eventKey="4-1"
                 className={`${key === '4-1' ? styles.sideItemActive : styles.sideDisable}`}
               >
-                Лонгитюдный круг
+                Лонгитюдный круг(старый)
               </Nav.Item>
-              <Nav.Item eventKey="4-2">Пространство и время</Nav.Item>
+              {/*<Nav.Item eventKey="4-2">Пространство и время</Nav.Item>*/}
               <Nav.Item
                 onClick={() => handleNavigate('/news')}
                 eventKey="4-3"
@@ -123,21 +134,14 @@ export const SideBar = () => {
               >
                 Инфо - поле
               </Nav.Item>
-              <Nav.Item eventKey="4-4">Внешние факторы</Nav.Item>
-              <Nav.Item
-                onClick={() => handleNavigate('/long/longitude')}
-                eventKey="4-5"
-                className={`${key === '4-5' ? styles.sideItemActive : styles.sideDisable}`}
-              >
-                Тестовые круги
-              </Nav.Item>
-              <Nav.Item
-                onClick={() => handleNavigate('/long/longresult')}
-                eventKey="4-6"
-                className={`${key === '4-6' ? styles.sideItemActive : styles.sideDisable}`}
-              >
-                Результат
-              </Nav.Item>
+              {/*<Nav.Item eventKey="4-4">Внешние факторы</Nav.Item>*/}
+              {/*<Nav.Item*/}
+              {/*  onClick={() => handleNavigate('/long/longresult')}*/}
+              {/*  eventKey="4-6"*/}
+              {/*  className={`${key === '4-6' ? styles.sideItemActive : styles.sideDisable}`}*/}
+              {/*>*/}
+              {/*  Результат*/}
+              {/*</Nav.Item>*/}
             </Nav.Menu>
             <Nav.Menu eventKey="5" title="Настройки" icon={<GearCircleIcon/>}>
               <Nav.Item eventKey="5-1">Профиль</Nav.Item>

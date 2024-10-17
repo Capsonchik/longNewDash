@@ -1,8 +1,9 @@
 import {MapWhite} from "@/components/mapWhite/MapWhite";
-import {Panel, SelectPicker, Text} from "rsuite";
+import {CheckTreePicker, Panel, SelectPicker, Text} from "rsuite";
 import {MAP_REGIONS} from "@/mocks/regionInfoMock";
 import {MockScatter} from "@/components/charts/mockChart/mockScatter";
 import {MonthPiker} from "@/components/rangePickers/monthPicker/MonthPiker";
+import {CHECK_TREE_MOCK_2} from "@/mocks/checkTreeMock";
 
 export default function Page() {
   const data = MAP_REGIONS.map(item => ({label: item, value: item}));
@@ -12,7 +13,7 @@ export default function Page() {
       <Panel bordered style={{width: '49%'}}>
         <div style={{display: "flex", flexDirection: "column", rowGap: '1rem'}}>
           <div style={{display: "flex", columnGap: '1rem'}}>
-            <SelectPicker data={data} placeholder={'Выберите показатель'}/>
+            <CheckTreePicker data={CHECK_TREE_MOCK_2} placeholder={'Выберите параметр'}/>
             <MonthPiker/>
           </div>
           <MapWhite currentValue={''}/>

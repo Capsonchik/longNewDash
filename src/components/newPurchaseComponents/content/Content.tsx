@@ -109,7 +109,7 @@ export const Content = () => {
       </Panel>
       <Panel bordered className={styles.panel}>
         <div className={styles.filters}>
-          <SelectPicker data={region} placeholder={'Выберите регион'}/>
+          <SelectPicker data={region} placeholder={'Выберите параметр'}/>
           <MonthPiker/>
         </div>
       </Panel>
