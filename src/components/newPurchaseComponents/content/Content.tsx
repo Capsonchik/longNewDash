@@ -7,7 +7,7 @@ import {setIndexes} from "@/store/store.slice";
 import {MockLineChart} from "@/components/charts/mockChart/mockLineChart";
 import {REGION} from "@/mocks/regionInfoMock";
 import {MonthPiker} from "@/components/rangePickers/monthPicker/MonthPiker";
-import {CHECK_TREE_MOCK} from "@/mocks/checkTreeMock";
+import {CHECK_TREE_MOCK_2} from "@/mocks/checkTreeMock";
 
 export const Content = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -43,7 +43,7 @@ export const Content = () => {
   }));
 
   // Используем состояния для каждого пикера
-  const [selectedRomir, setSelectedRomir] = useState<string[]>(['Индекс свободных денег']);
+  // const [selectedRomir, setSelectedRomir] = useState<string[]>(['Индекс свободных денег']);
   const [selectedParams, setSelectedParams] = useState<string[]>(['Среднемесячный доход на одного члена семьи за последний месяц, руб.']);
   // const [selectedConsumerPanel, setSelectedConsumerPanel] = useState<string[]>(['test6']);
   // const [selectedExternalFactors, setSelectedExternalFactors] = useState<string[]>(['test9']);
@@ -51,33 +51,39 @@ export const Content = () => {
   // Собираем все выбранные значения в один массив
   const [combinedSelections, setCombinedSelections] = useState<string[]>([]);
 
-  const [tree, setTree] = useState<any>([])
+  const [tree, setTree] = useState<any>(['Хронотип'])
 
   useEffect(() => {
     // Обновляем массив при изменении любого из состояний
     setCombinedSelections([
-      ...selectedRomir,
+      // ...selectedRomir,
       ...selectedParams,
       ...tree
       // ...selectedConsumerPanel,
       // ...selectedExternalFactors
     ]);
     dispatch(setIndexes(combinedSelections));
-  }, [selectedRomir, selectedParams, tree, dispatch]);
+  }, [selectedParams, tree, dispatch]);
 
 
   return (
     <div className={styles.container}>
       <Panel bordered className={styles.panel}>
         <div className={styles.romir} style={{overflow: 'auto'}}>
-          <CheckPicker
-            defaultValue={['Индекс свободных денег']}
-            data={data}
-            value={selectedRomir}
-            onChange={setSelectedRomir}
+          <CheckTreePicker
+            data={CHECK_TREE_MOCK_2}
+            value={tree}
+            onChange={setTree}
             placeholder={'Данные РОМИР'}
-            style={{width: 250, overflow: 'auto'}}
           />
+          {/*<CheckPicker*/}
+          {/*  defaultValue={['Индекс свободных денег']}*/}
+          {/*  data={data}*/}
+          {/*  value={selectedRomir}*/}
+          {/*  onChange={setSelectedRomir}*/}
+          {/*  placeholder={'Данные РОМИР'}*/}
+          {/*  style={{width: 250, overflow: 'auto'}}*/}
+          {/*/>*/}
           <CheckPicker
             data={data2}
             value={selectedParams}
@@ -99,10 +105,6 @@ export const Content = () => {
           {/*  placeholder={'Внешние факторы'}*/}
           {/*  style={{width: 250, overflow: 'auto'}}*/}
           {/*/>*/}
-          <CheckTreePicker
-            data={CHECK_TREE_MOCK}
-            onChange={setTree}
-          />
         </div>
       </Panel>
       <Panel bordered className={styles.panel}>
