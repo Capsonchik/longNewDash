@@ -51,16 +51,20 @@ export const Content = () => {
   // Собираем все выбранные значения в один массив
   const [combinedSelections, setCombinedSelections] = useState<string[]>([]);
 
+  const [tree, setTree] = useState<any>([])
+
   useEffect(() => {
     // Обновляем массив при изменении любого из состояний
     setCombinedSelections([
       ...selectedRomir,
       ...selectedParams,
+      ...tree
       // ...selectedConsumerPanel,
       // ...selectedExternalFactors
     ]);
     dispatch(setIndexes(combinedSelections));
-  }, [selectedRomir, selectedParams, dispatch]);
+  }, [selectedRomir, selectedParams, tree, dispatch]);
+
 
   return (
     <div className={styles.container}>
@@ -95,7 +99,10 @@ export const Content = () => {
           {/*  placeholder={'Внешние факторы'}*/}
           {/*  style={{width: 250, overflow: 'auto'}}*/}
           {/*/>*/}
-          <CheckTreePicker data={CHECK_TREE_MOCK}/>
+          <CheckTreePicker
+            data={CHECK_TREE_MOCK}
+            onChange={setTree}
+          />
         </div>
       </Panel>
       <Panel bordered className={styles.panel}>
