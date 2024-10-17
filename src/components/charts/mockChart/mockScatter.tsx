@@ -49,7 +49,7 @@ export const MockScatter = () => {
   };
 
   return (
-    <div>
+    <div style={{height: '100%'}}>
       <ReactECharts
         option={option}
         style={{height: 400, width: '100%'}} // Настройте размеры графика

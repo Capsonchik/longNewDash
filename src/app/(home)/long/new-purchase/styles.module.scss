@@ -7,3 +7,20 @@
 .title {
   margin-bottom: $medium-gap;
 }
+
+.legendBlock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.legendItemColor {
+  width: 40px;
+  height: 20px;
+}

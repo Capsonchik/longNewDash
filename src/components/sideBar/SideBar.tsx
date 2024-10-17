@@ -82,7 +82,7 @@ export const SideBar = () => {
               onClick={() => handleNavigate('/long/purchase')}
               className={`${key === '3' ? styles.sideItemActive : styles.sideDisable}`}
             >
-              Продажи по категориям
+              Региональный мониторинг
             </Nav.Item>
             {/*<Nav.Item*/}
             {/*  eventKey="6"*/}
@@ -110,7 +110,7 @@ export const SideBar = () => {
                 onClick={() => handleNavigate('/long/new-purchase')}
                 className={`${key === '4-7' ? styles.sideItemActive : styles.sideDisable}`}
               >
-                Аналитическая сервис
+                Аналитический сервис
               </Nav.Item>
               <Nav.Item
                 onClick={() => handleNavigate('/long/longitude')}

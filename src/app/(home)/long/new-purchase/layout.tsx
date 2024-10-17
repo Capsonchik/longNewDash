@@ -5,7 +5,7 @@ import {NavBar} from "@/components/newPurchaseComponents/nav/NavBar";
 export default function NewPurchaseLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
   return (
     <div className={styles.container}>
-      <Heading className={styles.title} level={3}>Аналитическая сервис</Heading>
+      <Heading className={styles.title} level={3}>Аналитический сервис</Heading>
       <NavBar/>
       {children}
     </div>

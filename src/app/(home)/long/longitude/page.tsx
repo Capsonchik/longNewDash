@@ -19,12 +19,12 @@ export default function Page() {
   const resultInput = useSelector(selectResultInput)
 
   const data = MAP_REGIONS.map(item => ({label: item, value: item}));
-  
+
   return (
     <div className={styles.container}>
       <div className={styles.questions}>
         <div className={styles.suns}>
-          <Heading level={4}>Выберите показатель на лонгитюдных кругах</Heading>
+          <Heading level={4}>Выберите параметр на лонгитюдных кругах</Heading>
           <FirstSunBurst/>
           <SecondSunBurst/>
         </div>
@@ -33,11 +33,11 @@ export default function Page() {
           <Text weight={'semibold'} size={'md'}>{LONFITUDE_TEXT}</Text>
           <div className={styles.selectsBlocks}>
             <div className={styles.selectsBlock}>
-              <Text weight={'semibold'}>1 вопрос:</Text>
+              <Text weight={'semibold'}>1 параметр:</Text>
               <SelectPicker disabled className={styles.select} data={data} placeholder={'Выберите вариант ответа'}/>
             </div>
             <div className={styles.selectsBlock}>
-              <Text weight={'semibold'}>2 вопрос:</Text>
+              <Text weight={'semibold'}>2 параметр:</Text>
               <SelectPicker className={styles.select} data={data} placeholder={'Выберите вариант ответа'}/>
             </div>
             <div className={styles.selectsBlock}>

@@ -62,7 +62,7 @@ export default function Page() {
   return (
     <>
       <div className={styles.topContainer}>
-        <Text size={'xl'} className={styles.title} weight={'semibold'}>Объем покупок по регионам</Text>
+        <Text size={'xl'} className={styles.title} weight={'semibold'}>Региональный мониторинг</Text>
         <div className={styles.filters}>
           <SelectPicker
             value={region}

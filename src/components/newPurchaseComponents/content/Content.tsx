@@ -112,8 +112,6 @@ export const Content = () => {
           <SelectPicker data={region} placeholder={'Выберите параметр'}/>
           <MonthPiker/>
         </div>
-      </Panel>
-      <Panel bordered className={styles.panel}>
         <MockLineChart indexes={combinedSelections}/>
       </Panel>
     </div>
