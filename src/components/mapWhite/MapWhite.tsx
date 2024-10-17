@@ -17,6 +17,18 @@ export const MapWhite = ({currentValue}: Props) => {
 
   const [activePath, setActivePath] = useState<string | null>(null);
 
+  const colorSwitcher = (value: number) => {
+    if (value < 20) {
+      return '#dcf5d6'
+    } else if (value >= 20 && value < 40) {
+      return '#bddeb3'
+    } else if (value >= 40 && value < 70) {
+      return '#80c783'
+    } else if (value >= 70 && value < 100) {
+      return '#42ab49'
+    }
+  }
+
   const handleClick = (event: SyntheticEvent) => {
     const title: string | null = event.currentTarget.getAttribute('data-title');
     // dispatch(setCurrentPickValue(title))
@@ -82,6 +94,7 @@ export const MapWhite = ({currentValue}: Props) => {
                   // style={{
                   //   fill: currentValue === path.data_title || activePath === path.data_title ? "#194a7a" : "#fff", // Подсвечиваем активный path
                   // }}
+                  style={{fill: `${path.value && colorSwitcher(path.value)}`}}
                   onMouseEnter={() => {
                     setActivePath(path.data_title);
                   }}
