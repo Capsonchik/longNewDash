@@ -2,18 +2,23 @@
 
 import ReactECharts from "echarts-for-react";
 import {EXTERNAL_DATA_MOCK} from "@/mocks/externalDataMock";
-import {useState} from "react";
+import React, {useState} from "react";
+import {Button, Modal, Tag, TagGroup, Text} from "rsuite";
 
 interface DataItem {
   id: number;
   name: string;
   children?: DataItem[];
+  isLast?: boolean;
 }
 
 
 export const NewPieChartMock = () => {
   const [filteredData, setFilteredData] = useState<DataItem[]>(EXTERNAL_DATA_MOCK); // Тип данных
   const [history, setHistory] = useState<DataItem[][]>([]); // Стек истории с типом
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
+  const [text, setText] = useState<string>('')
 
   const data = filteredData.map(el => {
     return {
@@ -21,6 +26,12 @@ export const NewPieChartMock = () => {
       name: el.name // Чтобы учесть опечатку
     };
   });
+
+  const removeTag = (tag: any) => {
+    const nextTags = selectedItems.filter(item => item !== tag);
+    setSelectedItems(nextTags);
+  };
+
 
   // Рекурсивная функция для поиска по имени
   const findItemByName = (data: DataItem[], name: string): DataItem | null => {
@@ -40,16 +51,21 @@ export const NewPieChartMock = () => {
 
   // Функция для фильтрации данных по имени
   const filterDataByName = (name: string) => {
-    if (name === "Назад") {
-      goBack();
-    } else {
-      const foundItem = findItemByName(EXTERNAL_DATA_MOCK, name);
-      if (foundItem && foundItem.children) {
+    const foundItem = findItemByName(EXTERNAL_DATA_MOCK, name);
+
+    if (foundItem && foundItem.isLast) {
+      // console.log(`Clicked on: ${name}`);
+      setIsModalOpen(true);
+      setText(name);
+    } else if (foundItem && foundItem.children) {
+      if (name === "Назад") {
+        goBack();
+      } else {
         setHistory([...history, filteredData]);
         setFilteredData(foundItem.children);
-      } else {
-        console.log(`No children found for ${name}`);
       }
+    } else {
+      console.log(`No children found for ${name}`);
     }
   };
 
@@ -63,12 +79,17 @@ export const NewPieChartMock = () => {
   };
 
   const onChartClick = (params: any) => {
-    console.log(`Clicked on: ${params.name}`);
     filterDataByName(params.name); // Фильтруем данные по клику
   };
 
   const onEvents = {
     click: onChartClick
+  };
+
+  const handleConfirm = () => {
+    setSelectedItems([...selectedItems, text]); // Добавляем выбранный элемент в список
+    setIsModalOpen(false); // Закрываем модальное окно
+    setFilteredData(EXTERNAL_DATA_MOCK); // Сбрасываем круг к исходным значениям
   };
 
   const option = {
@@ -107,11 +128,35 @@ export const NewPieChartMock = () => {
   };
 
   return (
-    <ReactECharts
-      option={option}
-      style={{height: 400, width: '100%'}} // Настройте размеры графика
-      onEvents={onEvents}
-    />
+    <>
+      <ReactECharts
+        option={option}
+        style={{height: 400, width: '100%'}} // Настройте размеры графика
+        onEvents={onEvents}
+      />
+
+      <TagGroup>
+        {selectedItems.map((item, index) => (
+          <Tag key={index} closable onClose={() => removeTag(item)}>{item}</Tag>
+        ))}
+      </TagGroup>
+
+      <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <Modal.Header>
+          <Modal.Title>Modal Title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Text>Добавить {text} к списку фильтров??</Text>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={handleConfirm} appearance="primary">
+            Добавить
+          </Button>
+          <Button onClick={() => setIsModalOpen(false)} appearance="subtle">
+            Отменить
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   )
-    ;
 };
