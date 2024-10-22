@@ -4,22 +4,28 @@ import ReactECharts from "echarts-for-react";
 import {EXTERNAL_DATA_MOCK} from "@/mocks/externalDataMock";
 import {useState} from "react";
 
+interface DataItem {
+  id: number;
+  name: string;
+  children?: DataItem[];
+}
+
 
 export const NewPieChartMock = () => {
-  const [filteredData, setFilteredData] = useState(EXTERNAL_DATA_MOCK);
-  const [history, setHistory] = useState([]);
+  const [filteredData, setFilteredData] = useState<DataItem[]>(EXTERNAL_DATA_MOCK); // Тип данных
+  const [history, setHistory] = useState<DataItem[][]>([]); // Стек истории с типом
 
   const data = filteredData.map(el => {
     return {
       value: 300,
-      name: el.name
-    }
-  })
+      name: el.name // Чтобы учесть опечатку
+    };
+  });
 
   // Рекурсивная функция для поиска по имени
-  const findItemByName = (data: any, name: any): any => {
+  const findItemByName = (data: DataItem[], name: string): DataItem | null => {
     for (const item of data) {
-      if (item.name === name) {
+      if (item.name === name) { // Проверяем оба варианта
         return item;
       }
       if (item.children) {
@@ -33,11 +39,11 @@ export const NewPieChartMock = () => {
   };
 
   // Функция для фильтрации данных по имени
-  const filterDataByName = (name: any): any => {
+  const filterDataByName = (name: string) => {
     const foundItem = findItemByName(EXTERNAL_DATA_MOCK, name);
     if (foundItem && foundItem.children) {
       setHistory([...history, filteredData]); // Сохраняем текущее состояние в историю
-      setFilteredData(foundItem.children);
+      setFilteredData(foundItem.children); // Устанавливаем дочерние элементы
     } else {
       console.log(`No children found for ${name}`);
     }
@@ -48,7 +54,7 @@ export const NewPieChartMock = () => {
     if (history.length > 0) {
       const prevData = history.pop(); // Достаем предыдущее состояние
       setHistory([...history]); // Обновляем стек истории
-      setFilteredData(prevData); // Восстанавливаем предыдущее состояние данных
+      setFilteredData(prevData!); // Восстанавливаем предыдущее состояние данных
     }
   };
 

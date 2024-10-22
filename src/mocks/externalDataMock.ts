@@ -117,7 +117,7 @@ export const EXTERNAL_DATA_MOCK = [
       },
       {
         id: 24,
-        mane: 'Этнография',
+        name: 'Этнография',
         children: [
           {
             id: 24,
