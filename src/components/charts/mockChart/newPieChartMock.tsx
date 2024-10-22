@@ -4,17 +4,20 @@ import ReactECharts from "echarts-for-react";
 import {EXTERNAL_DATA_MOCK} from "@/mocks/externalDataMock";
 import React, {useState} from "react";
 import {Button, Modal, Tag, TagGroup, Text} from "rsuite";
+import {SUN_DATA} from "@/mocks/sunBurstData";
 
 interface DataItem {
   id: number;
   name: string;
+  type?: string;
   children?: DataItem[];
   isLast?: boolean;
 }
 
 
 export const NewPieChartMock = () => {
-  const [filteredData, setFilteredData] = useState<DataItem[]>(EXTERNAL_DATA_MOCK); // Тип данных
+  const [filteredData, setFilteredData] = useState<DataItem[]>(EXTERNAL_DATA_MOCK);
+  const [iternalFilterData, setIternalFilterData] = useState(SUN_DATA)
   const [history, setHistory] = useState<DataItem[][]>([]); // Стек истории с типом
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
@@ -32,6 +35,21 @@ export const NewPieChartMock = () => {
       },
     };
   });
+
+  const iternalData = iternalFilterData.map(el => {
+    return {
+      value: 300,
+      name: el.name, // Чтобы учесть опечатку
+      // selected: el.isLast,
+      type: el.type,
+      itemStyle: {
+        borderRadius: 8,
+        // borderColor: el.isLast ? '#194a7a' : null,
+        borderWidth: 2
+      },
+    };
+  });
+
 
   const removeTag = (tag: any) => {
     const nextTags = selectedItems.filter(item => item !== tag);
@@ -86,6 +104,7 @@ export const NewPieChartMock = () => {
   };
 
   const onChartClick = (params: any) => {
+    console.log('params', params)
     filterDataByName(params.name); // Фильтруем данные по клику
   };
 
@@ -104,16 +123,12 @@ export const NewPieChartMock = () => {
       {
         name: 'Access From',
         type: 'pie',
-        radius: [0, '40%'],
+        radius: [0, '50%'],
         label: {
           position: 'inner',
           fontSize: 14
         },
-        data: [
-          {value: 1548, name: 'Социология'},
-          {value: 775, name: 'Психология'},
-          {value: 679, name: 'Антропология'}
-        ]
+        data: iternalData
       },
       {
         name: 'Access From',
