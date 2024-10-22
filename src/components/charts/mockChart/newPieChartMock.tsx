@@ -4,16 +4,10 @@ import ReactECharts from "echarts-for-react";
 import {EXTERNAL_DATA_MOCK} from "@/mocks/externalDataMock";
 import {useState} from "react";
 
-interface DataItem {
-  id: number;
-  name: string;
-  mane?: string;
-  children?: DataItem[];
-}
 
 export const NewPieChartMock = () => {
   const [filteredData, setFilteredData] = useState(EXTERNAL_DATA_MOCK);
-  const [history, setHistory] = useState<DataItem[][]>([]);
+  const [history, setHistory] = useState([]);
 
   const data = filteredData.map(el => {
     return {
