@@ -10,6 +10,10 @@ export const EXTERNAL_DATA_MOCK = [
           {
             id: 3,
             name: 'Загрязнение воды'
+          },
+          {
+            id: 27,
+            name: 'Назад'
           }
         ]
       },
@@ -24,8 +28,16 @@ export const EXTERNAL_DATA_MOCK = [
           {
             id: 6,
             name: 'Влажность воздуха'
+          },
+          {
+            id: 28,
+            name: 'Назад'
           }
         ]
+      },
+      {
+        id: 26,
+        name: 'Назад'
       }
     ]
   },
@@ -44,6 +56,10 @@ export const EXTERNAL_DATA_MOCK = [
           {
             id: 10,
             name: 'Внешняя миграция'
+          },
+          {
+            id: 30,
+            name: 'Назад'
           }
         ]
       },
@@ -58,8 +74,16 @@ export const EXTERNAL_DATA_MOCK = [
           {
             id: 12,
             name: 'Частота пожаров'
+          },
+          {
+            id: 31,
+            name: 'Назад'
           }
         ]
+      },
+      {
+        id: 29,
+        name: 'Назад'
       }
     ]
   },
@@ -78,6 +102,10 @@ export const EXTERNAL_DATA_MOCK = [
           {
             id: 17,
             name: 'Ключевая ставка'
+          },
+          {
+            id: 34,
+            name: 'Назад'
           }
         ]
       },
@@ -92,8 +120,16 @@ export const EXTERNAL_DATA_MOCK = [
           {
             id: 19,
             name: 'Закупки из заграницы'
+          },
+          {
+            id: 33,
+            name: 'Назад'
           }
         ]
+      },
+      {
+        id: 32,
+        name: 'Назад'
       }
     ]
   },
@@ -112,6 +148,10 @@ export const EXTERNAL_DATA_MOCK = [
           {
             id: 23,
             name: 'Пост'
+          },
+          {
+            id: 37,
+            name: 'Назад'
           }
         ]
       },
@@ -126,8 +166,16 @@ export const EXTERNAL_DATA_MOCK = [
           {
             id: 25,
             name: 'Национальность'
+          },
+          {
+            id: 36,
+            name: 'Назад'
           }
         ]
+      },
+      {
+        id: 35,
+        name: 'Назад'
       }
     ]
   }

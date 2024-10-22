@@ -40,21 +40,25 @@ export const NewPieChartMock = () => {
 
   // Функция для фильтрации данных по имени
   const filterDataByName = (name: string) => {
-    const foundItem = findItemByName(EXTERNAL_DATA_MOCK, name);
-    if (foundItem && foundItem.children) {
-      setHistory([...history, filteredData]); // Сохраняем текущее состояние в историю
-      setFilteredData(foundItem.children); // Устанавливаем дочерние элементы
+    if (name === "Назад") {
+      goBack();
     } else {
-      console.log(`No children found for ${name}`);
+      const foundItem = findItemByName(EXTERNAL_DATA_MOCK, name);
+      if (foundItem && foundItem.children) {
+        setHistory([...history, filteredData]);
+        setFilteredData(foundItem.children);
+      } else {
+        console.log(`No children found for ${name}`);
+      }
     }
   };
 
   // Функция для возврата к предыдущему состоянию
   const goBack = () => {
     if (history.length > 0) {
-      const prevData = history.pop(); // Достаем предыдущее состояние
-      setHistory([...history]); // Обновляем стек истории
-      setFilteredData(prevData!); // Восстанавливаем предыдущее состояние данных
+      const prevData = history.pop();
+      setHistory([...history]);
+      setFilteredData(prevData!);
     }
   };
 
@@ -103,16 +107,11 @@ export const NewPieChartMock = () => {
   };
 
   return (
-    <>
-      <ReactECharts
-        option={option}
-        style={{height: 400, width: '100%'}} // Настройте размеры графика
-        onEvents={onEvents}
-      />
-      <button onClick={goBack} disabled={history.length === 0}>
-        Назад
-      </button>
-    </>
+    <ReactECharts
+      option={option}
+      style={{height: 400, width: '100%'}} // Настройте размеры графика
+      onEvents={onEvents}
+    />
   )
     ;
 };
