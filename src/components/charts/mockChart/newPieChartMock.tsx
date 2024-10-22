@@ -24,7 +24,11 @@ export const NewPieChartMock = () => {
     return {
       value: 300,
       name: el.name, // Чтобы учесть опечатку
-      selected: el.isLast
+      itemStyle: el.isLast ? {
+        // borderRadius: 10,
+        borderColor: '#194a7a',
+        borderWidth: 2
+      } : null,
     };
   });
 
