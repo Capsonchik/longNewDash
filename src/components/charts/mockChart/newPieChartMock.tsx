@@ -7,7 +7,8 @@ import {Button, Modal, Tag, TagGroup, Text} from "rsuite";
 import {SUN_DATA} from "@/mocks/sunBurstData";
 
 interface DataItem {
-  id: number;
+  id?: number;
+  value?: number;
   name: string;
   type?: string;
   children?: DataItem[];
@@ -17,8 +18,9 @@ interface DataItem {
 
 export const NewPieChartMock = () => {
   const [filteredData, setFilteredData] = useState<DataItem[]>(EXTERNAL_DATA_MOCK);
-  const [iternalFilterData, setIternalFilterData] = useState(SUN_DATA)
+  const [iternalFilterData, setIternalFilterData] = useState<DataItem[]>(SUN_DATA)
   const [history, setHistory] = useState<DataItem[][]>([]); // Стек истории с типом
+  const [iternalHistory, setIternalHistory] = useState<DataItem[][]>([])
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const [text, setText] = useState<string>('')
@@ -73,6 +75,22 @@ export const NewPieChartMock = () => {
     return null;
   };
 
+  // Для внутреннего круга
+  const findIternalItemByName = (data: DataItem[], name: string): DataItem | null => {
+    for (const item of data) {
+      if (item.name === name) { // Проверяем оба варианта
+        return item;
+      }
+      if (item.children) {
+        const found = findIternalItemByName(item.children, name);
+        if (found) {
+          return found;
+        }
+      }
+    }
+    return null;
+  };
+
   // Функция для фильтрации данных по имени
   const filterDataByName = (name: string) => {
     const foundItem = findItemByName(EXTERNAL_DATA_MOCK, name);
@@ -94,6 +112,26 @@ export const NewPieChartMock = () => {
     }
   };
 
+  const filterIternalDataByName = (name: string) => {
+    const foundItem = findIternalItemByName(SUN_DATA, name);
+
+    if (name === "Назад") {
+      goBack();
+      return; // Завершаем выполнение функции
+    }
+
+    // Если найден элемент и он последний
+    if (foundItem && foundItem.isLast) {
+      setIsModalOpen(true);
+      setText(name);
+    } else if (foundItem && foundItem.children) {
+      setIternalHistory([...history, filteredData]);
+      setIternalFilterData(foundItem.children);
+    } else {
+      console.log(`No children found for ${name}`);
+    }
+  };
+
   // Функция для возврата к предыдущему состоянию
   const goBack = () => {
     if (history.length > 0) {
@@ -104,8 +142,9 @@ export const NewPieChartMock = () => {
   };
 
   const onChartClick = (params: any) => {
-    console.log('params', params)
-    filterDataByName(params.name); // Фильтруем данные по клику
+    // console.log('params', params)
+    params.data.type === 'iternal' ? filterIternalDataByName(params.name) : filterDataByName(params.name)
+    // filterDataByName(params.name); // Фильтруем данные по клику
   };
 
   const onEvents = {
@@ -123,7 +162,7 @@ export const NewPieChartMock = () => {
       {
         name: 'Access From',
         type: 'pie',
-        radius: [0, '50%'],
+        radius: [50, '50%'],
         label: {
           position: 'inner',
           fontSize: 14
@@ -154,7 +193,7 @@ export const NewPieChartMock = () => {
     <>
       <ReactECharts
         option={option}
-        style={{height: 400, width: '100%'}} // Настройте размеры графика
+        style={{height: 500, width: '100%'}} // Настройте размеры графика
         onEvents={onEvents}
       />
 
