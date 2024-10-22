@@ -53,17 +53,18 @@ export const NewPieChartMock = () => {
   const filterDataByName = (name: string) => {
     const foundItem = findItemByName(EXTERNAL_DATA_MOCK, name);
 
+    if (name === "Назад") {
+      goBack();
+      return; // Завершаем выполнение функции
+    }
+
+    // Если найден элемент и он последний
     if (foundItem && foundItem.isLast) {
-      // console.log(`Clicked on: ${name}`);
       setIsModalOpen(true);
       setText(name);
     } else if (foundItem && foundItem.children) {
-      if (name === "Назад") {
-        goBack();
-      } else {
-        setHistory([...history, filteredData]);
-        setFilteredData(foundItem.children);
-      }
+      setHistory([...history, filteredData]);
+      setFilteredData(foundItem.children);
     } else {
       console.log(`No children found for ${name}`);
     }
