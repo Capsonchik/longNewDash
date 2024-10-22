@@ -24,11 +24,12 @@ export const NewPieChartMock = () => {
     return {
       value: 300,
       name: el.name, // Чтобы учесть опечатку
-      itemStyle: el.isLast ? {
-        // borderRadius: 10,
-        borderColor: '#194a7a',
+      // selected: el.isLast,
+      itemStyle: {
+        borderRadius: 8,
+        borderColor: el.isLast ? '#194a7a' : null,
         borderWidth: 2
-      } : null,
+      },
     };
   });
 
@@ -118,7 +119,7 @@ export const NewPieChartMock = () => {
         name: 'Access From',
         selectedMode: 'multiple',
         type: 'pie',
-        radius: ['50%', '75%'],
+        radius: ['55%', '80%'],
         label: {
           position: 'inner',
           fontSize: 14
