@@ -23,7 +23,8 @@ export const NewPieChartMock = () => {
   const data = filteredData.map(el => {
     return {
       value: 300,
-      name: el.name // Чтобы учесть опечатку
+      name: el.name, // Чтобы учесть опечатку
+      selected: el.isLast
     };
   });
 
@@ -111,6 +112,7 @@ export const NewPieChartMock = () => {
       },
       {
         name: 'Access From',
+        selectedMode: 'multiple',
         type: 'pie',
         radius: ['50%', '75%'],
         label: {
