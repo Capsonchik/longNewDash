@@ -72,8 +72,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true,
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -98,8 +106,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true,
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -118,6 +134,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true,
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -137,6 +157,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true,
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -213,6 +237,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true,
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -238,6 +266,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -263,8 +295,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -283,6 +323,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -314,10 +358,18 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               }
             ]
+          },
+          {
+            name: 'Назад',
+            type: 'iternal',
           }
         ]
       },
@@ -352,6 +404,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -365,6 +421,14 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -378,10 +442,26 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
+          },
+          {
+            name: 'Назад',
+            type: 'iternal',
           }
         ]
       },
@@ -411,6 +491,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               }
@@ -431,6 +515,14 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -444,8 +536,20 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -464,6 +568,14 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -477,10 +589,26 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
+          },
+          {
+            name: 'Назад',
+            type: 'iternal',
           }
         ]
       },
@@ -552,12 +680,28 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
+          },
+          {
+            name: 'Назад',
+            type: 'iternal',
           }
         ]
+      },
+      {
+        name: 'Назад',
+        type: 'iternal',
       }
     ]
   },
@@ -610,6 +754,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -641,6 +789,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -672,8 +824,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -722,6 +882,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -759,8 +923,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -785,6 +957,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -798,6 +974,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -811,6 +991,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -872,6 +1056,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -885,6 +1073,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -898,6 +1090,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -923,6 +1119,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -942,6 +1142,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -955,6 +1159,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -968,6 +1176,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -987,6 +1199,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1000,8 +1216,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -1020,6 +1244,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               }
@@ -1040,6 +1268,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               }
@@ -1060,10 +1292,22 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
+          },
+          {
+            name: 'Назад',
+            type: 'iternal',
           }
         ]
       },
@@ -1087,6 +1331,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1100,8 +1348,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -1120,8 +1376,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -1146,6 +1410,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1165,6 +1433,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1190,6 +1462,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1203,6 +1479,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1228,10 +1508,22 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
+          },
+          {
+            name: 'Назад',
+            type: 'iternal',
           }
         ]
       },
@@ -1255,6 +1547,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1274,6 +1570,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1293,6 +1593,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1312,8 +1616,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -1350,8 +1662,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -1404,6 +1724,10 @@ export const SUN_DATA = [
                     isLast: true
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -1422,10 +1746,22 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
+          },
+          {
+            name: 'Назад',
+            type: 'iternal',
           }
         ]
       },
@@ -1455,6 +1791,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1522,6 +1862,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1709,6 +2053,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1728,6 +2076,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1741,8 +2093,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -1773,6 +2133,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1786,6 +2150,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1799,6 +2167,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1824,8 +2196,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -1856,6 +2236,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1869,8 +2253,16 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
           },
@@ -1889,6 +2281,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1908,6 +2304,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1921,6 +2321,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1940,6 +2344,10 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
               },
@@ -1953,12 +2361,28 @@ export const SUN_DATA = [
                     value: 0.5128205128205128,
                     type: 'iternal',
                     isLast: true
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
+          },
+          {
+            name: 'Назад',
+            type: 'iternal',
           }
         ]
+      },
+      {
+        name: 'Назад',
+        type: 'iternal',
       }
     ]
   }
