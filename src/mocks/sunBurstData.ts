@@ -23,55 +23,55 @@ export const SUN_DATA = [
                     name: "Вес",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Группа-крови",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Пол",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Преобладающая рука",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Размер обуви",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Размер одежды",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Резус-фактор",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Рост",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Цвет волос",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   }
                 ]
               }
@@ -91,13 +91,13 @@ export const SUN_DATA = [
                     name: "Сколько часов сна необходимо",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Хронотип",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   }
                 ]
               }
@@ -117,7 +117,7 @@ export const SUN_DATA = [
                     name: "Тип питания",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   }
                 ]
               },
@@ -130,13 +130,13 @@ export const SUN_DATA = [
                     name: "Сорт кофе",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Сорт чая",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   }
                 ]
               },
@@ -149,23 +149,35 @@ export const SUN_DATA = [
                     name: "Частота приема пищи",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Частота употребления кофе",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Частота употребления чая",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
+                  },
+                  {
+                    name: 'Назад',
+                    type: 'iternal',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
               }
             ]
+          },
+          {
+            name: 'Назад',
+            type: 'iternal',
           }
         ]
       },
@@ -188,19 +200,19 @@ export const SUN_DATA = [
                     name: "Вид алкоголя",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Частота курения",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Частота употребления алкоголя",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   }
                 ]
               },
@@ -213,19 +225,19 @@ export const SUN_DATA = [
                     name: "Есть ли аллергии",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true,
                   },
                   {
                     name: "Наличие хронического заболевания",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Тип хронического заболевания",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -238,19 +250,19 @@ export const SUN_DATA = [
                     name: "Оценка зрения",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень близорукости",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень дальнозоркости",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -270,7 +282,7 @@ export const SUN_DATA = [
                     name: "Отношение к вакцинации",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -283,31 +295,35 @@ export const SUN_DATA = [
                     name: "Употребление БАДов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Употребление витаминов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Употребление лекарств",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Употребление протеинов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
             ]
           }
         ]
+      },
+      {
+        name: 'Назад',
+        type: 'iternal',
       }
     ]
   },
@@ -335,7 +351,7 @@ export const SUN_DATA = [
                     name: "Виды сновидений",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -348,7 +364,7 @@ export const SUN_DATA = [
                     name: "Наличие снов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -361,7 +377,7 @@ export const SUN_DATA = [
                     name: "Частота снов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -388,13 +404,13 @@ export const SUN_DATA = [
                     name: "Сфера для творчества",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Считаете ли творческим человеком",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -414,7 +430,7 @@ export const SUN_DATA = [
                     name: "Любимый цвет",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -427,7 +443,7 @@ export const SUN_DATA = [
                     name: "Тип освещения",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -447,7 +463,7 @@ export const SUN_DATA = [
                     name: "Уровень IQ",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -460,7 +476,7 @@ export const SUN_DATA = [
                     name: "Тест IQ",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -487,55 +503,55 @@ export const SUN_DATA = [
                     name: "Уровень важности ценности | Безопасность",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень важности ценности | Доброта",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень важности ценности | Индивидуальность",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень важности ценности | Любовь ",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень важности ценности | Надежность",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень важности ценности | Образованность",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень важности ценности | Равенство",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень важности ценности | Семья",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень важности ценности | Справедливость",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -569,31 +585,31 @@ export const SUN_DATA = [
                     name: "В какие видеоигры играете",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды увлечений",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Предпочтения жанра кино",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Предпочтения жанра сериала",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Предпочтения темы подкастов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -606,25 +622,25 @@ export const SUN_DATA = [
                     name: "Где смотрите кино",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Где смотрите сериалы",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Платформы для видеоигр",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Формат подкастов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -637,25 +653,25 @@ export const SUN_DATA = [
                     name: "Как часто играете в видеоигры",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Как часто слушаете подкасты",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Как часто смотрите кино",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Как часто смотрите сериалы",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -675,37 +691,37 @@ export const SUN_DATA = [
                     name: "Как часто читаете литературу",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Слушаете ли музыку",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Способ чтения литературы",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения выставок",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения музеев",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения театра",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -718,31 +734,31 @@ export const SUN_DATA = [
                     name: "Какие выставки любите посещать",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Предпочтения в музыке",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Предпочтения литературного жанра",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Предпочтения театрального жанра",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Предпочтения тематики музея",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -762,13 +778,13 @@ export const SUN_DATA = [
                     name: "Радио по будням",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Радио по выходным",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -781,7 +797,7 @@ export const SUN_DATA = [
                     name: "Время ТВ будни",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -794,7 +810,7 @@ export const SUN_DATA = [
                     name: "Время ТВ выходные",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -807,55 +823,55 @@ export const SUN_DATA = [
                     name: "Уровень доверия информации | Информация в печатных изданиях (газеты, журналы и т.д.)",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия информации | Информация из Интернета",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия информации | Информация из социальных сетей",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия информации | Информация на ТВ",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия информации | Информация по радио",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия лидерам | Выступающим в Интернете",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия лидерам | Выступающим на платформе социальных сетей",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия лидерам | Выступающим по ТВ",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия лидерам | Выступающим по радио",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -868,7 +884,7 @@ export const SUN_DATA = [
                     name: "Продолжительность ТВ будни",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -881,7 +897,7 @@ export const SUN_DATA = [
                     name: "Продолжительность ТВ выходные",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -894,19 +910,19 @@ export const SUN_DATA = [
                     name: "Отношение к Интернет рекламе",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Отношение к радиорекламе",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Отношение к телерекламе",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -919,13 +935,13 @@ export const SUN_DATA = [
                     name: "Интернет в будни",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Интернет в выходные",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -938,7 +954,7 @@ export const SUN_DATA = [
                     name: "Устройство для просмотра телевидения",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -951,7 +967,7 @@ export const SUN_DATA = [
                     name: "Цели в соцсетей",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -964,13 +980,13 @@ export const SUN_DATA = [
                     name: "Как часто слушаете радио",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Как часто смотрите телевидение",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -983,7 +999,7 @@ export const SUN_DATA = [
                     name: "Какие соцсети",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1003,7 +1019,7 @@ export const SUN_DATA = [
                     name: "Уровень образования",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1023,7 +1039,7 @@ export const SUN_DATA = [
                     name: "Какую религию исповедуете",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1043,7 +1059,7 @@ export const SUN_DATA = [
                     name: "Какие мероприятия посещаете",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1070,7 +1086,7 @@ export const SUN_DATA = [
                     name: "Отношение",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1083,7 +1099,7 @@ export const SUN_DATA = [
                     name: "Политические взгляды",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1103,7 +1119,7 @@ export const SUN_DATA = [
                     name: "Знание партий",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1123,13 +1139,13 @@ export const SUN_DATA = [
                     name: "Влияние на принятие решений",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Отношение к выборам",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1142,13 +1158,13 @@ export const SUN_DATA = [
                     name: "Выборы Президента РФ",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Выборы в ГД",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1161,19 +1177,19 @@ export const SUN_DATA = [
                     name: "Кандидат в президенты РФ",
                     type: 'iternal',
                     value: 0.5128205128205128,
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Кандидат в президенты РФ (с В.В. Путиным)",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Партия в ГД",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1186,7 +1202,7 @@ export const SUN_DATA = [
                     name: "Частота участия",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1199,19 +1215,19 @@ export const SUN_DATA = [
                     name: "Время принятия решения",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Кто принимает решение",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Причины не участия",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1238,7 +1254,7 @@ export const SUN_DATA = [
                     name: "Наличие других домашних животных",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1251,13 +1267,13 @@ export const SUN_DATA = [
                     name: "Наличие кошки",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Порода кошки",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1270,13 +1286,13 @@ export const SUN_DATA = [
                     name: "Разведение котят",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Разведение щенков",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1289,13 +1305,13 @@ export const SUN_DATA = [
                     name: "Наличие собаки",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Порода собаки",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1315,25 +1331,25 @@ export const SUN_DATA = [
                     name: "Уровень доверия к другим | Знакомые, с которыми вместе проводите свободное время",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия к другим | Коллеги",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия к другим | Незнакомые люди, живущие в вашем городе",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Уровень доверия к другим | Соседи по дому",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1353,7 +1369,7 @@ export const SUN_DATA = [
                     name: "Количество",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1366,13 +1382,13 @@ export const SUN_DATA = [
                     name: "Количество поколений",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Размер семьи",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1385,7 +1401,7 @@ export const SUN_DATA = [
                     name: "Оценка семейного положения",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1405,7 +1421,7 @@ export const SUN_DATA = [
                     name: "Народность",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1432,13 +1448,13 @@ export const SUN_DATA = [
                     name: "Предпочтения в одежде",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Следование моде",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1451,61 +1467,61 @@ export const SUN_DATA = [
                     name: "Частота посещения | Бары / пабы",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения | Кафе",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения | Кинотеатры",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения | Ночные клубы / дискотеки",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения | Рестораны",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения | Рестораны фастфуд (fast food) / быстрого питания",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения | Салоны красоты",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения | Спортивные мероприятия (футбол, хоккей и т.д.)",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения | Театры, концерты, выставки",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Частота посещения | Фитнес клуб / спортзал",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1518,181 +1534,181 @@ export const SUN_DATA = [
                     name: "Виды экономии | Внимательно читаю рекламные брошюры в магазинах в поисках товаров по акции (товаров со скидкой)",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Выбираю магазины со специальными предложениями и скидками",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Если у меня есть карта лояльности, я скорее совершу покупку в этой торговой сети",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Если я случайно вижу стойки со специальными предложениями, я могу купить марку, даже если раньше ее не пробовал(а)",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Избегаю определенных отделов/полок в магазине, чтобы уменьшить возможный соблазн",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Избегаю покупки дорогих брендов (марок)",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Избегаю покупки ненужных продуктов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Избегаю совместного похода за покупками с другими членами семьи, чтобы минимизировать импульсные покупки",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Ищу промо-акции и скидки на товары, которые я покупаю регулярно",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Не покупаю/реже покупаю дорогие виды продуктов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Обращаю более пристальное внимание на выгодные продукты (с хорошим соотношением «цена-качество»)",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Обращаю более пристальное внимание на цену за 1 кг. продуктов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Отслеживаю в каких магазинах проходят акции на конкретные товары/продукты и целенаправленно хожу/езжу в эти магазины за этими товарами/продуктами",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Покупаю более дешевые бренды (марки)",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Покупаю более дорогие бренды (марки) только по акции (со скидкой)",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Покупаю дорогие продукты, но в меньшем количестве",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Покупаю и запасаю продукты впрок",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Покупаю продукты питания только, если я уверен(а), что употреблю их",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Покупаю продукты с максимальным сроком хранения",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Покупаю собственные торговые марки (частные марки) магазинов чаще, чем делал(а) это раньше",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Пополняю запасы меньшим количеством продуктов: Я покупаю исключительно то, что мне действительно нужно",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Реже хожу за продуктами, чтобы держать свой бюджет под контролем",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Составляю письменный список продуктов, которые собираюсь купить, чтобы минимизировать количество незапланированных покупок",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Трачу больше времени, чем раньше, на сравнение цен на продукты",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Уменьшаю количество пищевых отходов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Чаще изучаю информацию в Интернете в поиске самых лучших ценовых предложений",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Чаще использую дисконтные карты",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Чаще покупаю продукты в дискаунтерах",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Чаще покупаю продукты на местном (ближайшем) рынке",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Виды экономии | Чаще покупаю продукты питания через Интернет",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1705,13 +1721,13 @@ export const SUN_DATA = [
                     name: "Ежемесячные расходы",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Сотовый оператор",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1724,7 +1740,7 @@ export const SUN_DATA = [
                     name: "Факторы выбора товара",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1744,19 +1760,19 @@ export const SUN_DATA = [
                     name: "Марка автомобиля",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Сколько автомобилей",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Состояние автомобиля",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1769,7 +1785,7 @@ export const SUN_DATA = [
                     name: "Сколько предметов есть",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1782,7 +1798,7 @@ export const SUN_DATA = [
                     name: "Тип собственности",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1795,19 +1811,19 @@ export const SUN_DATA = [
                     name: "Размер",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Тип имущества",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Форма владения",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1827,19 +1843,19 @@ export const SUN_DATA = [
                     name: "Наличие работы",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Сфера занятости",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Формы трудоустройства",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1852,7 +1868,7 @@ export const SUN_DATA = [
                     name: "Группа неработающих",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }
@@ -1872,7 +1888,7 @@ export const SUN_DATA = [
                     name: "Виды банковских продуктов",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1885,13 +1901,13 @@ export const SUN_DATA = [
                     name: "Доход домохозяйства",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Личный доход",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1904,7 +1920,7 @@ export const SUN_DATA = [
                     name: "Оценка материального положения",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1917,13 +1933,13 @@ export const SUN_DATA = [
                     name: "Процент от ДХ",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   },
                   {
                     name: "Процент от личного дохода",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               },
@@ -1936,7 +1952,7 @@ export const SUN_DATA = [
                     name: "Виды страхования",
                     value: 0.5128205128205128,
                     type: 'iternal',
-                    children: []
+                    isLast: true
                   }
                 ]
               }

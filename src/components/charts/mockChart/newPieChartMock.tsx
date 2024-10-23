@@ -24,12 +24,13 @@ export const NewPieChartMock = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const [text, setText] = useState<string>('')
+  const [currentType, setCurrentType] = useState<'iternal' | 'external' | null>(null)
 
   const data = filteredData.map(el => {
     return {
       value: 300,
       name: el.name, // Чтобы учесть опечатку
-      // selected: el.isLast,
+      type: el.type,
       itemStyle: {
         borderRadius: 8,
         borderColor: el.isLast ? '#194a7a' : null,
@@ -42,11 +43,9 @@ export const NewPieChartMock = () => {
     return {
       value: 300,
       name: el.name, // Чтобы учесть опечатку
-      // selected: el.isLast,
       type: el.type,
       itemStyle: {
         borderRadius: 8,
-        // borderColor: el.isLast ? '#194a7a' : null,
         borderWidth: 2
       },
     };
@@ -108,7 +107,7 @@ export const NewPieChartMock = () => {
       setHistory([...history, filteredData]);
       setFilteredData(foundItem.children);
     } else {
-      console.log(`No children found for ${name}`);
+      console.log(`Не найдено чилдренов для ${name}`);
     }
   };
 
@@ -116,7 +115,7 @@ export const NewPieChartMock = () => {
     const foundItem = findIternalItemByName(SUN_DATA, name);
 
     if (name === "Назад") {
-      goBack();
+      goIternalBack();
       return; // Завершаем выполнение функции
     }
 
@@ -125,10 +124,10 @@ export const NewPieChartMock = () => {
       setIsModalOpen(true);
       setText(name);
     } else if (foundItem && foundItem.children) {
-      setIternalHistory([...history, filteredData]);
+      setIternalHistory([...iternalHistory, iternalFilterData]);
       setIternalFilterData(foundItem.children);
     } else {
-      console.log(`No children found for ${name}`);
+      console.log(`Не найдено чилдренов для ${name}`);
     }
   };
 
@@ -141,9 +140,19 @@ export const NewPieChartMock = () => {
     }
   };
 
+  const goIternalBack = () => {
+    if (iternalHistory.length > 0) {
+      const prevData = iternalHistory[iternalHistory.length - 1]; // Получаем последние данные из истории
+      setIternalHistory(iternalHistory.slice(0, -1)); // Убираем последний элемент из истории
+      setIternalFilterData(prevData); // Восстанавливаем внутренние данные
+    }
+  };
+
   const onChartClick = (params: any) => {
-    // console.log('params', params)
+
     params.data.type === 'iternal' ? filterIternalDataByName(params.name) : filterDataByName(params.name)
+    setCurrentType(params.data.type);
+    console.log('current type', params);
     // filterDataByName(params.name); // Фильтруем данные по клику
   };
 
@@ -154,7 +163,8 @@ export const NewPieChartMock = () => {
   const handleConfirm = () => {
     setSelectedItems([...selectedItems, text]); // Добавляем выбранный элемент в список
     setIsModalOpen(false); // Закрываем модальное окно
-    setFilteredData(EXTERNAL_DATA_MOCK); // Сбрасываем круг к исходным значениям
+    // setFilteredData(EXTERNAL_DATA_MOCK); // Сбрасываем круг к исходным значениям
+    currentType === 'external' ? setFilteredData(EXTERNAL_DATA_MOCK) : setIternalFilterData(SUN_DATA)
   };
 
   const option = {
@@ -178,12 +188,6 @@ export const NewPieChartMock = () => {
           position: 'inner',
           fontSize: 14
         },
-        // data: [
-        //   {value: 500, name: 'Природные'},
-        //   {value: 500, name: 'Социальные'},
-        //   {value: 500, name: 'Духовные'},
-        //   {value: 500, name: 'Экономические'},
-        // ]
         data: data
       }
     ]
