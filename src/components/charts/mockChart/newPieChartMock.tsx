@@ -154,14 +154,24 @@ export const NewPieChartMock = () => {
   };
 
   return (
-    <>
-      <ReactECharts option={option} style={{height: 500, width: '100%'}} onEvents={onEvents}/>
-
+    <div>
       <TagGroup>
-        {selectedItems.map((item, index) => (
-          <Tag key={index} closable onClose={() => removeTag(item)}>{item}</Tag>
-        ))}
+        {/*{selectedItems.map((item, index) => (*/}
+        {/*  <Tag key={index} closable onClose={() => removeTag(item)}>{item}</Tag>*/}
+        {/*))}*/}
+        {selectedItems.length
+          ? (
+            selectedItems.map((item, index) => (
+              <Tag key={index} closable onClose={() => removeTag(item)}>{item}</Tag>
+            ))
+          )
+          // : 'В этом разделе появятся выбранные параметры'
+          : <Text style={{marginTop: '.5rem', marginLeft: 10}}>В этом разделе появятся выбранные параметры</Text>
+        }
+
       </TagGroup>
+
+      <ReactECharts option={option} style={{height: 500, width: '100%'}} onEvents={onEvents}/>
 
       <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <Modal.Header>
@@ -175,6 +185,6 @@ export const NewPieChartMock = () => {
           <Button onClick={() => setIsModalOpen(false)} appearance="subtle">Отменить</Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   );
 };

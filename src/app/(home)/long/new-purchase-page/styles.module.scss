@@ -3,3 +3,27 @@
 .container {
   @include mainWidget;
 }
+
+.panelsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.panelLeft {
+  width: 30%;
+}
+
+.panelRight {
+  width: 69%;
+}
+
+.topPanelBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+}
