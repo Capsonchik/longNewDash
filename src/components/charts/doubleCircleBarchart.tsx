@@ -7,6 +7,17 @@ import ReactECharts from "echarts-for-react";
 export const DoubleCircleBarchart = () => {
   const currentData = useSelector(selectNewDoubleCircleAnswers)
 
+  const renderGraph = () => {
+    return (
+      <ReactECharts
+        style={{height: 400, width: '100%'}}
+        option={option}
+        //@ts-ignore
+        key={currentData}
+      />
+    )
+  }
+
   //@ts-ignore
   const transformedData = (currentData && currentData.data) ? currentData.data.map((item) => {
     //@ts-ignore
@@ -57,12 +68,16 @@ export const DoubleCircleBarchart = () => {
 
   return (
     <div>
-      <ReactECharts
-        style={{height: 400, width: '100%'}}
-        option={option}
-        //@ts-ignore
-        key={currentData}
-      />
+      {currentData.length !== 0
+        ? renderGraph()
+        : (
+          <div
+            style={{height: 400, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+          >
+            Выберите параметры в круге
+          </div>
+        )
+      }
     </div>
   );
 };

@@ -10,7 +10,8 @@ type InitialStateType = {
   question2: string,
   answ1: string[],
   answ2: string[],
-  currentData: []
+  currentData: [],
+  isAnswersLoading: boolean
 }
 
 const initialState: InitialStateType = {
@@ -18,7 +19,8 @@ const initialState: InitialStateType = {
   question2: '',
   answ1: [],
   answ2: [],
-  currentData: []
+  currentData: [],
+  isAnswersLoading: false
 }
 
 export const newCircleSlice = createSlice({
@@ -39,6 +41,10 @@ export const newCircleSlice = createSlice({
     builder
       .addCase(fetchPostNewSunData.fulfilled, (state, action) => {
         state.currentData = action.payload
+        state.isAnswersLoading = false
+      })
+      .addCase(fetchPostNewSunData.pending, (state) => {
+        state.isAnswersLoading = true
       })
       .addCase(fetchGetNewFirstAnswer.fulfilled, (state, action) => {
         state.answ1 = action.payload

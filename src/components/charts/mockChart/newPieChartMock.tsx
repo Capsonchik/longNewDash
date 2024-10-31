@@ -14,6 +14,7 @@ import {
 } from "@/store/newLongCircleSlice/newCircle.actions";
 import {setCurrentData, setFirstQuestion, setSecondQuestion} from "@/store/newLongCircleSlice/newSircle.slice";
 import {
+  selectIsNewCircleAnswersLoading,
   selectNewFirstAnswer,
   selectNewFirstQuestion,
   selectNewSecondAnswer,
@@ -46,6 +47,7 @@ export const NewPieChartMock = () => {
   const question2 = useSelector(selectNewSecondQuestion)
   const answ1 = useSelector(selectNewFirstAnswer)
   const answ2 = useSelector(selectNewSecondAnswer)
+  const loader = useSelector(selectIsNewCircleAnswersLoading)
 
   const handlePostAnswers = () => {
     dispatch(fetchPostNewSunData({
@@ -209,7 +211,8 @@ export const NewPieChartMock = () => {
         {selectedItems.length
           ? (
             selectedItems.map((item, index) => (
-              <Tag key={index} closable onClose={() => removeTag(item)}>{item}</Tag>
+              // <Tag key={index} closable onClose={() => removeTag(item)}>{item}</Tag>
+              <Tag key={index}>{item}</Tag>
             ))
           )
           : <Text style={{marginTop: '.5rem', marginLeft: 10}}>В этом разделе появятся выбранные параметры</Text>
@@ -223,6 +226,7 @@ export const NewPieChartMock = () => {
         appearance={'primary'}
         onClick={handlePostAnswers}
         disabled={disableBtn}
+        loading={loader}
       >
         Получить результат
       </Button>

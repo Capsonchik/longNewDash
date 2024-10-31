@@ -5,3 +5,4 @@ export const selectNewSecondQuestion = (state: RootState) => state.circle.questi
 export const selectNewFirstAnswer = (state: RootState) => state.circle.answ1
 export const selectNewSecondAnswer = (state: RootState) => state.circle.answ2
 export const selectNewDoubleCircleAnswers = (state: RootState) => state.circle.currentData
+export const selectIsNewCircleAnswersLoading = (state: RootState) => state.circle.isAnswersLoading
