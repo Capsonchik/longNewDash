@@ -5,6 +5,20 @@ import {EXTERNAL_DATA_MOCK} from "@/mocks/externalDataMock";
 import React, {useState} from "react";
 import {Button, Modal, Tag, TagGroup, Text} from "rsuite";
 import {SUN_DATA} from "@/mocks/sunBurstData";
+import {useDispatch, useSelector} from "react-redux";
+import {AppDispatch} from "@/store/store";
+import {
+  fetchGetNewFirstAnswer,
+  fetchGetNewSecondAnswer,
+  fetchPostNewSunData
+} from "@/store/newLongCircleSlice/newCircle.actions";
+import {setFirstQuestion, setSecondQuestion} from "@/store/newLongCircleSlice/newSircle.slice";
+import {
+  selectNewFirstAnswer,
+  selectNewFirstQuestion,
+  selectNewSecondAnswer,
+  selectNewSecondQuestion
+} from "@/store/newLongCircleSlice/newCircle.selectors";
 
 interface DataItem {
   id?: number;
@@ -17,6 +31,7 @@ interface DataItem {
 
 
 export const NewPieChartMock = () => {
+  const dispatch = useDispatch<AppDispatch>();
   const [filteredData, setFilteredData] = useState<DataItem[]>(EXTERNAL_DATA_MOCK);
   const [iternalFilterData, setIternalFilterData] = useState<DataItem[]>(SUN_DATA);
   const [history, setHistory] = useState<DataItem[][]>([]);
@@ -25,6 +40,20 @@ export const NewPieChartMock = () => {
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const [text, setText] = useState<string>('');
   const [currentType, setCurrentType] = useState<'iternal' | 'external' | null>(null);
+
+  const question1 = useSelector(selectNewFirstQuestion)
+  const question2 = useSelector(selectNewSecondQuestion)
+  const answ1 = useSelector(selectNewFirstAnswer)
+  const answ2 = useSelector(selectNewSecondAnswer)
+
+  const handlePostAnswers = () => {
+    dispatch(fetchPostNewSunData({
+      question1: question1,
+      question2: question2,
+      answ1: answ1,
+      answ2: answ2
+    }))
+  }
 
   const sharedItemStyle = {
     borderRadius: 8,
@@ -70,6 +99,16 @@ export const NewPieChartMock = () => {
     if (name === "Назад") {
       goBack(setData, setHistory, history);
       return;
+    }
+
+    if (!!foundItem?.isLast && question1 === '') {
+      alert('записали первый параметр')
+      dispatch(fetchGetNewFirstAnswer(foundItem.name));
+      dispatch(setFirstQuestion(foundItem.name));
+    } else if (!!foundItem?.isLast && question2 === '') {
+      alert("записали второй параметр")
+      dispatch(fetchGetNewSecondAnswer(foundItem.name));
+      dispatch(setSecondQuestion(foundItem.name));
     }
 
     if (foundItem && foundItem.isLast) {
@@ -172,6 +211,12 @@ export const NewPieChartMock = () => {
       </TagGroup>
 
       <ReactECharts option={option} style={{height: 500, width: '100%'}} onEvents={onEvents}/>
+
+      <Button
+        onClick={handlePostAnswers}
+      >
+        Ckick me
+      </Button>
 
       <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <Modal.Header>

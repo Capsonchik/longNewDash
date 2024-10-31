@@ -5,6 +5,7 @@ import secondSunBurstSlice from './secondSunBirstSlice/secondSunBurst.slice'
 import dataToSend from './dataSendSlice/dataToSend.slice'
 import answers from './answersSlice/answersSlice'
 import drawers from './drawersSlice/drawers.slice'
+import newCircle from './newLongCircleSlice/newSircle.slice'
 
 const customMiddleware: Middleware = store => next => action => {
   console.log('Dispatching action:', action);
@@ -19,6 +20,7 @@ const store = configureStore({
     dataToSend: dataToSend,
     answers: answers,
     drawers: drawers,
+    circle: newCircle
   },
   // middleware: (getDefaultMiddleware) =>
   //   getDefaultMiddleware()
