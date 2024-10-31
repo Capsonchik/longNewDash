@@ -48,8 +48,6 @@ export const LongResultBarChart = () => {
   //   };
   // });
 
-  console.log('transform', transformedData);
-
   const option = {
     tooltip: {
       trigger: 'axis',

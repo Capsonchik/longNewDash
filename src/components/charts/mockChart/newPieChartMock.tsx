@@ -102,11 +102,9 @@ export const NewPieChartMock = () => {
     }
 
     if (!!foundItem?.isLast && question1 === '') {
-      alert('записали первый параметр')
       dispatch(fetchGetNewFirstAnswer(foundItem.name));
       dispatch(setFirstQuestion(foundItem.name));
     } else if (!!foundItem?.isLast && question2 === '') {
-      alert("записали второй параметр")
       dispatch(fetchGetNewSecondAnswer(foundItem.name));
       dispatch(setSecondQuestion(foundItem.name));
     }
@@ -213,9 +211,11 @@ export const NewPieChartMock = () => {
       <ReactECharts option={option} style={{height: 500, width: '100%'}} onEvents={onEvents}/>
 
       <Button
+        style={{width: '100%'}}
+        appearance={'primary'}
         onClick={handlePostAnswers}
       >
-        Ckick me
+        Получить результат
       </Button>
 
       <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
