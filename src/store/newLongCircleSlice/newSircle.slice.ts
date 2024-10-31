@@ -30,6 +30,9 @@ export const newCircleSlice = createSlice({
     },
     setSecondQuestion: (state, action: PayloadAction<string>) => {
       state.question2 = action.payload
+    },
+    setCurrentData: (state) => {
+      state.currentData = []
     }
   },
   extraReducers: (builder) => {
@@ -46,6 +49,10 @@ export const newCircleSlice = createSlice({
   }
 })
 
-export const {setFirstQuestion, setSecondQuestion} = newCircleSlice.actions;
+export const {
+  setFirstQuestion,
+  setSecondQuestion,
+  setCurrentData,
+} = newCircleSlice.actions;
 
 export default newCircleSlice.reducer;

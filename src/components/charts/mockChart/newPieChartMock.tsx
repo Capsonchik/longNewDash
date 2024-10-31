@@ -12,7 +12,7 @@ import {
   fetchGetNewSecondAnswer,
   fetchPostNewSunData
 } from "@/store/newLongCircleSlice/newCircle.actions";
-import {setFirstQuestion, setSecondQuestion} from "@/store/newLongCircleSlice/newSircle.slice";
+import {setCurrentData, setFirstQuestion, setSecondQuestion} from "@/store/newLongCircleSlice/newSircle.slice";
 import {
   selectNewFirstAnswer,
   selectNewFirstQuestion,
@@ -40,6 +40,7 @@ export const NewPieChartMock = () => {
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const [text, setText] = useState<string>('');
   const [currentType, setCurrentType] = useState<'iternal' | 'external' | null>(null);
+  const [disableBtn, setDisableBtn] = useState(false)
 
   const question1 = useSelector(selectNewFirstQuestion)
   const question2 = useSelector(selectNewSecondQuestion)
@@ -53,6 +54,18 @@ export const NewPieChartMock = () => {
       answ1: answ1,
       answ2: answ2
     }))
+
+    if (question2 !== '') {
+      setDisableBtn(true)
+    }
+  }
+
+  const handleReloadCircle = () => {
+    dispatch(setFirstQuestion(''))
+    dispatch(setSecondQuestion(''))
+    setSelectedItems([])
+    setDisableBtn(false)
+    dispatch(setCurrentData())
   }
 
   const sharedItemStyle = {
@@ -193,19 +206,14 @@ export const NewPieChartMock = () => {
   return (
     <div>
       <TagGroup>
-        {/*{selectedItems.map((item, index) => (*/}
-        {/*  <Tag key={index} closable onClose={() => removeTag(item)}>{item}</Tag>*/}
-        {/*))}*/}
         {selectedItems.length
           ? (
             selectedItems.map((item, index) => (
               <Tag key={index} closable onClose={() => removeTag(item)}>{item}</Tag>
             ))
           )
-          // : 'В этом разделе появятся выбранные параметры'
           : <Text style={{marginTop: '.5rem', marginLeft: 10}}>В этом разделе появятся выбранные параметры</Text>
         }
-
       </TagGroup>
 
       <ReactECharts option={option} style={{height: 500, width: '100%'}} onEvents={onEvents}/>
@@ -214,9 +222,19 @@ export const NewPieChartMock = () => {
         style={{width: '100%'}}
         appearance={'primary'}
         onClick={handlePostAnswers}
+        disabled={disableBtn}
       >
         Получить результат
       </Button>
+
+      <Button
+        style={{width: '100%', marginTop: '.5rem'}}
+        appearance={'ghost'}
+        onClick={handleReloadCircle}
+      >
+        Сбросить
+      </Button>
+
 
       <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <Modal.Header>
