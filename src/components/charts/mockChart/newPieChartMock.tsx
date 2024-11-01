@@ -43,6 +43,7 @@ export const NewPieChartMock = () => {
   const [text, setText] = useState<string>('');
   const [currentType, setCurrentType] = useState<'iternal' | 'external' | null>(null);
   const [disableBtn, setDisableBtn] = useState(false)
+  const [refresher, setRefresher] = useState(0)
 
   const question1 = useSelector(selectNewFirstQuestion)
   const question2 = useSelector(selectNewSecondQuestion)
@@ -112,7 +113,7 @@ export const NewPieChartMock = () => {
   // Универсальная функция фильтрации данных
   const filterData = (name: string, data: DataItem[], setData: Function, setHistory: Function, history: DataItem[][]) => {
     const foundItem = findItemByName(data, name);
-
+    setRefresher(refresher + 1)
     if (name === "Назад") {
       goBack(setData, setHistory, history);
       return;
@@ -221,7 +222,12 @@ export const NewPieChartMock = () => {
         }
       </TagGroup>
 
-      <ReactECharts option={option} style={{height: 500, width: '100%'}} onEvents={onEvents}/>
+      <ReactECharts
+        option={option}
+        style={{height: 500, width: '100%'}}
+        onEvents={onEvents}
+        key={refresher}
+      />
 
       <Button
         style={{width: '100%'}}
