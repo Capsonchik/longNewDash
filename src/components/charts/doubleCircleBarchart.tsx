@@ -72,7 +72,7 @@ export const DoubleCircleBarchart = () => {
 
   return (
     <div>
-      {currentData.length !== 0
+      {currentData
         ? renderGraph()
         : (
           <div
