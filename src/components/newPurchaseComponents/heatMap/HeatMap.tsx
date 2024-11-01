@@ -22,7 +22,7 @@ export const HeatMap = () => {
   return (
     <>
       {isBottomOn ? (
-        <Panel bordered>
+        <Panel bordered shaded>
           <SelectPicker data={pickerData} placeholder={'Параметр'} className={styles.picker}/>
           <div className={styles.infoBlock}>
             <div className={styles.infoItem}>

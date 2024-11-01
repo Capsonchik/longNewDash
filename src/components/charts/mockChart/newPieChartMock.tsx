@@ -224,7 +224,8 @@ export const NewPieChartMock = () => {
               <Tag key={index}>{item}</Tag>
             ))
           )
-          : <Text style={{marginTop: '.5rem', marginLeft: 10}}>В этом разделе появятся выбранные параметры</Text>
+          : <Text style={{marginTop: '.5rem', marginLeft: 10, height: 34}}>В этом разделе появятся выбранные
+            параметры</Text>
         }
       </TagGroup>
 

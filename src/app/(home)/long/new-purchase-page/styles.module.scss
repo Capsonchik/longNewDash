@@ -16,6 +16,9 @@
 
 .panelRight {
   width: 54%;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 
 .topPanelBlock {
