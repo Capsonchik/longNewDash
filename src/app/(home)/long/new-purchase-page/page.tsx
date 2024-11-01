@@ -6,7 +6,7 @@ import {MonthPiker} from "@/components/rangePickers/monthPicker/MonthPiker";
 import {RegionPicker} from "@/components/filters/regionFilter/RegionPicker";
 import {DoubleCircleBarchart} from "@/components/charts/doubleCircleBarchart";
 import {Paragraph} from "@/components/placeHolder/Paragraph";
-import {MapWhite} from "@/components/mapWhite/MapWhite";
+import {HeatMap} from "@/components/newPurchaseComponents/heatMap/HeatMap";
 
 export default function Page() {
   return (
@@ -38,10 +38,9 @@ export default function Page() {
           </div>
         </Panel>
       </div>
-      <Panel bordered>
-        {/*<MapBig currentValue={''}/>*/}
-        <MapWhite currentValue={''}/>
-      </Panel>
+
+      <HeatMap/>
+
     </div>
   )
 }

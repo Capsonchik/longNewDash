@@ -12,7 +12,12 @@ import {
   fetchGetNewSecondAnswer,
   fetchPostNewSunData
 } from "@/store/newLongCircleSlice/newCircle.actions";
-import {setCurrentData, setFirstQuestion, setSecondQuestion} from "@/store/newLongCircleSlice/newSircle.slice";
+import {
+  setCurrentData,
+  setFirstQuestion,
+  setIsBottomOn,
+  setSecondQuestion
+} from "@/store/newLongCircleSlice/newSircle.slice";
 import {
   selectIsNewCircleAnswersLoading,
   selectNewFirstAnswer,
@@ -70,6 +75,7 @@ export const NewPieChartMock = () => {
     setSelectedItems([])
     setDisableBtn(false)
     dispatch(setCurrentData())
+    dispatch(setIsBottomOn(false))
   }
 
   const sharedItemStyle = {
