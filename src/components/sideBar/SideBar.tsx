@@ -120,11 +120,11 @@ export const SideBar = () => {
                 Лонгитюдный круг
               </Nav.Item>
               <Nav.Item
-                onClick={() => handleNavigate('/long')}
+                onClick={() => handleNavigate('/long/new-purchase-page')}
                 eventKey="4-1"
                 className={`${key === '4-1' ? styles.sideItemActive : styles.sideDisable}`}
               >
-                Лонгитюдный круг(старый)
+                Лонгитюдный круг(обновленный)
               </Nav.Item>
               {/*<Nav.Item eventKey="4-2">Пространство и время</Nav.Item>*/}
               <Nav.Item
