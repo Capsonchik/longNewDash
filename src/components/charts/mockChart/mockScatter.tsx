@@ -4,16 +4,16 @@ import ReactECharts from "echarts-for-react";
 
 export const MockScatter = () => {
   const option = {
-    title: {
-      text: "Планируют детей в ближайший год/среднесуточная температура",
-      left: 'center',
-      top: 0,
-      textStyle: {
-        fontSize: 12,  // уменьшенный размер шрифта
-        overflow: 'break',  // перенос текста при необходимости
-        width: 300,  // фиксированная ширина для тайтла
-      }
-    },
+    // title: {
+    //   text: "Планируют детей в ближайший год/среднесуточная температура",
+    //   left: 'center',
+    //   top: 0,
+    //   textStyle: {
+    //     fontSize: 12,  // уменьшенный размер шрифта
+    //     overflow: 'break',  // перенос текста при необходимости
+    //     width: 300,  // фиксированная ширина для тайтла
+    //   }
+    // },
     xAxis: {},
     yAxis: {},
     series: [

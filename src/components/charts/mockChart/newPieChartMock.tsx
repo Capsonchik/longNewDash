@@ -28,6 +28,7 @@ interface DataItem {
   type?: string;
   children?: DataItem[];
   isLast?: boolean;
+  color?: string;
 }
 
 
@@ -82,7 +83,8 @@ export const NewPieChartMock = () => {
       type: el.type,
       itemStyle: {
         ...sharedItemStyle,
-        borderColor: el.isLast ? isLastBorderColor : null,
+        borderColor: el.isLast ? isLastBorderColor : '#fff',
+        color: el.name === 'Назад' ? '#194a7a' : el.color
       },
     }));
 
