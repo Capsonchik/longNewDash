@@ -36,7 +36,7 @@ export const newCircleSlice = createSlice({
       state.question2 = action.payload
     },
     setCurrentData: (state) => {
-      state.currentData = []
+      state.currentData = {}
     },
     setIsBottomOn: (state, action: PayloadAction<boolean>) => {
       state.isBottomOn = action.payload
