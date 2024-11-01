@@ -47,21 +47,25 @@ export const DoubleCircleBarchart = () => {
         type: 'shadow'
       },
     },
-    legend: {},
+    legend: {
+      orient: 'vertical',
+      right: '10%',  // Отступ от правого края
+      top: 50  // Центрируем легенду по вертикали
+    },
     grid: {
       left: '3%',
-      right: '4%',
+      right: '30%', // Оставим место для легенды
       bottom: '3%',
       containLabel: true
     },
     xAxis: {
-      type: 'value',
-      max: 100
-    },
-    yAxis: {
       type: 'category',
       //@ts-ignore
       data: currentData ? currentData.labels : null,
+    },
+    yAxis: {
+      type: 'value',
+      max: 100
     },
     series: currentData ? transformedData : []
   };
