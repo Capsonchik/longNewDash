@@ -51,13 +51,13 @@ export const SUN_DATA = [
                     color: '#476F95',
                     isLast: true,
                   },
-                  {
-                    name: "Размер обуви",
-                    value: 0.5128205128205128,
-                    type: 'iternal',
-                    color: '#476F95',
-                    isLast: true,
-                  },
+                  // {
+                  //   name: "Размер обуви",
+                  //   value: 0.5128205128205128,
+                  //   type: 'iternal',
+                  //   color: '#476F95',
+                  //   isLast: true,
+                  // },
                   {
                     name: "Размер одежды",
                     value: 0.5128205128205128,
