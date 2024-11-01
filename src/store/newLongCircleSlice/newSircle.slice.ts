@@ -1,9 +1,11 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {
+  fetchGetHiData,
   fetchGetNewFirstAnswer,
   fetchGetNewSecondAnswer,
   fetchPostNewSunData
 } from "@/store/newLongCircleSlice/newCircle.actions";
+import {HiType} from "@/types/hiType";
 
 type InitialStateType = {
   question1: string,
@@ -12,7 +14,10 @@ type InitialStateType = {
   answ2: string[],
   currentData: {},
   isAnswersLoading: boolean,
-  isBottomOn: boolean
+  isBottomOn: boolean,
+  hiData: HiType | undefined,
+  hiDataError: boolean,
+  hiDataLoader: boolean,
 }
 
 const initialState: InitialStateType = {
@@ -23,6 +28,9 @@ const initialState: InitialStateType = {
   currentData: {},
   isAnswersLoading: false,
   isBottomOn: false,
+  hiData: undefined,
+  hiDataError: false,
+  hiDataLoader: false
 }
 
 export const newCircleSlice = createSlice({
@@ -58,6 +66,19 @@ export const newCircleSlice = createSlice({
       .addCase(fetchGetNewSecondAnswer.fulfilled, (state, action) => {
         state.answ2 = action.payload
       })
+      .addCase(fetchGetHiData.fulfilled, (state, action) => {
+        state.hiData = action.payload
+        state.hiDataLoader = false
+        state.hiDataError = false
+      })
+      .addCase(fetchGetHiData.pending, (state) => {
+        state.hiDataLoader = true
+      })
+      .addCase(fetchGetHiData.rejected, (state) => {
+        state.hiDataLoader = false
+        state.hiDataError = true
+      })
+
   }
 })
 

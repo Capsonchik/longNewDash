@@ -1,12 +1,11 @@
 import styles from './styles.module.scss';
 import {Panel, Text} from "rsuite";
 import {NewPieChartMock} from "@/components/charts/mockChart/newPieChartMock";
-import {MockScatter} from "@/components/charts/mockChart/mockScatter";
 import {MonthPiker} from "@/components/rangePickers/monthPicker/MonthPiker";
 import {RegionPicker} from "@/components/filters/regionFilter/RegionPicker";
 import {DoubleCircleBarchart} from "@/components/charts/doubleCircleBarchart";
-import {Paragraph} from "@/components/placeHolder/Paragraph";
 import {HeatMap} from "@/components/newPurchaseComponents/heatMap/HeatMap";
+import {HiChart} from "@/components/charts/hiChart";
 
 export default function Page() {
   return (
@@ -28,19 +27,24 @@ export default function Page() {
             <DoubleCircleBarchart/>
           </Panel>
 
+          {/*<Panel bordered shaded>*/}
+          {/*  <div className={styles.scatterBlock}>*/}
+          {/*    <div className={styles.scatterLeft}>*/}
+          {/*      <MockScatter/>*/}
+          {/*    </div>*/}
+          {/*    */}
+          {/*    <div className={styles.scatterRight}>*/}
+          {/*      <Text size={'md'}>Коэффициент корреляции</Text>*/}
+          {/*      <div className={styles.correlationIndex}>*/}
+          {/*        <Text weight={'semibold'} size={34}>7.3</Text>*/}
+          {/*      </div>*/}
+          {/*      <Paragraph rowNumber={7}/>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</Panel>*/}
+
           <Panel bordered shaded>
-            <div className={styles.scatterBlock}>
-              <div className={styles.scatterLeft}>
-                <MockScatter/>
-              </div>
-              <div className={styles.scatterRight}>
-                <Text size={'md'}>Коэффициент корреляции</Text>
-                <div className={styles.correlationIndex}>
-                  <Text weight={'semibold'} size={34}>7.3</Text>
-                </div>
-                <Paragraph rowNumber={7}/>
-              </div>
-            </div>
+            <HiChart/>
           </Panel>
 
         </div>

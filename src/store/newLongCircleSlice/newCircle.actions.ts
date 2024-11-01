@@ -48,3 +48,20 @@ export const fetchGetNewSecondAnswer = createAsyncThunk(
     }
   }
 );
+
+export const fetchGetHiData = createAsyncThunk(
+  'hiData',
+  async (data: any) => {
+
+    try {
+      const response = await axiosMainRequest.post(`/analyses/chi_square_table_literal/`, data);
+      if (response.status === 200) {
+        return response.data;
+      } else {
+        return 'error';
+      }
+    } catch (error) {
+      return 'throwError(error)';
+    }
+  }
+);

@@ -8,6 +8,7 @@ import {SUN_DATA} from "@/mocks/sunBurstData";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch} from "@/store/store";
 import {
+  fetchGetHiData,
   fetchGetNewFirstAnswer,
   fetchGetNewSecondAnswer,
   fetchPostNewSunData
@@ -62,6 +63,11 @@ export const NewPieChartMock = () => {
       question2: question2,
       answ1: answ1,
       answ2: answ2
+    }))
+
+    dispatch(fetchGetHiData({
+      parameter1: question1,
+      parameter2: question2
     }))
 
     if (question2 !== '') {
@@ -255,7 +261,7 @@ export const NewPieChartMock = () => {
       </Button>
 
       <div style={{marginTop: '.5rem'}}>
-        <Placeholder.Paragraph rows={10}/>
+        <Placeholder.Paragraph rows={7}/>
       </div>
 
 
