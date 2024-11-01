@@ -237,7 +237,7 @@ export const NewPieChartMock = () => {
       />
 
       <Button
-        style={{width: '100%'}}
+        style={{width: '100%', backgroundColor: '#194a7a'}}
         appearance={'primary'}
         onClick={handlePostAnswers}
         disabled={disableBtn}
