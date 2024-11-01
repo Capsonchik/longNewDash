@@ -10,7 +10,7 @@ export const DoubleCircleBarchart = () => {
   const renderGraph = () => {
     return (
       <ReactECharts
-        style={{height: 400, width: '100%'}}
+        style={{height: 500, width: '100%'}}
         option={option}
         //@ts-ignore
         key={currentData}
@@ -72,7 +72,7 @@ export const DoubleCircleBarchart = () => {
         ? renderGraph()
         : (
           <div
-            style={{height: 400, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+            style={{height: 500, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
           >
             Выберите параметры в круге
           </div>

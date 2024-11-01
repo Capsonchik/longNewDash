@@ -14,6 +14,13 @@ export const MockScatter = () => {
     //     width: 300,  // фиксированная ширина для тайтла
     //   }
     // },
+    grid: {
+      left: 0,
+      right: 0,
+      top: 10,
+      bottom: 0,
+      containLabel: true
+    },
     xAxis: {},
     yAxis: {},
     series: [

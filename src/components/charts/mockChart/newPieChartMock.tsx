@@ -3,7 +3,7 @@
 import ReactECharts from "echarts-for-react";
 import {EXTERNAL_DATA_MOCK} from "@/mocks/externalDataMock";
 import React, {useState} from "react";
-import {Button, Modal, Tag, TagGroup, Text} from "rsuite";
+import {Button, Modal, Placeholder, Tag, TagGroup, Text} from "rsuite";
 import {SUN_DATA} from "@/mocks/sunBurstData";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch} from "@/store/store";
@@ -240,6 +240,10 @@ export const NewPieChartMock = () => {
       >
         Сбросить
       </Button>
+
+      <div style={{marginTop: '.5rem'}}>
+        <Placeholder.Paragraph rows={10}/>
+      </div>
 
 
       <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>

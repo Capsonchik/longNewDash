@@ -27,3 +27,28 @@
   display: flex;
   gap: 1rem;
 }
+
+.scatterBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scatterLeft {
+  width: 69%;
+}
+
+.scatterRight {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 30%;
+}
+
+.correlationIndex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 16px;
+  background-color: #42ab49;
+}
