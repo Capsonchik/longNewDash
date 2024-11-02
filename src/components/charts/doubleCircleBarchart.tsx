@@ -3,6 +3,7 @@
 import {useSelector} from "react-redux";
 import {selectNewDoubleCircleAnswers} from "@/store/newLongCircleSlice/newCircle.selectors";
 import ReactECharts from "echarts-for-react";
+import {generateColors} from "@/helpers/generateColors";
 
 export const DoubleCircleBarchart = () => {
   const currentData = useSelector(selectNewDoubleCircleAnswers)
@@ -41,6 +42,7 @@ export const DoubleCircleBarchart = () => {
   }) : [];
 
   const option = {
+    color: generateColors(['#194a7a'], 10),
     tooltip: {
       trigger: 'axis',
       axisPointer: {
