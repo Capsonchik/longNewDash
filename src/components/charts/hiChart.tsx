@@ -2,9 +2,8 @@
 
 import {useSelector} from "react-redux";
 import {selectHiData, selectHiDataError, selectHiDataLoader} from "@/store/newLongCircleSlice/newCircle.selectors";
-import ReactECharts from "echarts-for-react";
 import {HiType} from "@/types/hiType";
-import {Text} from "rsuite";
+import {Panel, Text} from "rsuite";
 import {generateColors} from "@/helpers/generateColors";
 
 export const HiChart = () => {
@@ -65,17 +64,51 @@ export const HiChart = () => {
   return (
     <>
       {hiData !== undefined ? (
-        <ReactECharts
-          style={{height: 300, width: '100%'}}
-          option={option}
-        />
+        <div style={{display: "flex", justifyContent: 'space-between', alignItems: 'center'}}>
+          <Panel bordered style={{width: '32%'}}>
+
+            <div style={{
+              width: '100%',
+              height: 80,
+              display: 'flex',
+              justifyContent: 'start',
+              alignItems: 'center',
+              fontSize: 32,
+              fontWeight: 'bold'
+            }}>{hiData?.chi2}</div>
+            <Text weight={'semibold'} muted>Хи-квадрат</Text>
+          </Panel>
+          <Panel bordered style={{width: '32%'}}>
+            <div style={{
+              width: '100%',
+              height: 80,
+              display: 'flex',
+              justifyContent: 'start',
+              alignItems: 'center',
+              fontSize: 32,
+              fontWeight: 'bold'
+            }}>{hiData?.p}</div>
+            <Text weight={'semibold'} muted>P-value</Text>
+          </Panel>
+          <Panel bordered style={{width: '32%'}}>
+            <div style={{
+              width: '100%',
+              height: 80,
+              display: 'flex',
+              justifyContent: 'start',
+              alignItems: 'center',
+              fontSize: 32,
+              fontWeight: 'bold'
+            }}>{hiData?.dof}</div>
+            <Text weight={'semibold'} muted>Степени свободы</Text>
+          </Panel>
+        </div>
       ) : (
-        <div style={{height: 300, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div
+          style={{height: 143, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <Text>выберете параметры</Text>
         </div>
-
-      )
-      }
+      )}
     </>
 
   );

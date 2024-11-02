@@ -14,6 +14,7 @@ import {
   fetchPostNewSunData
 } from "@/store/newLongCircleSlice/newCircle.actions";
 import {
+  clearHiData,
   setCurrentData,
   setFirstQuestion,
   setIsBottomOn,
@@ -82,6 +83,7 @@ export const NewPieChartMock = () => {
     setDisableBtn(false)
     dispatch(setCurrentData())
     dispatch(setIsBottomOn(false))
+    dispatch(clearHiData())
   }
 
   const sharedItemStyle = {
@@ -261,7 +263,7 @@ export const NewPieChartMock = () => {
       </Button>
 
       <div style={{marginTop: '.5rem'}}>
-        <Placeholder.Paragraph rows={7}/>
+        <Placeholder.Paragraph rows={3}/>
       </div>
 
 

@@ -48,6 +48,9 @@ export const newCircleSlice = createSlice({
     },
     setIsBottomOn: (state, action: PayloadAction<boolean>) => {
       state.isBottomOn = action.payload
+    },
+    clearHiData: (state) => {
+      state.hiData = undefined
     }
   },
   extraReducers: (builder) => {
@@ -86,7 +89,8 @@ export const {
   setFirstQuestion,
   setSecondQuestion,
   setCurrentData,
-  setIsBottomOn
+  setIsBottomOn,
+  clearHiData
 } = newCircleSlice.actions;
 
 export default newCircleSlice.reducer;

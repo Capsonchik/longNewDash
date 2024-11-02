@@ -44,6 +44,7 @@ export default function Page() {
           {/*</Panel>*/}
 
           <Panel bordered shaded>
+            <Text weight={'semibold'} size={16} style={{marginBottom: '1rem'}}>Коэффициенты связи</Text>
             <HiChart/>
           </Panel>
 
