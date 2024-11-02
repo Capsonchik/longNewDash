@@ -20,7 +20,7 @@ export const DoubleCircleBarchart = () => {
   }
 
   //@ts-ignore
-  const test = currentData ? currentData.data.length : 10
+  const test = currentData && currentData.data ? currentData.data.length : 10
 
   //@ts-ignore
   const transformedData = (currentData && currentData.data) ? currentData.data.map((item) => {
