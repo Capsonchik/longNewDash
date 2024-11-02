@@ -5,11 +5,15 @@ import {selectHiData, selectHiDataError, selectHiDataLoader} from "@/store/newLo
 import ReactECharts from "echarts-for-react";
 import {HiType} from "@/types/hiType";
 import {Text} from "rsuite";
+import {generateColors} from "@/helpers/generateColors";
 
 export const HiChart = () => {
   const hiData = useSelector(selectHiData) as HiType | undefined;
   const hiDataError = useSelector(selectHiDataError);
   const hiDataLoader = useSelector(selectHiDataLoader);
+
+  // const hiLength = hiData && hiData.data.length
+  const hiLength = hiData ? hiData.data.length : 10;
 
   const transformedData = hiData && hiData.data.map((item) => {
     const total = item.stat.reduce((sum, value) => sum + value, 0);
@@ -32,6 +36,7 @@ export const HiChart = () => {
   });
 
   const option = {
+    color: generateColors(['#194a7a'], hiLength),
     tooltip: {
       trigger: 'axis',
       axisPointer: {

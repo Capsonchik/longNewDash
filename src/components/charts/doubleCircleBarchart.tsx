@@ -20,6 +20,9 @@ export const DoubleCircleBarchart = () => {
   }
 
   //@ts-ignore
+  const test = currentData ? currentData.data.length : 10
+
+  //@ts-ignore
   const transformedData = (currentData && currentData.data) ? currentData.data.map((item) => {
     //@ts-ignore
     // const total = item.stat.reduce((sum, value) => sum + value, 0);
@@ -42,7 +45,7 @@ export const DoubleCircleBarchart = () => {
   }) : [];
 
   const option = {
-    color: generateColors(['#194a7a'], 10),
+    color: generateColors(['#194a7a'], test),
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -51,11 +54,11 @@ export const DoubleCircleBarchart = () => {
     },
     legend: {
       orient: 'vertical',
-      right: '10%',  // Отступ от правого края
+      right: '0%',  // Отступ от правого края
       top: 50  // Центрируем легенду по вертикали
     },
     grid: {
-      left: '3%',
+      left: '0%',
       right: '30%', // Оставим место для легенды
       bottom: '3%',
       containLabel: true
