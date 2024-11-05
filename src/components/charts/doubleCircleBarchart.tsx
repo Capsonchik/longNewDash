@@ -44,6 +44,7 @@ export const DoubleCircleBarchart = () => {
     };
   }) : [];
 
+
   const option = {
     color: generateColors(['#194a7a'], test),
     tooltip: {
@@ -55,7 +56,9 @@ export const DoubleCircleBarchart = () => {
     legend: {
       orient: 'vertical',
       right: '0%',  // Отступ от правого края
-      top: 50  // Центрируем легенду по вертикали
+      top: 50,  // Центрируем легенду по вертикали
+      // @ts-ignore
+      data: currentData && currentData.data ? currentData.data.map((item: any) => item.label).reverse() : []
     },
     grid: {
       left: '0%',

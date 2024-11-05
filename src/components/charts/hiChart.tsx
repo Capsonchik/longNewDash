@@ -5,6 +5,7 @@ import {selectHiData, selectHiDataError, selectHiDataLoader} from "@/store/newLo
 import {HiType} from "@/types/hiType";
 import {Panel, Text} from "rsuite";
 import {generateColors} from "@/helpers/generateColors";
+import {Paragraph} from "@/components/placeHolder/Paragraph";
 
 export const HiChart = () => {
   const hiData = useSelector(selectHiData) as HiType | undefined;
@@ -91,16 +92,17 @@ export const HiChart = () => {
             <Text weight={'semibold'} muted>P-value</Text>
           </Panel>
           <Panel bordered style={{width: '32%'}}>
-            <div style={{
-              width: '100%',
-              height: 80,
-              display: 'flex',
-              justifyContent: 'start',
-              alignItems: 'center',
-              fontSize: 32,
-              fontWeight: 'bold'
-            }}>{hiData?.dof}</div>
-            <Text weight={'semibold'} muted>Степени свободы</Text>
+            {/*<div style={{*/}
+            {/*  width: '100%',*/}
+            {/*  height: 80,*/}
+            {/*  display: 'flex',*/}
+            {/*  justifyContent: 'start',*/}
+            {/*  alignItems: 'center',*/}
+            {/*  fontSize: 32,*/}
+            {/*  fontWeight: 'bold'*/}
+            {/*}}>{hiData?.dof}</div>*/}
+            {/*<Text weight={'semibold'} muted>Степени свободы</Text>*/}
+            <Paragraph rowNumber={4}/>
           </Panel>
         </div>
       ) : (
