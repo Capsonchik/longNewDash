@@ -1,18 +1,21 @@
 import styles from './styles.module.scss';
 import {Panel, Text} from "rsuite";
 import {NewPieChartMock} from "@/components/charts/mockChart/newPieChartMock";
-import {MonthPiker} from "@/components/rangePickers/monthPicker/MonthPiker";
-import {RegionPicker} from "@/components/filters/regionFilter/RegionPicker";
 import {DoubleCircleBarchart} from "@/components/charts/doubleCircleBarchart";
 import {HeatMap} from "@/components/newPurchaseComponents/heatMap/HeatMap";
 import {HiChart} from "@/components/charts/hiChart";
+import {getCurrentDate} from "@/helpers/dateHalpers";
 
 export default function Page() {
+
+
   return (
     <div className={styles.panelsBlock}>
       <Panel bordered className={styles.filters} shaded>
-        <RegionPicker/>
-        <MonthPiker/>
+        {/* Временно убрали, заменили на другое */}
+        {/*<RegionPicker/>*/}
+        {/*<MonthPiker/>*/}
+        <Text weight={'semibold'}>Обновлено... {getCurrentDate()}</Text>
       </Panel>
       <div className={styles.topPanelBlock}>
         <Panel bordered className={styles.panelLeft} shaded>
