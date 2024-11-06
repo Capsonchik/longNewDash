@@ -70,6 +70,9 @@ export const DoubleCircleBarchart = () => {
       type: 'category',
       //@ts-ignore
       data: currentData ? currentData.labels : null,
+      axisLabel: {
+        show: false  // Скрываем подписи
+      }
     },
     yAxis: {
       type: 'value',
