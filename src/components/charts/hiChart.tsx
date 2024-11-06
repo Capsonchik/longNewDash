@@ -67,7 +67,6 @@ export const HiChart = () => {
       {hiData !== undefined ? (
         <div style={{display: "flex", justifyContent: 'space-between', alignItems: 'center'}}>
           <Panel bordered style={{width: '32%'}}>
-
             <div style={{
               width: '100%',
               height: 80,
@@ -76,7 +75,7 @@ export const HiChart = () => {
               alignItems: 'center',
               fontSize: 32,
               fontWeight: 'bold'
-            }}>{hiData?.chi2}</div>
+            }}>{!hiDataError ? hiData?.chi2 : 'Ошибка данных'}</div>
             <Text weight={'semibold'} muted>Хи-квадрат</Text>
           </Panel>
           <Panel bordered style={{width: '32%'}}>
@@ -88,7 +87,7 @@ export const HiChart = () => {
               alignItems: 'center',
               fontSize: 32,
               fontWeight: 'bold'
-            }}>{hiData?.p}</div>
+            }}>{!hiDataError ? hiData?.p : 'Ошибка данных'}</div>
             <Text weight={'semibold'} muted>P-value</Text>
           </Panel>
           <Panel bordered style={{width: '32%'}}>
