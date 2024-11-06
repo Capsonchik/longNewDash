@@ -51,6 +51,13 @@ export const EXTERNAL_DATA_MOCK = [
             isLast: true
           },
           {
+            id: 38,
+            name: 'Среднесуточная температура',
+            type: 'external',
+            color: '#9BAEBC',
+            isLast: true
+          },
+          {
             id: 28,
             name: 'Назад',
             type: 'external',

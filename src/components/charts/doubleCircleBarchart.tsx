@@ -49,27 +49,6 @@ export const DoubleCircleBarchart = () => {
     color: generateColors(['#194a7a'], test),
     tooltip: {
       trigger: 'axis',
-      axisPointer: {
-        type: 'shadow'
-      },
-      appendToBody: true,
-      position: function (point: any, params: any, dom: any, rect: any, size: any) {
-        const [x, y] = point;
-        const {contentSize, viewSize} = size;
-
-        // Проверка выхода за границы и корректировка
-        const posX = x + contentSize[0] > viewSize[0] ? x - contentSize[0] : x;
-        const posY = y + contentSize[1] > viewSize[1] ? y - contentSize[1] : y;
-        return [posX, posY];
-      },
-      formatter: function (params: any) {
-        return params.map((item: any) => {
-          const name = item.seriesName.length > 50
-            ? item.seriesName.slice(0, 50) + '...'
-            : item.seriesName;
-          return `${name}: ${item.value.toFixed(2)}%`;
-        }).join('<br/>');
-      }
     },
     legend: {
       orient: 'vertical',
@@ -77,10 +56,6 @@ export const DoubleCircleBarchart = () => {
       top: 50,  // Центрируем легенду по вертикали
       // @ts-ignore
       data: currentData && currentData.data ? currentData.data.map((item: any) => item.label).reverse() : [],
-      // Принудительный перенос длинных строк!
-      // formatter: function (name: any) {
-      //   return name.length > 20 ? name.slice(0, 20) + '\n' + name.slice(20) : name;
-      // }
       formatter: function (name: any) {
         return name.length > 15 ? name.substring(0, 35) + '...' : name; // Ограничение длины
       }
