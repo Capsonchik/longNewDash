@@ -58,7 +58,14 @@ export const DoubleCircleBarchart = () => {
       right: '0%',  // Отступ от правого края
       top: 50,  // Центрируем легенду по вертикали
       // @ts-ignore
-      data: currentData && currentData.data ? currentData.data.map((item: any) => item.label).reverse() : []
+      data: currentData && currentData.data ? currentData.data.map((item: any) => item.label).reverse() : [],
+      // Принудительный перенос длинных строк!
+      // formatter: function (name: any) {
+      //   return name.length > 20 ? name.slice(0, 20) + '\n' + name.slice(20) : name;
+      // }
+      formatter: function (name: any) {
+        return name.length > 15 ? name.substring(0, 35) + '...' : name; // Ограничение длины
+      }
     },
     grid: {
       left: '0%',
