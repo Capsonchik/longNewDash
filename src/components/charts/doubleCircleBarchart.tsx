@@ -52,6 +52,24 @@ export const DoubleCircleBarchart = () => {
       axisPointer: {
         type: 'shadow'
       },
+      appendToBody: true,
+      position: function (point: any, params: any, dom: any, rect: any, size: any) {
+        const [x, y] = point;
+        const {contentSize, viewSize} = size;
+
+        // Проверка выхода за границы и корректировка
+        const posX = x + contentSize[0] > viewSize[0] ? x - contentSize[0] : x;
+        const posY = y + contentSize[1] > viewSize[1] ? y - contentSize[1] : y;
+        return [posX, posY];
+      },
+      formatter: function (params: any) {
+        return params.map((item: any) => {
+          const name = item.seriesName.length > 50
+            ? item.seriesName.slice(0, 50) + '...'
+            : item.seriesName;
+          return `${name}: ${item.value.toFixed(2)}%`;
+        }).join('<br/>');
+      }
     },
     legend: {
       orient: 'vertical',
@@ -89,7 +107,7 @@ export const DoubleCircleBarchart = () => {
   };
 
   return (
-    <div>
+    <div style={{zIndex: '-9999'}}>
       {Object.keys(currentData).length > 0
         ? renderGraph()
         : (
