@@ -49,6 +49,7 @@ export const DoubleCircleBarchart = () => {
     color: generateColors(['#194a7a'], test),
     tooltip: {
       trigger: 'axis',
+      confine: true,
     },
     legend: {
       orient: 'vertical',
