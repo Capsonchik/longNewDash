@@ -55,3 +55,13 @@
   border-radius: 16px;
   background-color: #42ab49;
 }
+
+@media(max-width: 1670px) {
+  .panelLeft {
+    width: 35%;
+  }
+
+  .panelRight {
+    width: 64%;
+  }
+}
