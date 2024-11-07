@@ -64,7 +64,7 @@ export const HiChart = () => {
 
   return (
     <>
-      {hiData !== undefined && hiDataError ? (
+      {hiData !== undefined ? (
         <div style={{display: "flex", justifyContent: 'space-between', alignItems: 'center'}}>
           <Panel bordered style={{width: '32%'}}>
             <div style={{
