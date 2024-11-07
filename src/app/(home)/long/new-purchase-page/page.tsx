@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import {Panel, Text} from "rsuite";
+import {Divider, Panel, Text} from "rsuite";
 import {NewPieChartMock} from "@/components/charts/mockChart/newPieChartMock";
 import {DoubleCircleBarchart} from "@/components/charts/doubleCircleBarchart";
 import {HeatMap} from "@/components/newPurchaseComponents/heatMap/HeatMap";
@@ -15,7 +15,8 @@ export default function Page() {
         {/* Временно убрали, заменили на другое */}
         {/*<RegionPicker/>*/}
         {/*<MonthPiker/>*/}
-        <Text weight={'semibold'}>Обновлено... {getCurrentDate()}</Text>
+        <Text weight={'semibold'}>
+          Обновлено <Divider vertical/> {getCurrentDate()}</Text>
       </Panel>
       <div className={styles.topPanelBlock}>
         <Panel bordered className={styles.panelLeft} shaded>

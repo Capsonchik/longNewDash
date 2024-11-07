@@ -13,6 +13,7 @@ type InitialStateType = {
   answ1: string[],
   answ2: string[],
   currentData: {},
+  currentDataError: boolean,
   isAnswersLoading: boolean,
   isBottomOn: boolean,
   hiData: HiType | undefined,
@@ -26,6 +27,7 @@ const initialState: InitialStateType = {
   answ1: [],
   answ2: [],
   currentData: {},
+  currentDataError: false,
   isAnswersLoading: false,
   isBottomOn: false,
   hiData: undefined,
@@ -59,9 +61,13 @@ export const newCircleSlice = createSlice({
         state.currentData = action.payload
         state.isAnswersLoading = false
         state.isBottomOn = true
+        state.currentDataError = false
       })
       .addCase(fetchPostNewSunData.pending, (state) => {
         state.isAnswersLoading = true
+      })
+      .addCase(fetchPostNewSunData.rejected, (state, action) => {
+        state.currentDataError = true
       })
       .addCase(fetchGetNewFirstAnswer.fulfilled, (state, action) => {
         state.answ1 = action.payload
@@ -80,6 +86,7 @@ export const newCircleSlice = createSlice({
       .addCase(fetchGetHiData.rejected, (state) => {
         state.hiDataLoader = false
         state.hiDataError = true
+        state.isAnswersLoading = false
       })
 
   }

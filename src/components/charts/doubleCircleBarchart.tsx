@@ -1,12 +1,14 @@
 'use client'
 
 import {useSelector} from "react-redux";
-import {selectNewDoubleCircleAnswers} from "@/store/newLongCircleSlice/newCircle.selectors";
+import {selectNewCircleError, selectNewDoubleCircleAnswers} from "@/store/newLongCircleSlice/newCircle.selectors";
 import ReactECharts from "echarts-for-react";
 import {generateColors} from "@/helpers/generateColors";
 
 export const DoubleCircleBarchart = () => {
   const currentData = useSelector(selectNewDoubleCircleAnswers)
+  const error = useSelector(selectNewCircleError)
+
 
   const renderGraph = () => {
     return (
@@ -84,16 +86,26 @@ export const DoubleCircleBarchart = () => {
 
   return (
     <div style={{zIndex: '-9999'}}>
-      {Object.keys(currentData).length > 0
-        ? renderGraph()
-        : (
-          <div
-            style={{height: 500, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
-          >
-            Выберите параметры в круге
-          </div>
-        )
+      {error ? (
+        <div
+          style={{height: 500, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+        >
+          Ошибка данных
+        </div>
+      ) : (
+        Object.keys(currentData).length > 0
+          ? renderGraph()
+          : (
+            <div
+              style={{height: 500, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+            >
+              Выберите параметры в круге
+            </div>
+          )
+
+      )
       }
+
     </div>
   );
 };

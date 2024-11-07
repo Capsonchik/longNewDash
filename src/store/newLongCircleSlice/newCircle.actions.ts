@@ -1,19 +1,12 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {axiosMainRequest} from "@/apiConfig/apiConfig";
 
+
 export const fetchPostNewSunData = createAsyncThunk(
   'postNewGraphInfo',
   async (data: any) => {
-    try {
-      const response = await axiosMainRequest.post(`/visualizations/crosstabulation_barcharts_percentage_literal/`, data);
-      if (response.status === 200) {
-        return response.data;
-      } else {
-        return 'error';
-      }
-    } catch (error) {
-      return 'throwError(error)';
-    }
+    const response = await axiosMainRequest.post(`/visualizations/crosstabulation_barcharts_percentage_literal/`, data);
+    return response.data;
   }
 );
 
@@ -49,19 +42,29 @@ export const fetchGetNewSecondAnswer = createAsyncThunk(
   }
 );
 
+// export const fetchGetHiData = createAsyncThunk(
+//   'hiData',
+//   async (data: any) => {
+//
+//     try {
+//       const response = await axiosMainRequest.post(`/analyses/chi_square_table_literal/`, data);
+//       if (response.status === 200) {
+//         return response.data;
+//       } else {
+//         return 'error';
+//       }
+//     } catch (error) {
+//       return 'throwError(error)';
+//     }
+//   }
+// );
+
 export const fetchGetHiData = createAsyncThunk(
   'hiData',
   async (data: any) => {
-
-    try {
-      const response = await axiosMainRequest.post(`/analyses/chi_square_table_literal/`, data);
-      if (response.status === 200) {
-        return response.data;
-      } else {
-        return 'error';
-      }
-    } catch (error) {
-      return 'throwError(error)';
-    }
+    const response = await axiosMainRequest.post(`/analyses/chi_square_table_literal/`, data);
+    return response.data;
   }
 );
+
+

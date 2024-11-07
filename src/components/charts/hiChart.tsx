@@ -13,9 +13,9 @@ export const HiChart = () => {
   const hiDataLoader = useSelector(selectHiDataLoader);
 
   // const hiLength = hiData && hiData.data.length
-  const hiLength = hiData ? hiData.data.length : 10;
+  const hiLength = hiData && hiData.data ? hiData.data.length : 10;
 
-  const transformedData = hiData && hiData.data.map((item) => {
+  const transformedData = hiData && hiData.data && hiData.data.map((item) => {
     const total = item.stat.reduce((sum, value) => sum + value, 0);
     const percentageData = item.stat.map((value) => (value / total) * 100);
 
@@ -64,7 +64,7 @@ export const HiChart = () => {
 
   return (
     <>
-      {hiData !== undefined ? (
+      {hiData !== undefined && hiDataError ? (
         <div style={{display: "flex", justifyContent: 'space-between', alignItems: 'center'}}>
           <Panel bordered style={{width: '32%'}}>
             <div style={{
@@ -107,7 +107,7 @@ export const HiChart = () => {
       ) : (
         <div
           style={{height: 143, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <Text>выберете параметры</Text>
+          <Text>{hiDataError ? 'Ошибка данных' : 'Выберете параметры'}</Text>
         </div>
       )}
     </>
