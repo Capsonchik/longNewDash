@@ -37,7 +37,7 @@ export const DoubleCircleBarchart = () => {
       stack: 'total',
       label: {
         show: true,
-        formatter: ({value}: any) => `${value.toFixed(2)}%`
+        formatter: ({value}: any) => `${value}%`
       },
       emphasis: {
         focus: 'series'

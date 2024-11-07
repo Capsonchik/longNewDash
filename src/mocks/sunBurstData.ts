@@ -585,6 +585,11 @@ export const SUN_DATA = [
                     color: '#194a7a',
                   }
                 ]
+              },
+              {
+                name: 'Назад',
+                type: 'iternal',
+                color: '#194a7a',
               }
             ]
           },
