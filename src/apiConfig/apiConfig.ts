@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const MAIN_API = 'https://c160-212-45-6-6.ngrok-free.app/v1/'
+export const MAIN_API = 'https://2e11-212-45-6-6.ngrok-free.app/v1/'
 
 const createAxiosMainRequest = () => {
   const instance = axios.create({
