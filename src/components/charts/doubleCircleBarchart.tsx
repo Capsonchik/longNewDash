@@ -17,6 +17,7 @@ export const DoubleCircleBarchart = () => {
         option={option}
         //@ts-ignore
         key={currentData}
+        theme="dark"
       />
     )
   }
@@ -48,6 +49,7 @@ export const DoubleCircleBarchart = () => {
 
 
   const option = {
+    backgroundColor: 'orange',
     color: generateColors(['#194a7a'], test),
     tooltip: {
       trigger: 'axis',
