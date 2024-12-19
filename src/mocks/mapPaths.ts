@@ -534,3 +534,18 @@ export const MAP_PATHS = [
     value: 46
   }
 ]
+
+const REGION_MOCK_DATA = {
+  'Чукотский автономный округ': {
+    firstIndex: 200,
+    secondIndex: 300,
+    thirdIndex: 400,
+    forthIndex: 500
+  },
+  'Магаданская область': {
+    firstIndex: 233,
+    secondIndex: 330,
+    thirdIndex: 403,
+    forthIndex: 505
+  }
+}
