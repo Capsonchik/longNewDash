@@ -12,7 +12,6 @@ import {selectActiveKey, selectIsMinMenu} from "@/store/store.selectors";
 import {setActiveKey, setIsMinMenu} from "@/store/store.slice";
 import FunnelTrendIcon from '@rsuite/icons/FunnelTrend';
 import {useEffect} from "react";
-import Link from "next/link";
 
 export const SideBar = () => {
   const router = useRouter();
@@ -125,8 +124,7 @@ export const SideBar = () => {
                 eventKey="4-1"
                 className={`${key === '4-1' ? styles.sideItemActive : styles.sideDisable}`}
               >
-                <Link href={'/long/new-purchase-page'} prefetch={true}>Лонгитюдный круг(обновленный)</Link>
-                {/*Лонгитюдный круг(обновленный)*/}
+                Лонгитюдный круг(обновленный)
               </Nav.Item>
               {/*<Nav.Item eventKey="4-2">Пространство и время</Nav.Item>*/}
               <Nav.Item
